@@ -1,0 +1,45 @@
+{
+  "type": "smart_app_data",
+  "smart_app_data": {
+    "commandName": "PressCalendarButton",
+    "commandParams": {
+      "data": {
+        "name": "Сафронов Артем Андреевич",
+        "bossFullName": "Васильева Надежда Андреевна",
+        "domain": "alpha",
+        "date": "09.06.2022",
+        "currentDate": "07.06.2022",
+        "filterName": "allMeets",
+        "bossId": "1769241",
+        "userEmail": "AAndSafronov@alpha-exchtest.sbrf.ru",
+        "emailExternal": "AAndSafronov@sigma-exchtest.sbrf.ru",
+        "emailInternal": "AAndSafronov@alpha-exchtest.sbrf.ru",
+        "externalDelegate": true,
+        "internalDelegate": true,
+        "daysStatus": {
+          "26.06.2022": "busyDay",
+          "27.06.2022": "busyDay",
+          "28.06.2022": "busyDay",
+          "29.06.2022": "holiday",
+          "30.06.2022": "holiday",
+          "01.07.2022": "holiday",
+          "02.07.2022": "holiday",
+          "03.07.2022": "holiday",
+          "04.07.2022": "holiday",
+          "05.07.2022": "holiday",
+          "06.07.2022": "holiday",
+          "07.07.2022": "holiday",
+          "08.07.2022": "holiday",
+          "09.07.2022": "holiday",
+          "10.07.2022": "holiday",
+          "11.07.2022": "holiday",
+          "12.07.2022": "holiday",
+          "13.07.2022": "holiday",
+          "14.07.2022": "holiday"
+        },
+        "appointments": []
+      },
+      "screenName": "MainCalendar"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "smart_app_data",
+  "smart_app_data": {
+    "commandName": "YourLocationPage",
+    "commandParams": {
+      "data": {"items": []},
+      "screenName": "YourLocationPage"
+    }
+  }
+}

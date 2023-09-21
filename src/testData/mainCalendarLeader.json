@@ -1,0 +1,905 @@
+{
+  "type": "smart_app_data",
+  "smart_app_data": {
+    "commandName": "",
+    "commandParams": {
+      "data": {
+        "appointments": [
+          {
+            "subject": "Встреча с Василием Ивановичем",
+            "date": "20.07.2022",
+            "start": "04:00",
+            "end": "04:30",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX1wAAEA==",
+            "organizer": [
+              {
+                "key": "Васильева Надежда Андреевна",
+                "value": "Vasilyeva.N.Andre@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [
+              {
+                "key": "Васильева Надежда Андреевна",
+                "value": "Vasilyeva.N.Andre@alpha-exchtest.sbrf.ru",
+                "response": "Нет ответа"
+              },
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru",
+                "response": "Отклонено"
+              }
+            ],
+            "optionalAttendees": [],
+            "body": "",
+            "location": " ",
+            "duration": "1800000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQAFD+EovvLJdInCrSu+MAXV0=",
+            "dateTimeStartTimeStamp": 1658278800000,
+            "dateTimeEndTimeStamp": 1658280600000,
+            "dateTimeCreatedTimeStamp": 1657113065000,
+            "recurrence": "true",
+            "response": "Ответ не получен",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 5",
+            "timestamp": 1658304948730
+          },
+          {
+            "subject": "НАЗВАНИЕ",
+            "date": "20.07.2022",
+            "start": "06:30",
+            "end": "07:00",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2gAAEA==",
+            "organizer": [
+              {
+                "key": "Васильева Надежда Андреевна",
+                "value": "Vasilyeva.N.Andre@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [
+              {
+                "key": "Васильева Надежда Андреевна",
+                "value": "Vasilyeva.N.Andre@alpha-exchtest.sbrf.ru",
+                "response": "Нет ответа"
+              },
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru",
+                "response": "Нет ответа"
+              }
+            ],
+            "optionalAttendees": [],
+            "body": "ОПИСАНИЕ",
+            "location": "РАСПОЛОЖЕНИЕ",
+            "duration": "1800000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQAPa26qmdzaVOhFzTQITnbFA=",
+            "dateTimeStartTimeStamp": 1658287800000,
+            "dateTimeEndTimeStamp": 1658289600000,
+            "dateTimeCreatedTimeStamp": 1657621856000,
+            "recurrence": "true",
+            "response": "Ответ не получен",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 6",
+            "timestamp": 1658304948839
+          },
+          {
+            "subject": "встреча на 15 минут",
+            "date": "20.07.2022",
+            "start": "08:00",
+            "end": "08:15",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIeAAAEA==",
+            "organizer": [
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [],
+            "optionalAttendees": [],
+            "body": "",
+            "location": " ",
+            "duration": "900000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQAAfGyZ3js8BEi3Ou+R5RBO4=",
+            "dateTimeStartTimeStamp": 1658293200000,
+            "dateTimeEndTimeStamp": 1658294100000,
+            "dateTimeCreatedTimeStamp": 1654083343000,
+            "recurrence": "true",
+            "response": "Организатор встречи",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 7",
+            "timestamp": 1658304948933
+          },
+          {
+            "subject": "не принятая не отруководителя",
+            "date": "20.07.2022",
+            "start": "09:00",
+            "end": "09:30",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIcQAAEA==",
+            "organizer": [
+              {
+                "key": "Chernysh.a.ser",
+                "value": "Chernysh.a.ser@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [
+              {
+                "key": "Chernysh.a.ser",
+                "value": "Chernysh.a.ser@alpha-exchtest.sbrf.ru",
+                "response": "Нет ответа"
+              },
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru",
+                "response": "Отклонено"
+              }
+            ],
+            "optionalAttendees": [],
+            "body": "",
+            "location": " ",
+            "duration": "1800000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQANOEXRZ+Eo5Cm8dXTha5eCM=",
+            "dateTimeStartTimeStamp": 1658296800000,
+            "dateTimeEndTimeStamp": 1658298600000,
+            "dateTimeCreatedTimeStamp": 1652965002000,
+            "recurrence": "true",
+            "response": "Ответ не получен",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 8",
+            "timestamp": 1658304949042
+          },
+          {
+            "subject": "пересечение",
+            "date": "20.07.2022",
+            "start": "10:00",
+            "end": "11:00",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIbQAAEA==",
+            "organizer": [
+              {
+                "key": "Chernysh.a.ser",
+                "value": "Chernysh.a.ser@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [
+              {
+                "key": "Chernysh.a.ser",
+                "value": "Chernysh.a.ser@alpha-exchtest.sbrf.ru",
+                "response": "Нет ответа"
+              },
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru",
+                "response": "Отклонено"
+              }
+            ],
+            "optionalAttendees": [],
+            "body": "Перекающаяся с митингом встреча",
+            "location": " ",
+            "duration": "3600000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQABq1+UdpyaBBuaCtLAh0b+Y=",
+            "dateTimeStartTimeStamp": 1658300400000,
+            "dateTimeEndTimeStamp": 1658304000000,
+            "dateTimeCreatedTimeStamp": 1652963249000,
+            "recurrence": "true",
+            "response": "Ответ не получен",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIaAAAEA==",
+                "subject": "МОЯ_ВСТРЕЧА"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 9",
+            "timestamp": 1658304949153
+          },
+          {
+            "subject": "МОЯ_ВСТРЕЧА",
+            "date": "20.07.2022",
+            "start": "10:07",
+            "end": "10:17",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIaAAAEA==",
+            "organizer": [
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [],
+            "optionalAttendees": [],
+            "body": "",
+            "location": "VAS TEAM ",
+            "duration": "600000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQADoJuhA6ptpAsp/q4xCkLOs=",
+            "dateTimeStartTimeStamp": 1658300820000,
+            "dateTimeEndTimeStamp": 1658301420000,
+            "dateTimeCreatedTimeStamp": 1652781273000,
+            "recurrence": "true",
+            "response": "Организатор встречи",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIbQAAEA==",
+                "subject": "пересечение"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 10",
+            "timestamp": 1658304949262
+          },
+          {
+            "subject": "casual дневная тестовая встреча",
+            "date": "20.07.2022",
+            "start": "11:30",
+            "end": "12:00",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIbgAAEA==",
+            "organizer": [
+              {
+                "key": "Chernysh.a.ser",
+                "value": "Chernysh.a.ser@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [
+              {
+                "key": "Chernysh.a.ser",
+                "value": "Chernysh.a.ser@alpha-exchtest.sbrf.ru",
+                "response": "Нет ответа"
+              },
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru",
+                "response": "Отклонено"
+              }
+            ],
+            "optionalAttendees": [],
+            "body": "",
+            "location": " ",
+            "duration": "1800000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQANqC//I8EUxNkQDdvBW+Ngg=",
+            "dateTimeStartTimeStamp": 1658305800000,
+            "dateTimeEndTimeStamp": 1658307600000,
+            "dateTimeCreatedTimeStamp": 1652963310000,
+            "recurrence": "true",
+            "response": "Ответ не получен",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 11",
+            "timestamp": 1658304949371
+          },
+          {
+            "subject": "тест 1 ",
+            "date": "20.07.2022",
+            "start": "12:30",
+            "end": "13:00",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIagAAEA==",
+            "organizer": [
+              {
+                "key": "Васильева Надежда Андреевна",
+                "value": "Vasilyeva.N.Andre@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [
+              {
+                "key": "Васильева Надежда Андреевна",
+                "value": "Vasilyeva.N.Andre@alpha-exchtest.sbrf.ru",
+                "response": "Нет ответа"
+              },
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru",
+                "response": "Отклонено"
+              }
+            ],
+            "optionalAttendees": [],
+            "body": "",
+            "location": " ",
+            "duration": "1800000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQAHOpuTTSKtFCuuFHYZZgihc=",
+            "dateTimeStartTimeStamp": 1658309400000,
+            "dateTimeEndTimeStamp": 1658311200000,
+            "dateTimeCreatedTimeStamp": 1652864524000,
+            "recurrence": "true",
+            "response": "Принято",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 12",
+            "timestamp": 1658304949481
+          },
+          {
+            "subject": "встреча альфа ",
+            "date": "20.07.2022",
+            "start": "13:30",
+            "end": "15:00",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIawAAEA==",
+            "organizer": [
+              {
+                "key": "Васильева Надежда Андреевна",
+                "value": "Vasilyeva.N.Andre@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [
+              {
+                "key": "Васильева Надежда Андреевна",
+                "value": "Vasilyeva.N.Andre@alpha-exchtest.sbrf.ru",
+                "response": "Нет ответа"
+              },
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru",
+                "response": "Отклонено"
+              }
+            ],
+            "optionalAttendees": [],
+            "body": "",
+            "location": "https://meetup.sberbank.ru/w/w/f9e8b4b5-caca-469e-95b9-d4fa2668a0ce",
+            "duration": "5400000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQADB8+qas1L1EvmZ5ytz1Gdw=",
+            "dateTimeStartTimeStamp": 1658313000000,
+            "dateTimeEndTimeStamp": 1658318400000,
+            "dateTimeCreatedTimeStamp": 1652864546000,
+            "recurrence": "true",
+            "response": "Ответ не получен",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 13",
+            "timestamp": 1658304949606
+          },
+          {
+            "subject": "3ье пересечение",
+            "date": "20.07.2022",
+            "start": "15:30",
+            "end": "17:00",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIeQAAEA==",
+            "organizer": [
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [],
+            "optionalAttendees": [],
+            "body": "",
+            "location": " ",
+            "duration": "5400000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQAKGpNbUlHeRFnWzA4SOTiaU=",
+            "dateTimeStartTimeStamp": 1658320200000,
+            "dateTimeEndTimeStamp": 1658325600000,
+            "dateTimeCreatedTimeStamp": 1654675429000,
+            "recurrence": "true",
+            "response": "Организатор встречи",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIbwAAEA==",
+                "subject": "принятая тестовая не от руководителя"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIcwAAEA==",
+                "subject": "принятая тестовая от руководителя 3 пересечение"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 14",
+            "timestamp": 1658304949715
+          },
+          {
+            "subject": "принятая тестовая от руководителя 3 пересечение",
+            "date": "20.07.2022",
+            "start": "16:00",
+            "end": "16:30",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIcwAAEA==",
+            "organizer": [
+              {
+                "key": "Васильева Надежда Андреевна",
+                "value": "Vasilyeva.N.Andre@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [
+              {
+                "key": "Васильева Надежда Андреевна",
+                "value": "Vasilyeva.N.Andre@alpha-exchtest.sbrf.ru",
+                "response": "Нет ответа"
+              },
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru",
+                "response": "Отклонено"
+              }
+            ],
+            "optionalAttendees": [],
+            "body": "",
+            "location": " ",
+            "duration": "1800000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQAOkOOzC+It5HgUlUdHTWXbI=",
+            "dateTimeStartTimeStamp": 1658322000000,
+            "dateTimeEndTimeStamp": 1658323800000,
+            "dateTimeCreatedTimeStamp": 1652967589000,
+            "recurrence": "true",
+            "response": "Принято",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIeQAAEA==",
+                "subject": "3ье пересечение"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIbwAAEA==",
+                "subject": "принятая тестовая не от руководителя"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 15",
+            "timestamp": 1658304949840
+          },
+          {
+            "subject": "принятая тестовая не от руководителя",
+            "date": "20.07.2022",
+            "start": "16:00",
+            "end": "16:30",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIbwAAEA==",
+            "organizer": [
+              {
+                "key": "Chernysh.a.ser",
+                "value": "Chernysh.a.ser@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [
+              {
+                "key": "Chernysh.a.ser",
+                "value": "Chernysh.a.ser@alpha-exchtest.sbrf.ru",
+                "response": "Нет ответа"
+              },
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru",
+                "response": "Отклонено"
+              }
+            ],
+            "optionalAttendees": [],
+            "body": "",
+            "location": " ",
+            "duration": "1800000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQAPnfVU873+FHvp5i5fbaqoY=",
+            "dateTimeStartTimeStamp": 1658322000000,
+            "dateTimeEndTimeStamp": 1658323800000,
+            "dateTimeCreatedTimeStamp": 1652963353000,
+            "recurrence": "true",
+            "response": "Принято",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIeQAAEA==",
+                "subject": "3ье пересечение"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIcwAAEA==",
+                "subject": "принятая тестовая от руководителя 3 пересечение"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 16",
+            "timestamp": 1658304949950
+          },
+          {
+            "subject": "МОЯ_ВСТРЕЧА_УХОД",
+            "date": "20.07.2022",
+            "start": "18:00",
+            "end": "18:30",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIcAAAEA==",
+            "organizer": [
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [],
+            "optionalAttendees": [],
+            "body": "Просто пустое описание",
+            "location": " ",
+            "duration": "1800000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQANl/5PT1YnpPo8bE8xA8GkQ=",
+            "dateTimeStartTimeStamp": 1658329200000,
+            "dateTimeEndTimeStamp": 1658331000000,
+            "dateTimeCreatedTimeStamp": 1652964722000,
+            "recurrence": "true",
+            "response": "Организатор встречи",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 17",
+            "timestamp": 1658304950059
+          },
+          {
+            "subject": "принятая не от руководителя без пересеченяия",
+            "date": "20.07.2022",
+            "start": "19:00",
+            "end": "19:30",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIcgAAEA==",
+            "organizer": [
+              {
+                "key": "Chernysh.a.ser",
+                "value": "Chernysh.a.ser@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [
+              {
+                "key": "Chernysh.a.ser",
+                "value": "Chernysh.a.ser@alpha-exchtest.sbrf.ru",
+                "response": "Нет ответа"
+              },
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru",
+                "response": "Отклонено"
+              }
+            ],
+            "optionalAttendees": [],
+            "body": "",
+            "location": " ",
+            "duration": "1800000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQAKgctxI5pz9OgipjNIHNk8s=",
+            "dateTimeStartTimeStamp": 1658332800000,
+            "dateTimeEndTimeStamp": 1658334600000,
+            "dateTimeCreatedTimeStamp": 1652965043000,
+            "recurrence": "true",
+            "response": "Принято",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 18",
+            "timestamp": 1658304950185
+          },
+          {
+            "subject": "встреча чтобы увелиичть количество встреч",
+            "date": "20.07.2022",
+            "start": "20:30",
+            "end": "21:30",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIfAAAEA==",
+            "organizer": [
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [],
+            "optionalAttendees": [],
+            "body": "",
+            "location": " ",
+            "duration": "3600000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQAJGTW/EDifRFhiEEDUjHv50=",
+            "dateTimeStartTimeStamp": 1658338200000,
+            "dateTimeEndTimeStamp": 1658341800000,
+            "dateTimeCreatedTimeStamp": 1654681470000,
+            "recurrence": "true",
+            "response": "Организатор встречи",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 19",
+            "timestamp": 1658304950294
+          },
+          {
+            "subject": "стык суток",
+            "date": "20.07.2022",
+            "start": "23:30",
+            "end": "01:00",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIewAAEA==",
+            "organizer": [
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [],
+            "optionalAttendees": [],
+            "body": "",
+            "location": " ",
+            "duration": "5400000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQADjPb0oNTFBOk9p0fLLByWY=",
+            "dateTimeStartTimeStamp": 1658349000000,
+            "dateTimeEndTimeStamp": 1658354400000,
+            "dateTimeCreatedTimeStamp": 1654681415000,
+            "recurrence": "true",
+            "response": "Организатор встречи",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mqr9HsAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 20",
+            "timestamp": 1658304950451
+          }
+        ],
+        "connectionList": [
+          {
+            "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ",
+            "date": "20.07.2022",
+            "start": "00:00",
+            "end": "00:00",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+            "organizer": [
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [],
+            "optionalAttendees": [],
+            "body": "",
+            "location": " ",
+            "duration": "86400000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQAM8eT5EWAIZIn9GS2LSdX6g=",
+            "dateTimeStartTimeStamp": 1658264400000,
+            "dateTimeEndTimeStamp": 1658350800000,
+            "dateTimeCreatedTimeStamp": 1658304046000,
+            "recurrence": "true",
+            "response": "Организатор встречи",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mkZn6eAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIewAAEA==",
+                "subject": "стык суток"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX1gAAEA==",
+                "subject": "Как не хочется идти на эту встречу"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX1wAAEA==",
+                "subject": "Встреча с Василием Ивановичем"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2gAAEA==",
+                "subject": "НАЗВАНИЕ"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIeAAAEA==",
+                "subject": "встреча на 15 минут"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIcQAAEA==",
+                "subject": "не принятая не отруководителя"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIbQAAEA==",
+                "subject": "пересечение"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIaAAAEA==",
+                "subject": "МОЯ_ВСТРЕЧА"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIbgAAEA==",
+                "subject": "casual дневная тестовая встреча"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIagAAEA==",
+                "subject": "тест 1 "
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIawAAEA==",
+                "subject": "встреча альфа "
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIeQAAEA==",
+                "subject": "3ье пересечение"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIcwAAEA==",
+                "subject": "принятая тестовая от руководителя 3 пересечение"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIbwAAEA==",
+                "subject": "принятая тестовая не от руководителя"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIcAAAEA==",
+                "subject": "МОЯ_ВСТРЕЧА_УХОД"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIcgAAEA==",
+                "subject": "принятая не от руководителя без пересеченяия"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIfAAAEA==",
+                "subject": "встреча чтобы увелиичть количество встреч"
+              },
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAADnhIewAAEA==",
+                "subject": "стык суток"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 3",
+            "timestamp": 1658304948511
+          },
+          {
+            "subject": "Как не хочется идти на эту встречу",
+            "date": "20.07.2022",
+            "start": "03:00",
+            "end": "03:30",
+            "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX1gAAEA==",
+            "organizer": [
+              {
+                "key": "Васильева Надежда Андреевна",
+                "value": "Vasilyeva.N.Andre@alpha-exchtest.sbrf.ru"
+              }
+            ],
+            "requiredAttendees": [
+              {
+                "key": "Васильева Надежда Андреевна",
+                "value": "Vasilyeva.N.Andre@alpha-exchtest.sbrf.ru",
+                "response": "Нет ответа"
+              },
+              {
+                "key": "Сафронов Артем Андреевич",
+                "value": "AAndSafronov@alpha-exchtest.sbrf.ru",
+                "response": "Принято"
+              }
+            ],
+            "optionalAttendees": [],
+            "body": "Встреча чтобы отклонить",
+            "location": " ",
+            "duration": "1800000",
+            "zoom": false,
+            "tks": false,
+            "vks": false,
+            "conversationId": "AAQkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQAQANcpwmF3GxxFhSSiHVJveOg=",
+            "dateTimeStartTimeStamp": 1658275200000,
+            "dateTimeEndTimeStamp": 1658277000000,
+            "dateTimeCreatedTimeStamp": 1657112984000,
+            "recurrence": "true",
+            "response": "Предварительно принято",
+            "conflicting": [
+              {
+                "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2mniyhFAAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAKLnX2wAAEA==",
+                "subject": "ВСТРЕЧА НА ВЕСЬ ДЕНЬ"
+              }
+            ],
+            "isConflicting": true,
+            "itemCount": "Встреча № 4",
+            "timestamp": 1658304948620
+          }
+        ],
+        "isVacation": true,
+        "isBusinessTrip": true,
+        "name": "Сафронов Артем Андреевич",
+        "domain": "alpha",
+        "defValue": "organizer",
+        "mainDomain": "sigma",
+        "date": "20.07.2022",
+        "timezone": "Etc/GMT-3",
+        "currentDate": "20.07.2022",
+        "filterName": "allMeets",
+        "bossId": "1769241",
+        "emailExternal": "AAndSafronov@sigma-exchtest.sbrf.ru",
+        "emailInternal": "AAndSafronov@alpha-exchtest.sbrf.ru",
+        "internalDelegate": true,
+        "externalDelegate": true,
+        "id": "1929881",
+        "screenName": "MainCalendar"
+      },
+      "screenName": "MainCalendar"
+    }
+  }
+}

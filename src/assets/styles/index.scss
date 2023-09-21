@@ -1,0 +1,22 @@
+@import "./var.scss";
+
+body {
+  height: 100vh;
+  color: $white;
+  font-family: "SB Sans Text", Helvetica, sans-serif;
+  position: relative;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex_start {
+  justify-content: flex-start;
+}
+
+.inliner_innerText {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,13 @@
+{
+  "type": "smart_app_data",
+  "smart_app_data": {
+    "commandName": "MeetingLink",
+    "commandParams": {
+      "screenName": "MeetingLink",
+      "data": {
+        "meetingLink": "https://jazz.sber.ru/e375w6?psw=OAcAAhUJEBoTFwcUSh0HCRwdGg",
+        "fromMeetId" : "fromMeetId"
+      }
+    }
+  }
+}

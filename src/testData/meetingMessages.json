@@ -1,0 +1,38 @@
+{
+  "type": "smart_app_data",
+  "smart_app_data": {
+    "commandName": "MeetingMessages",
+    "commandParams": {
+      "screenName": "MeetingMessages",
+      "data": {
+        "date": "25.05.2022",
+        "start": "11:00",
+        "end": "13:00",
+        "subject": "Название",
+        "requiredAttendees": [
+          {
+            "key": "Ва******* На***** Ан*******",
+            "response": "Нет ответа",
+            "value": "Vasilyeva.N.Andre_sigma-exchtest.sbrf.ru"
+          },
+          {
+            "key": "Ни******* В**** Ив******",
+            "response": "Нет ответа",
+            "value": "VINikitenko_sigma-exchtest.sbrf.ru"
+          },
+          {
+            "key": "Sorokina.Elena.Aleksl_sigma-exchtest.sbrf.ru",
+            "response": "Нет ответа",
+            "value": "Sorokina.Elena.Aleksl_sigma-exchtest.sbrf.ru"
+          },
+          {
+            "key": "Strashevskaya.A.Val",
+            "response": "Нет ответа",
+            "value": "Strashevskaya.A.Val_sigma-exchtest.sbrf.ru"
+          }
+        ],
+        "userText": "Текст от пользователя"
+      }
+    }
+  }
+}

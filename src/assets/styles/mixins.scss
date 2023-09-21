@@ -1,0 +1,48 @@
+@use "sass:math";
+
+$breakpoints: (
+  "xxl": 2560,
+  "xl": 1920,
+  "lg": 1600,
+  "md": 1366,
+  "sm": 1024,
+  "xs": 768,
+  "xxs": 414,
+);
+
+@mixin mq($maxWidth, $minWidth: false) {
+  @if map-has-key($breakpoints, $maxWidth) {
+    $maxWidth: map-get($breakpoints, $maxWidth);
+
+    @if ($minWidth != false) and map-has-key($breakpoints, $minWidth) {
+      $minWidth: map-get($breakpoints, $minWidth) + "px";
+
+      @media (max-width: ($maxWidth - 1px)) and (min-width: $minWidth) {
+        @content;
+      }
+    } @else {
+      @media (max-width: ($maxWidth - 1px)) {
+        @content;
+      }
+    }
+  }
+}
+
+@function vw($parent,$child) {
+  @if map-has-key($breakpoints, $parent) {
+    $parent: map-get($breakpoints, $parent);
+  }
+  @return math.div($child * 100vw, $parent);
+}
+
+@mixin btnReset {
+  padding: 0;
+  color: inherit;
+  line-height: inherit;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  appearance: none;
+  text-decoration: none;
+  outline: none;
+}

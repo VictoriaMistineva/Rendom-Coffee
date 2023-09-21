@@ -1,0 +1,36 @@
+@import "../assets/styles/var.scss";
+
+.layout {
+  // background: $mainBgColor;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @media (min-width: 1200px) {
+      width: 650px;
+  }
+  // max-width: 650px;
+
+  &__content {
+    height: calc(100vh - 54px);
+    overflow: auto;
+  }
+
+  &_blur {
+    filter: blur(8px);
+  }
+
+  &__spinerContainer {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: #00000080;
+  }
+}
+

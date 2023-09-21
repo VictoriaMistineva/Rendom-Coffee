@@ -1,0 +1,46 @@
+{
+  "type": "smart_app_data",
+  "smart_app_data": {
+    "commandName": "MeetDetails",
+    "commandParams": {
+      "data": {
+        "emailUser": "aandsafronov@alpha-exchtest.sbrf.ru",
+        "timestampStart": 1675146000000,
+        "timestampEnd": 1675147200000,
+        "id": "AAMkADVjODhhMmI2LTE2MjMtNDJjZC05N2U1LTg2OWFiODMzMGYzMQFRAAgI2wMeGJ6AAEYAAAAAYM/TkvI7nUibacv4DG27hAcARji9cBbRB0qLkjQYRiUcawAAAAABDQAARji9cBbRB0qLkjQYRiUcawAAZiKeCwAAEA==",
+        "organizer": {
+          "name": "Chernysh.a.ser",
+          "address": "Chernysh.a.ser@alpha-exchtest.sbrf.ru"
+        },
+        "conflicting": [ ],
+        "isConflicting": false,
+        "meetingConnections": [ ],
+        "subject": "Пересекается с пустой темой",
+        "isOrganizer": false,
+        "participants": {
+          "attendees": [
+            {
+              "mailboxUser": {
+                "name": "Chernysh.a.ser",
+                "address": "Chernysh.a.ser@alpha-exchtest.sbrf.ru"
+              },
+              "response": "Нет ответа"
+            },
+            {
+              "mailboxUser": {
+                "name": "Сафронов Артем Андреевич",
+                "address": "AAndSafronov@alpha-exchtest.sbrf.ru"
+              },
+              "response": "Отклонено"
+            }
+          ],
+          "attendeesCount": 2
+        },
+        "location": " ",
+        "response": "Ответ не получен",
+        "isWithManagers": false
+      },
+      "screenName": "MeetDetails"
+    }
+  }
+}

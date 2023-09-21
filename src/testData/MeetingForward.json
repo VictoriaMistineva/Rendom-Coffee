@@ -1,0 +1,78 @@
+{
+    "type": "smart_app_data",
+    "smart_app_data": {
+        "commandName": "MeetingForward",
+        "commandParams": {
+          "data":{ 
+            "search":[
+              {
+                  "fio": "Мистинева Виктория Максимовна",
+                  "position": "инженер по разработке,ЦА",
+                  "structure": "ЦА Сбербанк",
+                  "emailInternal": "AAndSafronov_alpha-exchtest.sbrf.ru",
+                  "emailExternal": "AAndSafronov_sigma_alpha-exchtest.sbrf.ru",
+                  "emailMain": "",
+                  "selected": true
+              },
+              {
+                  "fio": "Рыжов Владимир Михайлович",
+                  "position": "инженер по разработке,ЦА",
+                  "structure": "ЦА Сбербанк",
+                  "emailInternal": "Vasilyeva.N.Andre_alpha-exchtest.sbrf.ru",
+                  "emailExternal": "Vasilyeva.N.Andre_sigma-exchtest.sbrf.ru",
+                  "emailMain": "",
+                  "selected": false
+              },
+              {
+                  "fio": "Николаев Всеволод Ильич",
+                  "position": "инженер по разработке,ЦА",
+                  "structure": "ЦА Сбербанк",
+                  "emailInternal": "VINikitenko_alpha-exchtest.sbrf.ru",
+                  "emailExternal": "VINikitenko_sigma-exchtest.sbrf.ru",
+                  "emailMain": "",
+                  "selected": false
+              },
+              {
+                  "fio": "Рыжков Владимир Михайлович",
+                  "position": "инженер по разработке,ЦА",
+                  "structure": "ЦА Сбербанк",
+                  "emailInternal": "Strashevskaya.A.Val_alpha-exchtest.sbrf.ru",
+                  "emailExternal": "Strashevskaya.A.Val_sigma-exchtest.sbrf.ru",
+                  "emailMain": "",
+                  "selected": false
+              },
+              {
+                  "fio": "Кудряшов Роман Ильич",
+                  "position": "инженер по разработке,ЦА",
+                  "structure": "ЦА Сбербанк",
+                  "emailInternal": "esstarchikova_omega.sbrf.ru",
+                  "emailExternal": "esstarchikova_sberbank.ru",
+                  "emailMain": "",
+                  "selected": false
+              }
+            ],
+            "selectedUsers":[
+              {
+                  "fio": "Рыжков Владимир Михайлович",
+                  "position": "инженер по разработке,ЦА",
+                  "structure": "ЦА Сбербанк",
+                  "emailInternal": "Strashevskaya.A.Val_alpha-exchtest.sbrf.ru",
+                  "emailExternal": "Strashevskaya.A.Val_sigma-exchtest.sbrf.ru",
+                  "emailMain": "",
+                  "selected": false
+              },
+              {
+                  "fio": "Кудряшов Роман Ильич",
+                  "position": "инженер по разработке,ЦА",
+                  "structure": "ЦА Сбербанк",
+                  "emailInternal": "esstarchikova_omega.sbrf.ru",
+                  "emailExternal": "esstarchikova_sberbank.ru",
+                  "emailMain": "",
+                  "selected": false
+              }
+            ]
+          },
+          "screenName": "MeetingForward"
+        }
+    }
+  }

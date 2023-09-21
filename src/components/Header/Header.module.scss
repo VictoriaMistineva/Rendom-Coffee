@@ -1,0 +1,57 @@
+@import "../../assets/styles/var.scss";
+@import "../../assets/styles/mixins.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 26px 18px 13px 19px;
+  justify-content: space-between;
+
+  &__organiserInfo {
+    justify-content: flex-start;
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    &_close {
+      transition: transform 0.3s ease;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__titleDay {
+    text-align: center;
+    font-family: SB Sans Text;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 105.263% */
+    letter-spacing: -0.361px;
+    text-align: center;
+    color: $white;
+    padding: 0 20px;
+    font-weight: 600;
+  }
+
+  &__buttons {
+    display: flex;
+    min-width: 24px
+  }
+
+  &__button {
+    @include btnReset;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    
+    &+& {
+      margin-left: 11px;
+    }
+
+    &_hide {
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+}

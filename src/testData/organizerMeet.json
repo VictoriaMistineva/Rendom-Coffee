@@ -1,0 +1,157 @@
+{
+  "type": "smart_app_data",
+  "smart_app_data": {
+    "commandName": "OrganizerPersonalInfo",
+    "commandParams": {
+      "screenName": "OrganizerPersonalInfo",
+      "data": {
+        "sbernetUserId": 215391,
+        "subscription": false,
+        "avatar": {
+          "id": 273191,
+          "small": {
+            "id": 273190,
+            "name": "E9AC4B2F-33FD-4422-99FD-FD930D63FC91.jpg",
+            "type": "image",
+            "url": "avatars/b9b19ab7dd7b03f924e73c5414f1b282",
+            "contentType": "image/jpeg",
+            "height": 3025,
+            "width": 3024,
+            "cropRatio": 0.99966943,
+            "size": 1545487,
+            "moderation": "ok",
+            "createdAt": 1622171138154,
+            "updatedAt": 1622171138154
+          },
+          "big": {
+            "id": 273189,
+            "name": "50AE8813-C0CB-4FFC-B304-9E4B374CA217.jpg",
+            "type": "image",
+            "url": "avatars/75712e45c5c22721c51dd266c9de2989",
+            "contentType": "image/jpeg",
+            "height": 3025,
+            "width": 3024,
+            "cropRatio": 0.99966943,
+            "size": 1545487,
+            "moderation": "ok",
+            "createdAt": 1622171138123,
+            "updatedAt": 1622171138123
+          },
+          "createdAt": 1622171138157,
+          "updatedAt": 1622171138157
+        },
+        "id": "1769241",
+        "familyName": "Ва*******",
+        "givenName": "На*****",
+        "patronymic": "Ан*******",
+        "shortDepartName": "Управление сервисов корпоративной модели данных",
+        "structure": "ЦА",
+        "position": "инженер по разработке",
+        "birthday": "13 июля ",
+        "phoneInner": "8-55774838",
+        "phoneMobile": "8-000-000-0000",
+        "emailMain": "vasi*************************",
+        "emailInternal": "Vasi************************************",
+        "emailExternal": "Vasi************************************",
+        "deptId": "10290398",
+        "status": [ ],
+        "highlights": {
+          "familyName": "<span class=\"highlight\">Ва*******</span>",
+          "givenName": "<span class=\"highlight\">На*****</span>",
+          "patronymic": "<span class=\"highlight\">Ан*******</span>"
+        },
+        "userTimeZone": 3,
+        "userStatus": "9602",
+        "userSex": 0,
+        "userIsVsp": false,
+        "department": [
+          {
+            "deptId": "10290398",
+            "deptName": "Упр-е сервисов корпоративной модели дан.",
+            "chainListId": [
+              "10000360",
+              "10222236",
+              "10281237",
+              "10290398"
+            ],
+            "chainListName": [
+              "Should not be empty parent",
+              "Блок \"Технологии\"",
+              "Департамент управления данными (SberData",
+              "Упр-е сервисов корпоративной модели дан."
+            ],
+            "chain": "Should not be empty parent・Блок \"Технологии\"・Департамент управления данными (SberData・Упр-е сервисов корпоративной модели дан."
+          }
+        ],
+        "agile": [
+          {
+            "deptId": "555555555",
+            "deptName": "Команда ВАС (полное имя)",
+            "chainListId": [
+              "99999999",
+              "77777777",
+              "555554555"
+            ],
+            "chainListName": [
+              "Цифровые решения для сотрудника",
+              "Удобный доступ к сервисам",
+              "Команда ВАС (полное имя)"
+            ],
+            "chain": "Цифровые решения для сотрудника・Удобный доступ к сервисам・Команда ВАС (полное имя)",
+            "type": "team",
+            "role": "Участник команды"
+          },
+          {
+            "deptId": "555553555",
+            "deptName": "Команда ВАС (полное имя)",
+            "chainListId": [
+              "99999999",
+              "77777777",
+              "55555555"
+            ],
+            "chainListName": [
+              "Цифровые решения для сотрудника",
+              "Удобный доступ к сервисам",
+              "Команда ВАС (полное имя)"
+            ],
+            "chain": "Цифровые решения для сотрудника・Удобный доступ к сервисам・Команда ВАС (полное имя)",
+            "type": "team",
+            "role": "Участник команды"
+          },
+          {
+            "deptId": "555555575",
+            "deptName": "Команда ВАС (полное имя)",
+            "chainListId": [
+              "99999999",
+              "77777777",
+              "555555556"
+            ],
+            "chainListName": [
+              "Цифровые решения для сотрудника",
+              "Удобный доступ к сервисам",
+              "Команда ВАС (полное имя)"
+            ],
+            "chain": "Цифровые решения для сотрудника・Удобный доступ к сервисам・Команда ВАС (полное имя)",
+            "type": "team",
+            "role": "Участник команды"
+          }
+        ],
+        "bossId": "01657120",
+        "bossNameInfo": "Ненайденко Ва****** Вла*********",
+        "email": "Vasi************************************",
+        "emailOmega": "Vasi************************************",
+        "emailSigma": "Vasi************************************",
+        "userVacationStart": "2023-04-30T21:00:00Z",
+        "userVacationEnd": "2023-05-10T21:00:00Z",
+        "distantWorkStart": "2021-04-30T21:00:00Z",
+        "distantWorkEnd": "2022-08-06T21:00:00Z",
+        "isBusy": false,
+        "utilsdata": {
+          "email": "Vasi************************************",
+          "name": "Ва******* На***** Ан*******"
+        },
+        "avatarURL": "https://api.sberfriend.sbrf.ru/sberfriend-api/api/v1/ext/app/friend/rest/sbernet/api/v1/media/getmedia/avatars/E9AC4B2F-33FD-4422-99FD-FD930D63FC91.jpg"
+      }
+    }
+  }
+}

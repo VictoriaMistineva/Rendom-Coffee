@@ -1,0 +1,113 @@
+{
+  "type": "smart_app_data",
+  "smart_app_data": {
+    "commandName": "MeetingAttendees",
+    "commandParams": {
+      "data": {
+        "attendees": [
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          },
+          {
+            "mailboxUser": {
+              "name": "SBT-test-user3",
+              "address": "SBT-test-user3@alpha-exchtest.sbrf.ru"
+            },
+            "response": "Нет ответа"
+          }
+        ],
+        "moreChangesAvailable" : true
+      },
+      "screenName": "MeetingAttendees"
+    }
+  }
+  
+}

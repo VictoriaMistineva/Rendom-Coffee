@@ -1,0 +1,30 @@
+{
+  "type": "smart_app_data",
+  "smart_app_data": {
+    "commandName": "MeetingAttendees",
+    "commandParams": {
+      "screenName": "MeetingAttendees",
+      "data": {
+        "requiredAttendees": [
+          {
+            "key": "Ва******* На***** Ан*******",
+            "value": "Vasi************************************",
+            "response": "Нет ответа"
+          },
+          {
+            "key": "Са****** А**** Ан*******",
+            "value": "AAnd*******************************",
+            "response": "Принято"
+          }
+        ],
+        "optionalAttendees": [
+          {
+            "key": "Са****** А**** Ан*******",
+            "value": "AAnd*******************************",
+            "response": "Принято"
+          }
+        ]
+      }
+    }
+  }
+}
