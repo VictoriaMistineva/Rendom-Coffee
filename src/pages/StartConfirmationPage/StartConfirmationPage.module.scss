@@ -1,14 +1,15 @@
 @import "../../assets/styles/var.scss";
 @import '../../assets/styles/mixins';
 
-.selectionColleagues {
-  padding: 0 15px 0 15px;
+.startConfirmation {
+  padding: 0 20px 0 20px;
 
   &__container {
-    padding-top: 163px;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 48px;
 
   }
 
@@ -16,12 +17,27 @@
     color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
     text-align: center;
     font-family: SB Sans Text;
-    font-size: 30px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 500;
-    line-height: 46px;
-    /* 153.333% */
-    letter-spacing: -0.57px;
+    line-height: 46px; /* 127.778% */
+    letter-spacing: -0.684px;
+  }
+
+  &__subTitle {
+    text-align: center;
+    font-family: SB Sans Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    /* 156.25% */
+    letter-spacing: -0.304px;
+    opacity: 0.7;
+    background: var(--text-icons-gradient-sber, linear-gradient(94deg, #1DD13B 6.49%, #27C6E5 93.51%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   &__button {
@@ -49,7 +65,7 @@
     }
 
     &:last-of-type {
-      margin-bottom: 111px;
+      margin-bottom: 167px;
     }
 
     &+& {
@@ -92,37 +108,9 @@
     }
   }
 
-  &__radioGroupContainer {
-    margin-top: 92px;
+  &__buttonContainer{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 100px;
   }
-}
-
-p{
-  background: var(--text-icons-gradient-sber, linear-gradient(90deg, #0EB029 0%, #00A6C7 100%));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: SB Sans Text;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.228px;
-  
-}
-
-.radiobox span:first-of-type {
-  color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
-  font-family: SB Sans Text;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.475px;
-}
-
-.radiobox label:first-of-type {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

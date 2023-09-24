@@ -17,12 +17,18 @@ const SelectionColleaguesPage = () => {
         <RadioGroup >
           <Radiobox
             label="Доверюсь судьбе"
+            className={styles.radiobox}
           />
           <Radiobox
             label="По календарю"
-            description="Предоставить доступ"
+            className={styles.radiobox}
           />
-          <Radiobox label="По интересам" />
+          <div style={{paddingLeft:"31.5px",paddingBottom:"9px"}}>
+            <p>Предоставить доступ</p>
+          </div>
+          <Radiobox label="По интересам" 
+            className={styles.radiobox}
+          />
         </RadioGroup>
       </div>
 

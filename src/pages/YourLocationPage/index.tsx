@@ -26,13 +26,13 @@ const YourLocationPage = () => {
           )
           :
           (
-          <div>
+          <div className={styles.yourLocation__textLocationContainer}>
             <div className={styles.yourLocation__textCity}>
               Екатеринбург
-              <button className={styles.yourLocation__buttonIcon}>
+            </div>
+            <button className={styles.yourLocation__buttonIcon}>
                 <Loupe/>
             </button>
-            </div>
           </div>
         )
         }

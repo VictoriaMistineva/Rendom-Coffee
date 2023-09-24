@@ -11,6 +11,7 @@ import SecondPage from './pages/SecondPage';
 import YourLocationPage from './pages/YourLocationPage';
 import SelectionColleaguesPage from './pages/SelectionСolleaguesPage';
 import SelectionInterestPage from './pages/SelectionInterestPage';
+import StartConfirmationPage from './pages/StartConfirmationPage';
 const history = createBrowserHistory();
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
       <HistoryRouter history={history}>
         <Layout>
           <Routes>
-            <Route path="/" element={< YourLocationPage  />} />
-            <Route path="/yourLocationPage" element={< YourLocationPage />} />
+            <Route path="/" element={< StartConfirmationPage  />} />
+            <Route path="/yourLocationPage" element={< StartConfirmationPage />} />
             <Route path="/SecondPage" element={< SecondPage />} />
           </Routes>
         </Layout>
