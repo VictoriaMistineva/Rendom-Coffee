@@ -1,18 +1,20 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { PayloadAction,createSlice } from '@reduxjs/toolkit';
 import {YourLocationPageSliceState} from './types'
 export * from './selectors';
 
 
 const initialState: YourLocationPageSliceState = {
-    items: Array<string>
+  "city": '',
+  "cities": []
   }
 
 const yourLocationSlice = createSlice({
   name: 'yourLocation',
   initialState: initialState,
   reducers: {
-    setData(state, { payload }) {
-      state.items = payload?.items ?? [];
+    setData(state, action: PayloadAction<YourLocationPageSliceState>) {
+      state.city = action.payload.city ?? '';
+      state.cities = action.payload.cities ?? [];
     }
   },
 });

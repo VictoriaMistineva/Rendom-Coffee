@@ -3,10 +3,21 @@ import { createSlice } from '@reduxjs/toolkit';
 import { initialize } from '../../api/connection';
 import testData from '../../testData/main.json';
 import {AssistantSliceState, CommandParams, SmartAppResponseType} from './types'
-import { RuleSet } from 'styled-components';
+// import { RuleSet } from 'styled-components';
 import { AppDispatch, RootState } from '..';
-import {setData as setMainCalendarData} from '../yourLocationPage'
+import {setData as setYourLocationPage} from '../yourLocationPage'
+import {setData as setFirstStoriesPage} from '../firstStoriesPage'
+import {setData as setSelectionMethod} from '../selectionMethodPage'
+import { StartConfirmationPageSliceState } from '../firstStoriesPage/types';
+import { YourLocationPageSliceState } from '../yourLocationPage/types';
 export * from './selectors';
+import {
+  turnOffMicrophone,
+  turnOffSound,
+  turnOnMicrophone,
+  turnOnSound,
+} from '../utilsCommandName';
+import { selectionMethodPageSliceState } from '../selectionMethodPage/types';
 
 let assistant: any = null;
 
@@ -69,19 +80,31 @@ export const {
 export default assistantSlice.reducer;
 
 const processAssistantParams = (dispatch : AppDispatch, commandParams : CommandParams) => {
-  const { screenName, data } = commandParams;
+  const screenName = commandParams.screenName
+  const data = commandParams.data;
+
   let page = '';
   switch (screenName) {
-    case 'YourLocationPage':
-      page = '/yourLocationPage';
+    case 'FirstStories':
+      page = '/firstStories';
       console.log(data)
-      dispatch(setMainCalendarData(data))
+      dispatch(setFirstStoriesPage(data as StartConfirmationPageSliceState))
       break;
     case 'SecondPage':
       page = '/SecondPage';
       console.log(data);
       // dispatch()
       break;
+    case 'CityChoose':
+      page = '/cityChoose';
+      dispatch(setYourLocationPage(data as YourLocationPageSliceState))
+      break;
+    case 'SelectionMethod':
+      page = '/selectionMethod';
+      dispatch(setSelectionMethod(data as selectionMethodPageSliceState ));
+      break;
+
+
   }
 
   dispatch(setPage({ page }));
@@ -92,6 +115,18 @@ const processAssistantCommand = (dispatch : AppDispatch, commandName : string, g
   switch (commandName) {
     case 'ExitFromCanvas':
       dispatch(close());
+      break;
+    case 'MicrophoneTurnOff':
+      dispatch(turnOffMicrophone());
+      break;
+    case 'MicrophoneTurnOn':
+      dispatch(turnOnMicrophone());
+      break;
+    case 'SoundTurnOn':
+      dispatch(turnOnSound());
+      break;
+    case 'SoundTurnOff':
+      dispatch(turnOffSound());
       break;
     default:
       break;
@@ -121,24 +156,23 @@ export const initAssistant = () => (dispatch : AppDispatch, getState : RootState
     // debugger;
     if (data?.type !== 'smart_app_data' || !data.smart_app_data) return;
 
-    const { commandParams, commandName } = data.smart_app_data;
-    // if (commandName === "pingPong") {
-    //   console.log("Sent event " + commandParams?.eventName + " with parameters");
-    //   console.log(commandParams?.eventParams);
-    //   assistant.sendData({
-    //     action: {
-    //       action_id: commandParams?.eventName || "I_NEED_A_NAME",
-    //       parameters: commandParams?.eventParams
-    //     }
-    //   });
-    //   return;
-    // }
+    const commandParams = data.smart_app_data?.commandParams as CommandParams;
+    const commandName = data.smart_app_data.commandName;
+
+    if (commandName === "pingPong") {
+      console.log("Sent event " + commandParams?.eventName + " with parameters");
+      console.log(commandParams?.eventParams);
+      assistant.sendData({
+        action: {
+          action_id: commandParams?.eventName || "I_NEED_A_NAME",
+          parameters: commandParams?.eventParams
+        }
+      });
+      return;
+    }
     dispatch(finishIsLoading());
     if (commandParams.hasOwnProperty("screenName") && !['PressBackButton'].includes(commandName))
       processAssistantParams(dispatch, commandParams);
-    if (commandName === "MicrofonOff") {
-      console.log("RESPONSE");
-    }
     processAssistantCommand(dispatch, commandName, getState);
   });
 };

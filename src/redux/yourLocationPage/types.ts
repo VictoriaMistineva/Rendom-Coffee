@@ -1,3 +1,4 @@
 export type YourLocationPageSliceState = {
-    items: any,
+    "city": string;
+    "cities": Array<string>;
 }

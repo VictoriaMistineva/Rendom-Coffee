@@ -1,47 +1,71 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Picker } from '@salutejs/plasma-ui/components/Pickers/Picker';
 import { RootState } from '../../redux';
 import styles from './Picker.module.scss'
 import cn from 'classnames';
 import { ReactComponent as Loupe } from '../../assets/img/icons/loupe.svg';
+import { getCities, getCity } from '../../redux/yourLocationPage';
+import { sendData } from '../../redux/assistant';
+import { PickerItem } from '@salutejs/plasma-ui/components/Pickers/types';
+
 const YourLocationPage = () => {
+
+  const dispatch = useDispatch();
+  const citiesArray = useSelector(getCities);
+  const locationCity = useSelector(getCity);
+  const [pickerLabel, setPickerLabel] = useState<string | number | Date>("");
+
+  const handleClickButton = () => {
+    dispatch(
+      sendData({
+        action_id: 'clickButtonPicker',
+        parameters: pickerLabel ? pickerLabel : locationCity,
+      })
+    );
+  }
+  const handleClickLoupe = () => {
+    dispatch(
+      sendData({
+        action_id: 'clickLoupe',
+      })
+    );
+  }
   return (
     <div className={styles.yourLocation}>
       <div className={styles.yourLocation__container}>
         <div className={styles.yourLocation__title}>Вы находитесь в городе</div>
         {
-          false ? (
+          citiesArray.length > 0 ? (
             <Picker
-            items={[{ value: "1", label: "One" },
-            { value: "2", label: "Two" },
-            { value: "3", label: "Three" },
-            { value: "4", label: "Four" },
-            ]}
-            value={"3"}
-            enableNativeControl={true}
-            infiniteScroll={false}
-            className={styles.picker}
-          />
+              items={citiesArray.map((item, index) => ({ value: item, label: item }))}
+              value={locationCity}
+              enableNativeControl={true}
+              infiniteScroll={false}
+              className={styles.picker}
+              onChange={(value: PickerItem) => (setPickerLabel(value.value))}
+
+            />
           )
-          :
-          (
-          <div className={styles.yourLocation__textLocationContainer}>
-            <div className={styles.yourLocation__textCity}>
-              Екатеринбург
-            </div>
-            <button className={styles.yourLocation__buttonIcon}>
-                <Loupe/>
-            </button>
-          </div>
-        )
+            :
+            (
+              <div className={styles.yourLocation__textLocationContainer}>
+                <div className={styles.yourLocation__textCity}>
+                  {locationCity}
+                </div>
+                <button className={styles.yourLocation__buttonIcon} onClick={handleClickLoupe}>
+                  <Loupe />
+                </button>
+              </div>
+            )
         }
       </div>
       <div className={styles.yourLocation__buttonContainer}>
-          <button
-            className={cn(styles.yourLocation__button, styles.yourLocation__button_green)}>
-            Да
-          </button>
+        <button
+          onClick={handleClickButton}
+          className={cn(styles.yourLocation__button, styles.yourLocation__button_green)}>
+          Да
+        </button>
       </div>
     </div>
   )

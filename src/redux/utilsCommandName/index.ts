@@ -9,8 +9,8 @@ const initialState: MainPageSliceState = {
     isSoundOff: false,
   }
 
-const mainCalendarSlice = createSlice({
-  name: 'mainCalendar',
+const utilsCommandNameSlice = createSlice({
+  name: 'utilsCommandName',
   initialState: initialState,
   reducers: {
     setData(state, { payload }) {
@@ -32,11 +32,11 @@ const mainCalendarSlice = createSlice({
   },
 });
 
-export default mainCalendarSlice.reducer;
+export default utilsCommandNameSlice.reducer;
 export const {
   setData,
   turnOffMicrophone,
   turnOnMicrophone,
   turnOnSound,
   turnOffSound,
-} = mainCalendarSlice.actions;
+} = utilsCommandNameSlice.actions;

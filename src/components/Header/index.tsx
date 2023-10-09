@@ -6,27 +6,54 @@ import MICROPHONE_OFF from '../../assets/img/icons/microphoneOff.svg';
 import MICROPHONE_ON from '../../assets/img/icons/microphoneOn.svg';
 import { ReactComponent as IconSoundOff } from '../../assets/img/icons/soundOff.svg';
 import { ReactComponent as IconSoundOn } from '../../assets/img/icons/soundOn.svg';
-
 import styles from './Header.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
+import PaginationLine from '../PaginationLine';
+import { getIsMicrophoneOff, getIsSoundOff, turnOffMicrophone, turnOffSound, turnOnMicrophone, turnOnSound } from '../../redux/utilsCommandName';
+import { sendData } from '../../redux/assistant';
+
 
 interface HeaderProps {
   className?: string;
 }
 
-const Header = ({ className } : HeaderProps) => {
+const Header = ({ className }: HeaderProps) => {
 
   const location = useLocation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // console.log("Header historyCoun ---------- " + historyCount)
+  const isMicrophoneOff = useSelector(getIsMicrophoneOff);
+  const isSoundOff = useSelector(getIsSoundOff);
 
+  const handleClickMicrophone = useCallback(() => {
+    if (isMicrophoneOff) dispatch(turnOnMicrophone());
+    else dispatch(turnOffMicrophone());
+
+    dispatch(
+      sendData({
+        action_id: isMicrophoneOff ? 'MicrophoneTurnOn' : 'MicrophoneTurnOff',
+      })
+    );
+  }, [isMicrophoneOff]);
+
+  const handleClickSound = useCallback(() => {
+    if (isSoundOff) dispatch(turnOnSound());
+    else dispatch(turnOffSound());
+
+    dispatch(
+      sendData({
+        action_id: isSoundOff ? 'SoundTurnOn' : 'SoundTurnOff',
+      })
+    );
+  }, [isSoundOff]);
 
   const routingTitle = useMemo(() => {
     switch (location.pathname) {
       case '/SecondPage':
-        return '2 - SecondPage';
+      case '/firstStories':
+      case '/':
+        return '';
       default:
         return 'РЭНДОМ КОФЕ В СБЕРЕ';
     }
@@ -45,26 +72,27 @@ const Header = ({ className } : HeaderProps) => {
             [styles.header__icon_close]: false,
           })}
         />
-        
+
       </div>
-      <div>
-        {routingTitle}
-      </div>
+      {routingTitle ? routingTitle :
+        <div className={styles.header__paginationContainer}>
+          <PaginationLine isActive={location.pathname === '/firstStories'} />
+          <PaginationLine isActive={location.pathname === '/SecondPage'} />
+        </div>
+      }
       <div className={styles.header__buttons}>
-          <button
-                // onClick={handleClickMicrophone}
-                className={styles.header__button}
-              >
-                {/* <img src={isMicrophoneOff ? MICROPHONE_OFF : MICROPHONE_ON} /> */}
-                <img src={true ? MICROPHONE_OFF : MICROPHONE_ON} />
-              </button>
-              <button
-                // onClick={handleClickSound}
-                className={styles.header__button}
-              >
-                {/* {isSoundOff ? <IconSoundOff /> : <IconSoundOn />} */}
-                {true ? <IconSoundOff /> : <IconSoundOn />}
-          </button>
+        <button
+          onClick={handleClickMicrophone}
+          className={styles.header__button}
+        >
+          <img src={isMicrophoneOff ? MICROPHONE_OFF : MICROPHONE_ON} />
+        </button>
+        <button
+          onClick={handleClickSound}
+          className={styles.header__button}
+        >
+          {isSoundOff ? <IconSoundOff /> : <IconSoundOn />}
+        </button>
       </div>
     </header>
   );

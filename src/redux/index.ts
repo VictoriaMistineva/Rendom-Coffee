@@ -1,17 +1,19 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import app from './app';
 import assistant from './assistant';
-import mainPage from './mainPage';
+import utilsCommandName from './utilsCommandName';
 import secondPage from './secondPage';
-import YourLocationPage from './yourLocationPage';
-
-
+import yourLocationPage from './yourLocationPage';
+import startConfirmation from './firstStoriesPage';
+import selectionMethod from './selectionMethodPage';
 const rootReducer = combineReducers({
     app,
     assistant,
-    mainPage,
+    utilsCommandName,
     secondPage,
-    YourLocationPage,
+    yourLocationPage,
+    startConfirmation,
+    selectionMethod,
 });
 
 const store = configureStore({

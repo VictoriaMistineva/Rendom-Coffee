@@ -1,0 +1,13 @@
+@import "../../assets/styles/var.scss";
+
+.paginationLine{
+    height: 2px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.56);
+    border-radius: 10px;
+
+    &__isActive{
+        background: var(--text-icons-gradient-sber, linear-gradient(90deg, #0EB029 0%, #00A6C7 100%));
+        animation: appear-from-left .5s ease-out;;
+    }
+}

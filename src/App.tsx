@@ -9,9 +9,11 @@ import MainPage from './pages/MainPage';
 import Layout from './layout';
 import SecondPage from './pages/SecondPage';
 import YourLocationPage from './pages/YourLocationPage';
-import SelectionColleaguesPage from './pages/SelectionСolleaguesPage';
+import SelectionColleaguesPage from './pages/SelectionColleaguePage';
 import SelectionInterestPage from './pages/SelectionInterestPage';
 import StartConfirmationPage from './pages/StartConfirmationPage';
+import SecondStoriesPage from './pages/SecondStoriesPage';
+import SelectionColleaguePage from './pages/SelectionColleaguePage';
 const history = createBrowserHistory();
 
 function App() {
@@ -21,8 +23,10 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={< StartConfirmationPage  />} />
-            <Route path="/yourLocationPage" element={< StartConfirmationPage />} />
-            <Route path="/SecondPage" element={< SecondPage />} />
+            <Route path="/firstStories" element={< StartConfirmationPage />} />
+            <Route path="/SecondPage" element={< SecondStoriesPage />} />
+            <Route path="/cityChoose" element={< YourLocationPage />} />
+            <Route path = "/selectionMethod" element={<SelectionColleaguesPage/>}/>
           </Routes>
         </Layout>
       </HistoryRouter>

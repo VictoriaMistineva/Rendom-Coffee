@@ -6,7 +6,8 @@ import { Button } from '@salutejs/plasma-ui';
 import { RootState } from '../../redux';
 
 const SecondPage = () => {
-  const errorInfo = useSelector((state : RootState) => getErrorInfo(state));
+  const errorInfo = useSelector(getErrorInfo);
+
   return <>
     <h1>SecondPage</h1>
     <p>errorInfo: {errorInfo}</p>

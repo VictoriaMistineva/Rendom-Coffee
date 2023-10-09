@@ -1,10 +1,31 @@
 {
   "type": "smart_app_data",
   "smart_app_data": {
-    "commandName": "YourLocationPage",
+    "commandName": "SelectionMethod",
     "commandParams": {
-      "data": {"items": []},
-      "screenName": "YourLocationPage"
+      "data": {
+        "methods": [
+          {
+            "title": "Доверюсь судьбе",
+            "canUse": true,
+            "selected": false,
+            "description": ""
+          },
+          {
+            "title": "По календарю",
+            "canUse": false,
+            "selected": false,
+            "description": "Предоставить доступ"
+          },
+          {
+            "title": "По интересам",
+            "canUse": true,
+            "selected": true,
+            "description": ""
+          }
+        ]
+      },
+      "screenName": "SelectionMethod"
     }
   }
 }
