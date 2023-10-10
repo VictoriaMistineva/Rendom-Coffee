@@ -6,6 +6,9 @@ import secondPage from './secondPage';
 import yourLocationPage from './yourLocationPage';
 import startConfirmation from './firstStoriesPage';
 import selectionMethod from './selectionMethodPage';
+import bubblesImage from './bubblesImage'
+import smallUserCard from './smallUserCard'
+import meetInfo from './meetInfo';
 const rootReducer = combineReducers({
     app,
     assistant,
@@ -14,6 +17,9 @@ const rootReducer = combineReducers({
     yourLocationPage,
     startConfirmation,
     selectionMethod,
+    bubblesImage,
+    smallUserCard,
+    meetInfo
 });
 
 const store = configureStore({

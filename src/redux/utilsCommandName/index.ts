@@ -4,7 +4,7 @@ export * from './selectors';
 
 
 const initialState: MainPageSliceState = {
-    items: Array<string>,
+    items: [],
     isMicrophoneOff: false,
     isSoundOff: false,
   }

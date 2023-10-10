@@ -10,6 +10,9 @@ import {setData as setFirstStoriesPage} from '../firstStoriesPage'
 import {setData as setSelectionMethod} from '../selectionMethodPage'
 import { StartConfirmationPageSliceState } from '../firstStoriesPage/types';
 import { YourLocationPageSliceState } from '../yourLocationPage/types';
+import {setData as setBubblesImage} from '../bubblesImage';
+import {setData as setSmallUserCard} from '../smallUserCard';
+import {setData as setMeetingInfo} from '../meetInfo';
 export * from './selectors';
 import {
   turnOffMicrophone,
@@ -18,6 +21,10 @@ import {
   turnOnSound,
 } from '../utilsCommandName';
 import { selectionMethodPageSliceState } from '../selectionMethodPage/types';
+import { bubblesImageSliceState } from '../bubblesImage/types';
+import { smallUserCardSliceState } from '../smallUserCard/types';
+import { MeetInfoSliceState } from '../meetInfo/types';
+
 
 let assistant: any = null;
 
@@ -103,7 +110,18 @@ const processAssistantParams = (dispatch : AppDispatch, commandParams : CommandP
       page = '/selectionMethod';
       dispatch(setSelectionMethod(data as selectionMethodPageSliceState ));
       break;
-
+    case 'SearchResult':
+      page = '/searchResult'
+      dispatch(setBubblesImage(data as bubblesImageSliceState));
+      break;
+    case 'SmallUserCard':
+      page = '/smallUserCard'
+      dispatch(setSmallUserCard(data as smallUserCardSliceState))
+      break
+    case 'MeetInfo':
+      page = '/meetInfo'
+      dispatch(setMeetingInfo(data as MeetInfoSliceState))
+      break
 
   }
 

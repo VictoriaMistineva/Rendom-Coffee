@@ -4,7 +4,7 @@ export * from './selectors';
 
 
 const initialState: SecondPageSliceState = {
-  items: Array<string>
+  items: []
 }
 
 const secondPageSlice = createSlice({

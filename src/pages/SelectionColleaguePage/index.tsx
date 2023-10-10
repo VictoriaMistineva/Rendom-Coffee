@@ -15,11 +15,10 @@ const SelectionColleaguesPage = () => {
   const handleChange = (index: number) => {
     dispatch(
       sendData({
-        action_id: 'calendarPickerChange',
+        action_id: 'radioBoxIndex',
         parameters: index,
       })
     );
-    console.log(index)
   };
 
   const handleClickButton = () => {

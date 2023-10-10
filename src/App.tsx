@@ -14,6 +14,9 @@ import SelectionInterestPage from './pages/SelectionInterestPage';
 import StartConfirmationPage from './pages/StartConfirmationPage';
 import SecondStoriesPage from './pages/SecondStoriesPage';
 import SelectionColleaguePage from './pages/SelectionColleaguePage';
+import BubblesImagePage from './pages/BubblesImagePage';
+import SmallUserCardPage from './pages/SmallUserCardPage';
+import MeetingPage from './pages/MeetingPage';
 const history = createBrowserHistory();
 
 function App() {
@@ -27,6 +30,9 @@ function App() {
             <Route path="/SecondPage" element={< SecondStoriesPage />} />
             <Route path="/cityChoose" element={< YourLocationPage />} />
             <Route path = "/selectionMethod" element={<SelectionColleaguesPage/>}/>
+            <Route path="/searchResult" element={<BubblesImagePage/>} />
+            <Route path="/smallUserCard" element = {<SmallUserCardPage/>}/>
+            <Route path="/meetInfo" element= {<MeetingPage/>}/>
           </Routes>
         </Layout>
       </HistoryRouter>
