@@ -38,10 +38,10 @@ const SmallUserCard = () => {
                     </div>
                     
                    <div className={styles.smallCardUser__subTitle}>
-                        {users.team.role}
+                        {users.position}
                         </div>
                     <div className={styles.smallCardUser__subTitle}>
-                        {users.team.deptName}
+                        {users.department}
                     </div>
                     <div className={styles.smallCardUser__cardContainer} onClick={handleClickAction}>
                         <div className={styles.smallCardUser__titleGreen}>

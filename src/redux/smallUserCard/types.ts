@@ -10,17 +10,18 @@ export type Users = {
     avatar: string,
     fullName: string,
     position: null,
-    departament: string,
+    department: string,
     birthdayToday: boolean,
     phoneMobile: string,
     phoneInner: string,
     emailExternal: string,
     emailInternal: string,
     emailMain: string,
-    team: Team                
+    teams: Teams[] ,
+    isBusy: boolean               
 }
 
-export type Team = {
+export type Teams = {
     deptName: string,
     role?: string
 }

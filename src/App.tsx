@@ -17,6 +17,7 @@ import SelectionColleaguePage from './pages/SelectionColleaguePage';
 import BubblesImagePage from './pages/BubblesImagePage';
 import SmallUserCardPage from './pages/SmallUserCardPage';
 import MeetingPage from './pages/MeetingPage';
+import PersonalInfo from './pages/PersonalInfo';
 const history = createBrowserHistory();
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             <Route path="/searchResult" element={<BubblesImagePage/>} />
             <Route path="/smallUserCard" element = {<SmallUserCardPage/>}/>
             <Route path="/meetInfo" element= {<MeetingPage/>}/>
+            <Route path="/extendedUserCard" element = {<PersonalInfo/>}/>
           </Routes>
         </Layout>
       </HistoryRouter>

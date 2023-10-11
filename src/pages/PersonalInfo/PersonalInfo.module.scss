@@ -1,0 +1,144 @@
+@import "../../assets/styles/var";
+
+.organizerMeet {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 0 28px;
+
+  &__statusInfo {
+    display: flex;
+    margin: 15px 0;
+  }
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__avatarIcon {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__statusInfoColumn {
+    margin-left: 18px;
+  }
+
+  &__section {
+    border-bottom: 1px solid $lightGrey_3;
+    padding: 10px 0;
+    box-sizing: border-box;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: -0.019em;
+    color: rgba(255, 255, 255, 0.96);
+
+  }
+
+  &__subTitle {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.019em;
+    color: $lightGrey_2;
+  }
+  &__subTitleMidge{
+    color: var(--text-icons-secondary, rgba(255, 255, 255, 0.56));
+    font-family: SB Sans Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 200% */
+    letter-spacing: -0.308px;
+  }
+
+  &__status {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.019em;
+    margin-top: 6px;
+
+    &_busy {
+      color: var(--button-status-warning, #E35502);
+    }
+
+    &_free {
+      background: var(--text-icons-gradient-sber, linear-gradient(94deg, #1DD13B 6.49%, #27C6E5 93.51%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    &_nodata {
+        color: $lightGrey_2;
+    }
+  }
+
+  &__birthday {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    line-height: 20px;
+  }
+
+  &__birthdayIcon {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+  }
+
+  &__titleGroup {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.022em;
+    color: rgba(255, 255, 255, 0.96);
+
+
+    &:not(&:first-of-type) {
+      margin-top: 10px;
+    }
+  }
+
+  &__contactInfo {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.019em;
+    background: var(--text-icons-gradient-sber, linear-gradient(94deg, #1DD13B 6.49%, #27C6E5 93.51%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  &__textMeeting {
+    width: 100%;
+    padding-top: 119.5px;
+    padding-right: 2px;
+    display: flex;
+    justify-content: end;
+    color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
+    text-align: right;
+    font-family: SB Sans Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.266px;
+
+}
+}

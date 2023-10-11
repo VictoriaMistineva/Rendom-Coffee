@@ -2,23 +2,26 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { initialize } from '../../api/connection';
 import testData from '../../testData/main.json';
-import {AssistantSliceState, CommandParams, SmartAppResponseType} from './types'
+import { AssistantSliceState, CommandParams, SmartAppResponseType, AlertPopUp } from './types'
 // import { RuleSet } from 'styled-components';
 import { AppDispatch, RootState } from '..';
-import {setData as setYourLocationPage} from '../yourLocationPage'
-import {setData as setFirstStoriesPage} from '../firstStoriesPage'
-import {setData as setSelectionMethod} from '../selectionMethodPage'
+import { setData as setYourLocationPage } from '../yourLocationPage'
+import { setData as setFirstStoriesPage } from '../firstStoriesPage'
+import { setData as setSelectionMethod } from '../selectionMethodPage'
 import { StartConfirmationPageSliceState } from '../firstStoriesPage/types';
 import { YourLocationPageSliceState } from '../yourLocationPage/types';
-import {setData as setBubblesImage} from '../bubblesImage';
-import {setData as setSmallUserCard} from '../smallUserCard';
-import {setData as setMeetingInfo} from '../meetInfo';
+import { setData as setBubblesImage } from '../bubblesImage';
+import { setData as setSmallUserCard } from '../smallUserCard';
+import { setData as setMeetingInfo } from '../meetInfo';
+
 export * from './selectors';
 import {
   turnOffMicrophone,
   turnOffSound,
   turnOnMicrophone,
   turnOnSound,
+  openActionPopup,
+  closeActionPopup,
 } from '../utilsCommandName';
 import { selectionMethodPageSliceState } from '../selectionMethodPage/types';
 import { bubblesImageSliceState } from '../bubblesImage/types';
@@ -86,7 +89,7 @@ export const {
 } = assistantSlice.actions;
 export default assistantSlice.reducer;
 
-const processAssistantParams = (dispatch : AppDispatch, commandParams : CommandParams) => {
+const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandParams) => {
   const screenName = commandParams.screenName
   const data = commandParams.data;
 
@@ -108,7 +111,7 @@ const processAssistantParams = (dispatch : AppDispatch, commandParams : CommandP
       break;
     case 'SelectionMethod':
       page = '/selectionMethod';
-      dispatch(setSelectionMethod(data as selectionMethodPageSliceState ));
+      dispatch(setSelectionMethod(data as selectionMethodPageSliceState));
       break;
     case 'SearchResult':
       page = '/searchResult'
@@ -116,6 +119,10 @@ const processAssistantParams = (dispatch : AppDispatch, commandParams : CommandP
       break;
     case 'SmallUserCard':
       page = '/smallUserCard'
+      dispatch(setSmallUserCard(data as smallUserCardSliceState))
+      break
+    case 'ExtendedUserCard':
+      page = '/extendedUserCard'
       dispatch(setSmallUserCard(data as smallUserCardSliceState))
       break
     case 'MeetInfo':
@@ -129,7 +136,7 @@ const processAssistantParams = (dispatch : AppDispatch, commandParams : CommandP
 };
 
 
-const processAssistantCommand = (dispatch : AppDispatch, commandName : string, getState : RootState) => {
+const processAssistantCommand = (dispatch: AppDispatch, commandName: string, getState?: RootState, commandParams?: CommandParams) => {
   switch (commandName) {
     case 'ExitFromCanvas':
       dispatch(close());
@@ -146,13 +153,52 @@ const processAssistantCommand = (dispatch : AppDispatch, commandName : string, g
     case 'SoundTurnOff':
       dispatch(turnOffSound());
       break;
+    case 'ShowNoMatchPopup':
+      {
+        // const data = commandParams?.data.title
+        // console.log(data)
+        // if (commandParams?.data as AlertPopUp)
+        //   dispatch(
+        //     openAlertPopup({
+        //       title: commandParams?.data?.title ,
+        //       subTitle: commandParams?.data,
+        //     })
+
+        //   );
+      }
+      break;
+    case 'popUpStatusError':
+      dispatch(
+        openActionPopup({ commandName: commandName })
+      );
+      break;
+    case 'popUpStatusSuccess':
+      dispatch(
+        openActionPopup({ commandName: commandName })
+      );
+      break;
+    case 'popUpAccessNotCurrentlyGranted':
+      dispatch(
+        openActionPopup({ commandName: commandName })
+      );
+      break;
+    case 'opUpRequestAccess':
+      dispatch(
+        openActionPopup({ commandName: commandName })
+      );
+      break;
+    case 'UsersNotFound':
+      dispatch(
+        openActionPopup({ commandName: commandName })
+      );
+      break;
     default:
       break;
   }
 };
 
 // должно вызываться только один раз и только в одном месте, сейчас в layout
-export const initAssistant = () => (dispatch : AppDispatch, getState : RootState) => {
+export const initAssistant = () => (dispatch: AppDispatch, getState: RootState) => {
   // @ts-ignore
   assistant = initialize(() => null);
 
@@ -161,11 +207,11 @@ export const initAssistant = () => (dispatch : AppDispatch, getState : RootState
     const { commandParams, commandName } = testData.smart_app_data;
     dispatch(finishIsLoading());
     processAssistantParams(dispatch, { ...commandParams });
-    processAssistantCommand(dispatch, commandName, getState);
+    processAssistantCommand(dispatch, commandName, getState, commandParams);
     return;
   }
 
-  assistant.on('data', (response : SmartAppResponseType) => {
+  assistant.on('data', (response: SmartAppResponseType) => {
     // dispatch(setErrorInfo(response));
     const data =
       // response;
@@ -191,6 +237,6 @@ export const initAssistant = () => (dispatch : AppDispatch, getState : RootState
     dispatch(finishIsLoading());
     if (commandParams.hasOwnProperty("screenName") && !['PressBackButton'].includes(commandName))
       processAssistantParams(dispatch, commandParams);
-    processAssistantCommand(dispatch, commandName, getState);
+    processAssistantCommand(dispatch, commandName, getState, commandParams);
   });
 };

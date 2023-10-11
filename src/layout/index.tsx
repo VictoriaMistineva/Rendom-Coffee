@@ -1,4 +1,4 @@
-import React, { ReactNode, useCallback, useEffect } from 'react';
+import React, { ReactNode, useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -18,6 +18,10 @@ import {
 
 import styles from './Layout.module.scss';
 import { RootState } from '../redux';
+import AlertPopup from '../components/AlertPopup';
+import StatusPopup from '../components/StatusPopup';
+import {closeActionPopup, getActionPopup } from '../redux/utilsCommandName'
+
 
 interface LayoutProps {
   children?: ReactNode
@@ -37,6 +41,8 @@ const Layout = ({ children } : LayoutProps) => {
     isLoading: getIsLoading(state)
   }));
 
+  const actionPopup = useSelector(getActionPopup);
+
   useEffect(() => {
     // @ts-ignore
     dispatch(initAssistant());
@@ -46,6 +52,17 @@ const Layout = ({ children } : LayoutProps) => {
     const pageWithoutSearch = page.split('?')[0];
     if (location.pathname !== pageWithoutSearch) navigate(`${page}`);
   }, [page]);
+
+  const handleCloseActionPopup = useCallback(() => {
+    dispatch(closeActionPopup());
+  }, []);
+  const switchToCalendar = useCallback(() => {
+    dispatch(
+      sendData({
+        action_id: 'GrandAccessButton',
+      })
+    );
+  }, [handleCloseActionPopup]);
 
   return (
     <div
@@ -61,6 +78,28 @@ const Layout = ({ children } : LayoutProps) => {
           <Spinner size={128} />
         </Portal>
       )}
+      {/* {alertPopup.isShow &&
+          <AlertPopup
+            isOpen={alertPopup.isShow}
+            list={[]}
+            inset={[]}
+            title={alertPopup.title}
+            subTitle={alertPopup.subTitle}
+            onClose={handleCloseAlertPopup}
+            closeCanvas={() => {
+              dispatch(close());
+            }}
+          />
+      } */}
+      {actionPopup.isOpen && (
+          <StatusPopup
+            status={actionPopup.status}
+            textItems={actionPopup.textItems}
+            buttonText={actionPopup.buttonText}
+            onButtonClick={switchToCalendar}
+            onClose={handleCloseActionPopup}
+          />
+        )}
     </div>
   );
 };

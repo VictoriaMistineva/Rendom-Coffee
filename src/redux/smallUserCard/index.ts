@@ -10,17 +10,15 @@ const initialState: smallUserCardSliceState = {
     avatar: '',
     fullName: '',
     position: null,
-    departament: '',
+    department: '',
     birthdayToday: false,
     phoneMobile: '',
     phoneInner: '',
     emailExternal: '',
     emailInternal: '',
     emailMain: '',
-    team: {
-      deptName: '',
-      role: ''
-    }
+    teams: [],
+    isBusy: false,
   },
   avatar: '',
 }
@@ -32,6 +30,7 @@ const smallUserCardSlice = createSlice({
     setData(state, action:PayloadAction<smallUserCardSliceState>) {
       state.user = action.payload.user ?? {};
       state.avatar = action.payload.avatar ?? '';
+      state.user.teams = action.payload.user.teams ?? '';
       
     },
 

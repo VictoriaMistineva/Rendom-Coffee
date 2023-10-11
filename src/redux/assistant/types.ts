@@ -13,8 +13,12 @@ export type SmartAppResponseType = {
 }
 
 export type CommandParams = {
-    data?: object,
+    data?: object | AlertPopUp,
     screenName?: string,
     eventName?: string,
     eventParams?: object
+}
+export type AlertPopUp = {
+    title?: object,
+    subTitle?: object
 }
