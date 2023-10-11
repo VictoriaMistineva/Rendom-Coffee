@@ -21,6 +21,7 @@ import { RootState } from '../redux';
 import AlertPopup from '../components/AlertPopup';
 import StatusPopup from '../components/StatusPopup';
 import {closeActionPopup, getActionPopup } from '../redux/utilsCommandName'
+import StatusPopupOpacityAndIsButton from '../components/StatusPopupOpacityAndIsButton';
 
 
 interface LayoutProps {
@@ -56,13 +57,7 @@ const Layout = ({ children } : LayoutProps) => {
   const handleCloseActionPopup = useCallback(() => {
     dispatch(closeActionPopup());
   }, []);
-  const switchToCalendar = useCallback(() => {
-    dispatch(
-      sendData({
-        action_id: 'GrandAccessButton',
-      })
-    );
-  }, [handleCloseActionPopup]);
+
 
   return (
     <div
@@ -92,11 +87,10 @@ const Layout = ({ children } : LayoutProps) => {
           />
       } */}
       {actionPopup.isOpen && (
-          <StatusPopup
+          <StatusPopupOpacityAndIsButton
             status={actionPopup.status}
             textItems={actionPopup.textItems}
             buttonText={actionPopup.buttonText}
-            onButtonClick={switchToCalendar}
             onClose={handleCloseActionPopup}
           />
         )}

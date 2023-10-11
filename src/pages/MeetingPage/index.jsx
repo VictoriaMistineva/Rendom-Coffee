@@ -17,11 +17,12 @@ import { ReactComponent as IconBell } from '../../assets/img/icons/bell.svg';
 import { getDateMeetInfo } from '../../assets/scripts/date';
 import { getAttendees, getMeetInfo } from './../../redux/meetInfo'
 import styles from './MeetingPage.module.scss';
+import { sendData } from '../../redux/assistant';
 
 const MeetingPage = () => {
   const dispatch = useDispatch();
-  const meetingInfo = useSelector(getMeetInfo)
-  const attendees = useSelector(getAttendees)
+  const meetingInfo = useSelector(getMeetInfo);
+  const attendees = useSelector(getAttendees);
 
   const handleClickButton = () => {
     dispatch(

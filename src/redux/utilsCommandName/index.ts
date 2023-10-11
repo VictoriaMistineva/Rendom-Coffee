@@ -1,9 +1,9 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { MainPageSliceState } from './types'
+import { UtilsCommandNameSliceState } from './types'
 export * from './selectors';
 
 
-const initialState: MainPageSliceState = {
+const initialState: UtilsCommandNameSliceState = {
   items: [],
   isMicrophoneOff: false,
   isSoundOff: false,
@@ -37,7 +37,7 @@ const utilsCommandNameSlice = createSlice({
     },
     //any убрать
 
-    openActionPopup(state , action: PayloadAction<{commandName: string }>) {
+    openActionPopup(state, action: PayloadAction<{ commandName: string }>) {
       switch (action.payload.commandName) {
         case 'popUpStatusSuccess':
           state.actionPopup.status = 'success';
@@ -82,6 +82,15 @@ const utilsCommandNameSlice = createSlice({
       state.actionPopup.isOpen = false;
       state.actionPopup.buttonText = '';
     },
+    // openAlertPopup(state, { payload }) {
+    //   state.alertPopup.isShow = true;
+    //   state.alertPopup.title = payload.title ?? '';
+    //   state.alertPopup.subTitle = payload.subTitle ?? '';
+
+    // },
+    // closeAlertPopup(state) {
+    //   state.alertPopup.isShow = false;
+    // },
 
 
   },

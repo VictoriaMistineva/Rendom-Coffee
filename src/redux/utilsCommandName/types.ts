@@ -1,6 +1,6 @@
 import { string } from "prop-types"
 
-export type MainPageSliceState = {
+export type UtilsCommandNameSliceState = {
     commandName: string;
     items: any,
     isMicrophoneOff: boolean,

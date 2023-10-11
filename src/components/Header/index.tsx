@@ -48,6 +48,14 @@ const Header = ({ className }: HeaderProps) => {
     );
   }, [isSoundOff]);
 
+  const handleClickButton = () => {
+    dispatch(
+      sendData({
+        action_id: 'Back',
+      })
+    );
+  };
+
   const routingTitle = useMemo(() => {
     switch (location.pathname) {
       case '/SecondPage':
@@ -67,11 +75,14 @@ const Header = ({ className }: HeaderProps) => {
       )}
     >
       <div>
-        <IconChevronLeft
-          className={cn(styles.header__icon, {
-            [styles.header__icon_close]: false,
-          })}
-        />
+        <div onClick={handleClickButton}>
+          <IconChevronLeft
+            className={cn(styles.header__icon, {
+              [styles.header__icon_close]: location.pathname === '/firstStories' || location.pathname === '/',
+            })}
+
+          />
+        </div>
 
       </div>
       {routingTitle ? routingTitle :
