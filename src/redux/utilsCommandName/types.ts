@@ -5,6 +5,7 @@ export type UtilsCommandNameSliceState = {
     items: any,
     isMicrophoneOff: boolean,
     isSoundOff: boolean,
+    alertPopup: AlertPopup,
     actionPopup: ActionPopUp,
 }
 export type ActionPopUp = {
@@ -13,4 +14,11 @@ export type ActionPopUp = {
     textItems: string[],
     buttonText: string,
 
+}
+
+export type AlertPopup = {
+    isShow: boolean,
+    title: string,
+    subTitle: string,
+    list: string[],
 }

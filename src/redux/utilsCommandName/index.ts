@@ -13,6 +13,12 @@ const initialState: UtilsCommandNameSliceState = {
     textItems: [],
     buttonText: '',
   },
+  alertPopup: {
+    isShow: false,
+    title: '',
+    subTitle: '',
+    list: [],
+  },
   commandName: ""
 }
 
@@ -35,8 +41,7 @@ const utilsCommandNameSlice = createSlice({
     turnOffSound(state) {
       state.isSoundOff = true;
     },
-    //any убрать
-
+ 
     openActionPopup(state, action: PayloadAction<{ commandName: string }>) {
       switch (action.payload.commandName) {
         case 'popUpStatusSuccess':
@@ -82,15 +87,15 @@ const utilsCommandNameSlice = createSlice({
       state.actionPopup.isOpen = false;
       state.actionPopup.buttonText = '';
     },
-    // openAlertPopup(state, { payload }) {
-    //   state.alertPopup.isShow = true;
-    //   state.alertPopup.title = payload.title ?? '';
-    //   state.alertPopup.subTitle = payload.subTitle ?? '';
+    openAlertPopup(state, { payload }) {
+      state.alertPopup.isShow = true;
+      state.alertPopup.title = payload.title ?? '';
+      state.alertPopup.subTitle = payload.subTitle ?? '';
 
-    // },
-    // closeAlertPopup(state) {
-    //   state.alertPopup.isShow = false;
-    // },
+    },
+    closeAlertPopup(state) {
+      state.alertPopup.isShow = false;
+    },
 
 
   },
@@ -105,4 +110,6 @@ export const {
   turnOffSound,
   openActionPopup,
   closeActionPopup,
+  openAlertPopup,
+  closeAlertPopup
 } = utilsCommandNameSlice.actions;

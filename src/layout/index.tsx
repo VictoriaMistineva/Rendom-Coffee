@@ -11,6 +11,7 @@ import {
   getPage,
   initAssistant,
   sendData,
+  close
 } from '../redux/assistant';
 import {
   getIsBlur,
@@ -20,7 +21,7 @@ import styles from './Layout.module.scss';
 import { RootState } from '../redux';
 import AlertPopup from '../components/AlertPopup';
 import StatusPopup from '../components/StatusPopup';
-import {closeActionPopup, getActionPopup } from '../redux/utilsCommandName'
+import {closeActionPopup, closeAlertPopup, getActionPopup, getAlertPopup } from '../redux/utilsCommandName'
 import StatusPopupOpacityAndIsButton from '../components/StatusPopupOpacityAndIsButton';
 
 
@@ -43,7 +44,8 @@ const Layout = ({ children } : LayoutProps) => {
   }));
 
   const actionPopup = useSelector(getActionPopup);
-
+  const alertPopup = useSelector(getAlertPopup);
+  
   useEffect(() => {
     // @ts-ignore
     dispatch(initAssistant());
@@ -56,6 +58,10 @@ const Layout = ({ children } : LayoutProps) => {
 
   const handleCloseActionPopup = useCallback(() => {
     dispatch(closeActionPopup());
+  }, []);
+  
+  const handleCloseAlertPopup = useCallback(() => {
+    dispatch(closeAlertPopup());
   }, []);
 
 
@@ -73,10 +79,9 @@ const Layout = ({ children } : LayoutProps) => {
           <Spinner size={128} />
         </Portal>
       )}
-      {/* {alertPopup.isShow &&
+      {alertPopup.isShow &&
           <AlertPopup
             isOpen={alertPopup.isShow}
-            list={[]}
             inset={[]}
             title={alertPopup.title}
             subTitle={alertPopup.subTitle}
@@ -85,7 +90,7 @@ const Layout = ({ children } : LayoutProps) => {
               dispatch(close());
             }}
           />
-      } */}
+      }
       {actionPopup.isOpen && (
           <StatusPopupOpacityAndIsButton
             status={actionPopup.status}

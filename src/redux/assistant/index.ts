@@ -155,16 +155,22 @@ const processAssistantCommand = (dispatch: AppDispatch, commandName: string, get
       break;
     case 'ShowNoMatchPopup':
       {
-        // const data = commandParams?.data.title
-        // console.log(data)
-        // if (commandParams?.data as AlertPopUp)
-        //   dispatch(
-        //     openAlertPopup({
-        //       title: commandParams?.data?.title ,
-        //       subTitle: commandParams?.data,
-        //     })
+        // TODO ignore fix
+        // @ts-ignore
+        const data = commandParams?.data.title
+        console.log(data)
+        // @ts-ignore
+        if (commandParams?.data as AlertPopUp)
+        // @ts-ignore
+          dispatch(
+            // @ts-ignore
+            openAlertPopup({
+              // @ts-ignore
+              title: commandParams?.data?.title ,
+              subTitle: commandParams?.data,
+            })
 
-        //   );
+          );
       }
       break;
     case 'popUpStatusError':
