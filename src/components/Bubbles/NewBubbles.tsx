@@ -3,10 +3,13 @@ import { Container, Row, Col } from 'react-grid-system';
 import { data } from "./data";
 import "./styles.css";
 import FlowerBubble from '../FlowerBubble';
+import { useSelector } from 'react-redux';
+import { geUsersBubbles } from '../../redux/bubblesImage';
 
 const NewBubbles = () => {
     const containerWidth = window.innerWidth < 650 ? window.innerWidth : 500;
     const startBubbleWidth = Math.floor(containerWidth / 5);
+    const users = useSelector(geUsersBubbles);
 
     type BubbleImageProps = {
         imgUrl: string;
@@ -40,9 +43,10 @@ const NewBubbles = () => {
 
     return (
         <>
+            
             <Container fluid >
                 <Row justify="around">
-                    <Col xs={"content"} style={{ marginTop: 30}}>
+                    <Col xs={"content"} style={{ marginTop: 30 }}>
                         <BubbleImage
                             imgUrl={"https://i.pravatar.cc/?img=9"}
                             width={startBubbleWidth}
@@ -54,30 +58,30 @@ const NewBubbles = () => {
                             width={startBubbleWidth}
                         />
                     </Col>
-                    <Col xs={"content"} style={{ marginTop: 30}}>
+                    <Col xs={"content"} style={{ marginTop: 30 }}>
                         <BubbleImage
                             imgUrl={"https://i.pravatar.cc/?img=11"}
-                            width={startBubbleWidth }
+                            width={startBubbleWidth}
                         />
                     </Col>
                 </Row>
                 <br></br>
-                <Row justify="around" style={{ marginTop: 30}}>
-                    <Col className={"bubbleImg6"} 
-                    style={{
-                        animationDuration: "11s"
-                    }}>
-                        <FlowerBubble/>
+                <Row justify="around" style={{ marginTop: 30 }}>
+                    <Col className={"bubbleImg6"}
+                        style={{
+                            animationDuration: "11s"
+                        }}>
+                        <FlowerBubble />
                     </Col>
                 </Row>
-                <Row justify="around" style={{ marginTop: 230}}>
+                <Row justify="around" style={{ marginTop: 230 }}>
                     <Col xs={"content"}>
                         <BubbleImage
                             imgUrl={"https://i.pravatar.cc/?img=9"}
                             width={startBubbleWidth}
                         />
                     </Col>
-                    <Col xs={"content"} style={{ marginTop: 20}}>
+                    <Col xs={"content"} style={{ marginTop: 20 }}>
                         <BubbleImage
                             imgUrl={"https://i.pravatar.cc/?img=10"}
                             width={startBubbleWidth}
@@ -86,7 +90,7 @@ const NewBubbles = () => {
                     <Col xs={"content"}>
                         <BubbleImage
                             imgUrl={"https://i.pravatar.cc/?img=11"}
-                            width={startBubbleWidth }
+                            width={startBubbleWidth}
                         />
                     </Col>
                 </Row>
@@ -103,7 +107,7 @@ const NewBubbles = () => {
                     <Col xs={"content"}>
                         <BubbleImage
                             imgUrl={"https://i.pravatar.cc/?img=13"}
-                            width={startBubbleWidth }
+                            width={startBubbleWidth}
                             top={-15}
                             left={-30}
                         />
@@ -118,17 +122,17 @@ const NewBubbles = () => {
                             width={startBubbleWidth}
                         />
                     </Col>
-                    <Col xs={"content"} style={{ marginTop: 20}}>
+                    <Col xs={"content"} style={{ marginTop: 20 }}>
                         <BubbleImage
                             imgUrl={"https://i.pravatar.cc/?img=10"}
                             width={startBubbleWidth}
-                            
+
                         />
                     </Col>
                     <Col xs={"content"}>
                         <BubbleImage
                             imgUrl={"https://i.pravatar.cc/?img=11"}
-                            width={startBubbleWidth }
+                            width={startBubbleWidth}
                         />
                     </Col>
                 </Row>
@@ -145,7 +149,7 @@ const NewBubbles = () => {
                     <Col xs={"content"}>
                         <BubbleImage
                             imgUrl={"https://i.pravatar.cc/?img=13"}
-                            width={startBubbleWidth }
+                            width={startBubbleWidth}
                             top={-15}
                             left={-30}
                         />
@@ -158,17 +162,17 @@ const NewBubbles = () => {
                             width={startBubbleWidth}
                         />
                     </Col>
-                    <Col xs={"content"} style={{ marginTop: 20}}>
+                    <Col xs={"content"} style={{ marginTop: 20 }}>
                         <BubbleImage
                             imgUrl={"https://i.pravatar.cc/?img=10"}
                             width={startBubbleWidth}
-                            
+
                         />
                     </Col>
                     <Col xs={"content"}>
                         <BubbleImage
                             imgUrl={"https://i.pravatar.cc/?img=11"}
-                            width={startBubbleWidth }
+                            width={startBubbleWidth}
                         />
                     </Col>
                 </Row>
@@ -185,7 +189,7 @@ const NewBubbles = () => {
                     <Col xs={"content"}>
                         <BubbleImage
                             imgUrl={"https://i.pravatar.cc/?img=13"}
-                            width={startBubbleWidth }
+                            width={startBubbleWidth}
                             top={-15}
                             left={-30}
                         />

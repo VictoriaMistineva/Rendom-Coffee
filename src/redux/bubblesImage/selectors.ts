@@ -1,7 +1,7 @@
 
 import { RootState } from "../index";
 
-export const geUsers = (state: RootState) => state.bubblesImage.users;
+export const geUsersBubbles = (state: RootState) => state.bubblesImage.users;
 
 
 
