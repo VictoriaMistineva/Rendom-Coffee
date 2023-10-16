@@ -1,4 +1,4 @@
-const w = 80;
+const w = 50;
 
 export type BubbleAppearanceOptions = {
     imgUrl: string,
@@ -64,6 +64,27 @@ export const data : Array<BubbleAppearanceOptions> = [
     },
     {
         imgUrl: "https://i.pravatar.cc/?img=32",
+        width: w,
+    }
+    ,
+    {
+        imgUrl: "https://i.pravatar.cc/?img=34",
+        width: w,
+    },
+    {
+        imgUrl: "https://i.pravatar.cc/?img=35",
+        width: w,
+    },
+    {
+        imgUrl: "https://i.pravatar.cc/?img=36",
+        width: w,
+    },
+    {
+        imgUrl: "https://i.pravatar.cc/?img=37",
+        width: w,
+    },
+    {
+        imgUrl: "https://i.pravatar.cc/?img=38",
         width: w,
     },
     {
