@@ -27,14 +27,9 @@ const FlowerBubble = () => {
                     <img src="https://i.pravatar.cc/?img=5" className="avatar" alt="description of image3" />
                 </div>
                 <div className="avatarContainer">
-                    <img src="https://i.pravatar.cc/?img=5" className="avatar" alt="description of image3" />
+                    <img src="https://i.pravatar.cc/?img=6" className="avatar" alt="description of image3" />
                 </div>
-                <div className="avatarContainer">
-                    <img src="https://i.pravatar.cc/?img=5" className="avatar" alt="description of image3" />
-                </div>
-                <div className="avatarContainer">
-                    <img src="http://lea.verou.me/book/adamcatlace.jpg" className="avatar" alt="description of image" />
-                </div>
+
             </div>
         </div>
     );

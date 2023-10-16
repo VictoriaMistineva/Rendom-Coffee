@@ -28,10 +28,11 @@ const NewBubbles = () => {
                     left: left ? left : 0,
                     bottom: bottom ? bottom : 0,
                     position: "relative",
-                    animationDuration: "60s",
+                    animationDuration: "7s",
                     visibility: visibility === false ? "hidden" : "visible",
                 }}
-                    // className={"bubbleImg10"}
+                    //className={"bubbleImg5"}
+                    className={"bubbleImg5"}
                 />
             </>
         );
@@ -62,7 +63,10 @@ const NewBubbles = () => {
                 </Row>
                 <br></br>
                 <Row justify="around" style={{ marginTop: 30}}>
-                    <Col>
+                    <Col className={"bubbleImg6"} 
+                    style={{
+                        animationDuration: "11s"
+                    }}>
                         <FlowerBubble/>
                     </Col>
                 </Row>
