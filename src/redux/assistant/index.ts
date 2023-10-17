@@ -22,6 +22,7 @@ import {
   turnOnSound,
   openActionPopup,
   closeActionPopup,
+  openHowItWorksPopUp,
 } from '../utilsCommandName';
 import { selectionMethodPageSliceState } from '../selectionMethodPage/types';
 import { bubblesImageSliceState } from '../bubblesImage/types';
@@ -196,6 +197,11 @@ const processAssistantCommand = (dispatch: AppDispatch, commandName: string, get
     case 'UsersNotFound':
       dispatch(
         openActionPopup({ commandName: commandName })
+      );
+      break;
+    case 'HowItWorks':
+      dispatch(
+        openHowItWorksPopUp()
       );
       break;
     default:

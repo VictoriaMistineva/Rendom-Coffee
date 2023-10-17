@@ -7,6 +7,7 @@ export type UtilsCommandNameSliceState = {
     isSoundOff: boolean,
     alertPopup: AlertPopup,
     actionPopup: ActionPopUp,
+    howItWorksPopUpIsOpen: boolean,
 }
 export type ActionPopUp = {
     isOpen: boolean,

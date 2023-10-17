@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import PaginationLine from '../PaginationLine';
 import { getIsMicrophoneOff, getIsSoundOff, turnOffMicrophone, turnOffSound, turnOnMicrophone, turnOnSound } from '../../redux/utilsCommandName';
 import { sendData } from '../../redux/assistant';
+import { getStoriesPage } from '../../redux/firstStoriesPage';
 
 
 interface HeaderProps {
@@ -25,7 +26,8 @@ const Header = ({ className }: HeaderProps) => {
 
   const isMicrophoneOff = useSelector(getIsMicrophoneOff);
   const isSoundOff = useSelector(getIsSoundOff);
-
+  const slidesPerView = useSelector(getStoriesPage);
+  
   const handleClickMicrophone = useCallback(() => {
     if (isMicrophoneOff) dispatch(turnOnMicrophone());
     else dispatch(turnOffMicrophone());
@@ -87,8 +89,8 @@ const Header = ({ className }: HeaderProps) => {
       </div>
       {routingTitle ? routingTitle :
         <div className={styles.header__paginationContainer}>
-          <PaginationLine isActive={location.pathname === '/firstStories'} />
-          <PaginationLine isActive={location.pathname === '/SecondPage'} />
+          <PaginationLine isActive={location.pathname === '/firstStories' && slidesPerView == 1} />
+          <PaginationLine isActive={location.pathname === '/firstStories' && slidesPerView == 2} />
         </div>
       }
       <div className={styles.header__buttons}>

@@ -21,8 +21,9 @@ import styles from './Layout.module.scss';
 import { RootState } from '../redux';
 import AlertPopup from '../components/AlertPopup';
 import StatusPopup from '../components/StatusPopup';
-import {closeActionPopup, closeAlertPopup, getActionPopup, getAlertPopup } from '../redux/utilsCommandName'
+import {closeActionPopup, closeAlertPopup, getActionPopup, getAlertPopup,closeHowItWorksPopUp,getHowItWorksPopUpIsOpen } from '../redux/utilsCommandName'
 import StatusPopupOpacityAndIsButton from '../components/StatusPopupOpacityAndIsButton';
+import HowItWorksPopUp from '../components/HowItWorksPopUp';
 
 
 interface LayoutProps {
@@ -45,6 +46,7 @@ const Layout = ({ children } : LayoutProps) => {
 
   const actionPopup = useSelector(getActionPopup);
   const alertPopup = useSelector(getAlertPopup);
+  const howItWorksPopUpIsOpen = useSelector(getHowItWorksPopUpIsOpen);
   
   useEffect(() => {
     // @ts-ignore
@@ -62,6 +64,10 @@ const Layout = ({ children } : LayoutProps) => {
   
   const handleCloseAlertPopup = useCallback(() => {
     dispatch(closeAlertPopup());
+  }, []);
+
+  const handleCloseHowItWorksPopUp = useCallback(() => {
+    dispatch(closeHowItWorksPopUp());
   }, []);
 
 
@@ -99,6 +105,12 @@ const Layout = ({ children } : LayoutProps) => {
             onClose={handleCloseActionPopup}
           />
         )}
+      {howItWorksPopUpIsOpen && (
+          <HowItWorksPopUp
+            isOpen = {howItWorksPopUpIsOpen}
+            onClose={handleCloseHowItWorksPopUp}
+          />
+      )}
     </div>
   );
 };

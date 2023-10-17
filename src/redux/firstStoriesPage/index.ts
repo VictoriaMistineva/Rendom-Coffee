@@ -1,13 +1,16 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import {StartConfirmationPageSliceState} from './types'
+import { StartConfirmationPageSliceState } from './types'
 import { number } from 'prop-types';
 export * from './selectors';
 
 
 const initialState: StartConfirmationPageSliceState = {
-    access: true,
-    checkboxAccess: false,
-  }
+  access: true,
+  checkboxAccess: false,
+  storiesPage: 1,
+  sound: false, 
+  microphone: false
+}
 
 const startConfirmationSlice = createSlice({
   name: 'startConfirmation',
@@ -16,6 +19,7 @@ const startConfirmationSlice = createSlice({
     setData(state, action: PayloadAction<StartConfirmationPageSliceState>) {
       state.access = action.payload?.access ?? true;
       state.checkboxAccess = action.payload?.checkboxAccess ?? false;
+      state.storiesPage = action.payload?.storiesPage ?? 1;
     },
     // OpenInfoPopUp(state){
     //   // state.infoPopUp.isShow = 

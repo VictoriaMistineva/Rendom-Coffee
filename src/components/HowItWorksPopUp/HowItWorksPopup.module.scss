@@ -1,0 +1,108 @@
+@import "../../assets/styles/var";
+@import '../../assets/styles/mixins';
+
+
+.connectionListPopup {
+  &__content {
+    padding: 19px 27.8px 42px 0;
+    overflow: auto;
+    background: radial-gradient(72.02% 60.82% at 50.15% 0,#4c3123 0,#1a1a1a 100%);
+  }
+
+  &__iconContainer {
+    width: 112px;
+    height: 60px;
+    margin: 60px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(250, 109, 32, 0.1);
+      filter: blur(65px);
+    }
+  }
+
+  &__text {
+    width: calc(100% - 60px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    opacity: 0.5;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.022em;
+    color: rgba(255, 255, 255, 0.96);
+    margin-bottom: 5.5px;
+  }
+  &__textContent {
+    width: 325px;
+    margin-bottom: 42px;
+
+    font-family: 'SB Sans Text';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    @include mq("md") {
+      margin-bottom: 28px;
+      font: 600 16px/28px 'SB Sans Text', sans-serif;
+    }
+  }
+
+  &__subtitle {
+    font: 500 11px/17px 'SB Sans Text', sans-serif;
+    color: rgba(196, 196, 196, 0.63);
+    text-align: center;
+    letter-spacing: -0.022em;
+    margin-bottom: 5.5px;
+  }
+
+  &__meet {
+    @include btnReset;
+    display: block;
+    width: 100%;
+    padding: 9px 0;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    padding-left: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+
+  &__meetLogo {
+    width: 45px;
+  }
+
+  &__arrow {
+    margin-left: auto;
+    height: 15px !important;
+    margin-left: auto;
+
+    svg {
+      color: $colorMeetingGrey;
+    }
+  }
+}

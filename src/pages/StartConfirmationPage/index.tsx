@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import styles from './StartConfirmationPage.module.scss'
 import cn from 'classnames';
 import { ReactComponent as Illustration } from '../../assets/img/icons/Illustration.svg';
@@ -6,11 +6,11 @@ import { Checkbox } from '@salutejs/plasma-ui';
 import { RootState } from '../../redux';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { sendData, setPage } from '../../redux/assistant';
-import { getAccess, getCheckboxAccess } from '../../redux/firstStoriesPage';
+import { finishIsLoading, sendData, setPage } from '../../redux/assistant';
+import { getAccess, getCheckboxAccess, getStoriesPage } from '../../redux/firstStoriesPage';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import secondPageStyles from '../SecondStoriesPage/SecondStoriesPage.module.scss'
+import secondPageStyles from './SecondStoriesPage.module.scss'
 import "./swiper-custom.scss"
 // Import Swiper styles
 import 'swiper/css';
@@ -20,17 +20,30 @@ const StartConfirmationPage = () => {
 
   const checkboxAccess = useSelector(getCheckboxAccess);
   const access = useSelector(getAccess);
-
+  const slidesPerView = useSelector(getStoriesPage);
   // After switching slides to Mock, the page will be loaded (Please check out that content of mock and real pages are the same)
   const handleSlideChange = () => {
-    const page = "/SecondPage"
-    dispatch(setPage({ page }))
+    dispatch(
+      sendData({
+        action_id: 'changeStories',
+        parameters: { "page": (slidesPerView === 1) ? 1 : 2 }
+      })
+    );
+    dispatch(finishIsLoading())
   };
 
-  const handleClickButton = () => {
+  const handleClickButtonParticipate = () => {
     dispatch(
       sendData({
         action_id: 'clickParticipate',
+      })
+    );
+  };
+
+  const handleClickButtonHowItWorks = () => {
+    dispatch(
+      sendData({
+        action_id: 'HowItWorks',
       })
     );
   };
@@ -47,8 +60,9 @@ const StartConfirmationPage = () => {
   return (
     <Swiper
       spaceBetween={50}
-      slidesPerView={1}
+      slidesPerView={slidesPerView}
       onSlideChange={handleSlideChange}
+      onClick={handleSlideChange}
       loop={true}
     >
 
@@ -67,7 +81,7 @@ const StartConfirmationPage = () => {
           </div>
           <button
             className={cn(styles.startConfirmation__button, styles.startConfirmation__button_green)}
-            onClick={handleClickButton}
+            onClick={handleClickButtonParticipate}
           >
             Участвовать
           </button>
@@ -106,11 +120,13 @@ const StartConfirmationPage = () => {
           <div className={secondPageStyles.secondStories__buttonContainer}>
             <button
               className={cn(secondPageStyles.secondStories__button, secondPageStyles.secondStories__button_green)}
+              onClick={handleClickButtonParticipate}
             >
               Участвовать
             </button>
             <button
               className={cn(secondPageStyles.secondStories__button, secondPageStyles.secondStories__button_white)}
+              onClick={handleClickButtonHowItWorks}
             >
               Как это работает
             </button>

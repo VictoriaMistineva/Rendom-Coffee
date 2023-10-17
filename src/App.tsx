@@ -12,7 +12,6 @@ import YourLocationPage from './pages/YourLocationPage';
 import SelectionColleaguesPage from './pages/SelectionColleaguePage';
 import SelectionInterestPage from './pages/SelectionInterestPage';
 import StartConfirmationPage from './pages/StartConfirmationPage';
-import SecondStoriesPage from './pages/SecondStoriesPage';
 import SelectionColleaguePage from './pages/SelectionColleaguePage';
 import BubblesImagePage from './pages/BubblesImagePage';
 import SmallUserCardPage from './pages/SmallUserCardPage';
@@ -28,7 +27,6 @@ function App() {
           <Routes>
             <Route path="/" element={< StartConfirmationPage  />} />
             <Route path="/firstStories" element={< StartConfirmationPage />} />
-            <Route path="/SecondPage" element={< SecondStoriesPage />} />
             <Route path="/cityChoose" element={< YourLocationPage />} />
             <Route path = "/selectionMethod" element={<SelectionColleaguesPage/>}/>
             <Route path="/searchResult" element={<BubblesImagePage/>} />

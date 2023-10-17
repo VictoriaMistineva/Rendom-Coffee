@@ -19,6 +19,7 @@ const initialState: UtilsCommandNameSliceState = {
     subTitle: '',
     list: [],
   },
+  howItWorksPopUpIsOpen:false,
   commandName: ""
 }
 
@@ -91,13 +92,16 @@ const utilsCommandNameSlice = createSlice({
       state.alertPopup.isShow = true;
       state.alertPopup.title = payload.title ?? '';
       state.alertPopup.subTitle = payload.subTitle ?? '';
-
     },
     closeAlertPopup(state) {
       state.alertPopup.isShow = false;
     },
-
-
+    openHowItWorksPopUp(state) {
+      state.howItWorksPopUpIsOpen = true;
+    },
+    closeHowItWorksPopUp(state) {
+      state.howItWorksPopUpIsOpen = false;
+    },
   },
 });
 
@@ -111,5 +115,7 @@ export const {
   openActionPopup,
   closeActionPopup,
   openAlertPopup,
-  closeAlertPopup
+  closeAlertPopup,
+  openHowItWorksPopUp,
+  closeHowItWorksPopUp,
 } = utilsCommandNameSlice.actions;
