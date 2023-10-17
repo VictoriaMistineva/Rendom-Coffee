@@ -23,17 +23,32 @@ const HowItWorksPopup = ({
       <div
         className={styles.connectionListPopup__content}
       >
-        {/* <div className={styles.connectionListPopup__iconContainer}>
-          <IconWarning />
-        </div>
+
         <h5
           className={styles.connectionListPopup__title}
-          dangerouslySetInnerHTML={{ __html: title }}
-        />
+        >
+          Вы и другие сотрудники<br />
+          подтверждаете готовность<br />
+          к участию в рэндом кофе.<br />
+          Далее выбираете, как рекомендовать вам коллегу для встречи
+        </h5>
+
+        <div className={styles.connectionListPopup__contentText} >
+          <ul>
+            <li className={styles.li}>Доверюсь судьбе - рандомный выбор</li>
+            <li className={styles.li}>По календарю - ассистент найдет коллег на вашей площадке, с которыми у вас есть ближайшее общее свободное время в календаре</li>
+            <li className={styles.li}>По интересам - ассистент сопоставит интересы и предложит коллегу с похожим запросом</li>
+          </ul>
+        </div>
+
         <h5
           className={styles.connectionListPopup__subtitle}
-          dangerouslySetInnerHTML={{ __html: subTitle }}
-        /> */}
+        >
+          Если предложение вам подходит,<br />
+          ассистент выставит встречу<br />
+          в календарь всем участникам<br />
+        </h5>
+
       </div>
     </PopupSheet>
   );

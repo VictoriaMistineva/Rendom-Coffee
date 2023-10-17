@@ -1,7 +1,16 @@
 {
   "type": "smart_app_data",
   "smart_app_data": {
-    "commandName": "HowItWorks",
-    "commandParams": {}
+    "commandName": "StartPage",
+    "commandParams": {
+      "data": {
+        "access": true,
+        "checkboxAccess": true,
+        "storiesPage": 1,
+        "sound": false, 
+        "microphone": false 
+      },
+      "screenName": "FirstStories"
+    }
   }
 }

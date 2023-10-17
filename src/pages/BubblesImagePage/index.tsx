@@ -8,8 +8,8 @@ const BubblesImagePage = () => {
     return ( 
         <>
             {/* <Bubbles /> */}
-            <NewBubbles/>
-            {/* <FlowerBubble/> */}
+            {/* <NewBubbles/> */}
+            <FlowerBubble/>
         </>
     );
 };

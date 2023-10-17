@@ -162,12 +162,12 @@ const processAssistantCommand = (dispatch: AppDispatch, commandName: string, get
         console.log(data)
         // @ts-ignore
         if (commandParams?.data as AlertPopUp)
-        // @ts-ignore
+          // @ts-ignore
           dispatch(
             // @ts-ignore
             openAlertPopup({
               // @ts-ignore
-              title: commandParams?.data?.title ,
+              title: commandParams?.data?.title,
               subTitle: commandParams?.data,
             })
 
@@ -223,6 +223,11 @@ export const initAssistant = () => (dispatch: AppDispatch, getState: RootState) 
     return;
   }
 
+  // @ts-ignore
+  assistant.on('start', () => {
+    // @ts-ignore
+    window.AssistantHost?.closeKeyboard?.()
+  })
   assistant.on('data', (response: SmartAppResponseType) => {
     // dispatch(setErrorInfo(response));
     const data =

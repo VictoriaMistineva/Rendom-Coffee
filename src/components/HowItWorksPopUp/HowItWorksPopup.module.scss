@@ -4,9 +4,17 @@
 
 .connectionListPopup {
   &__content {
-    padding: 19px 27.8px 42px 0;
+    padding: 19px 27.8px 100px 0;
     overflow: auto;
-    background: radial-gradient(72.02% 60.82% at 50.15% 0,#4c3123 0,#1a1a1a 100%);
+
+  }
+
+  &__contentText {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center
   }
 
   &__iconContainer {
@@ -51,30 +59,24 @@
     color: rgba(255, 255, 255, 0.96);
     margin-bottom: 5.5px;
   }
+
   &__textContent {
-    width: 325px;
-    margin-bottom: 42px;
-
-    font-family: 'SB Sans Text';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 35px;
+    font-family: SB Sans Text;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: -0.019em;
     text-align: center;
-    letter-spacing: -0.022em;
-
-    @include mq("md") {
-      margin-bottom: 28px;
-      font: 600 16px/28px 'SB Sans Text', sans-serif;
-    }
   }
 
   &__subtitle {
-    font: 500 11px/17px 'SB Sans Text', sans-serif;
-    color: rgba(196, 196, 196, 0.63);
+    font-family: SB Sans Text;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: -0.019em;
     text-align: center;
-    letter-spacing: -0.022em;
-    margin-bottom: 5.5px;
+
   }
 
   &__meet {
@@ -105,4 +107,18 @@
       color: $colorMeetingGrey;
     }
   }
+
+
+}
+
+.li {
+  font-family: SB Sans Text;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.019em;
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 20px;
+
 }

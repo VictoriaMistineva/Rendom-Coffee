@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getUsers, getAvatar } from '../../redux/smallUserCard';
 import { ReactComponent as IconAction } from '../../assets/img/icons/Action.svg';
 import { sendData } from '../../redux/assistant';
+import AVATAR from '../../assets/img/icons/avatar.svg'; 
 const SmallUserCard = () => {
 
     const users = useSelector(getUsers);
@@ -30,7 +31,7 @@ const SmallUserCard = () => {
         <div className={styles.smallCardUser}>
 
             <div className={styles.smallCardUser__container}>
-                    <img src={avatar} width={156} style={{ borderRadius: "50%" }} />
+                    <img src={avatar ? avatar: AVATAR} width={156} style={{ borderRadius: "50%" }} />
 
                 <div className={styles.smallCardUser__textContainer}>
                     <div className={styles.smallCardUser__title}>

@@ -14,13 +14,14 @@ const YourLocationPage = () => {
   const dispatch = useDispatch();
   const citiesArray = useSelector(getCities);
   const locationCity = useSelector(getCity);
-  const [pickerLabel, setPickerLabel] = useState<string | number | Date>("");
+  const [pickerLabel, setPickerLabel] = useState<string | number | Date>(locationCity);
+
 
   const handleClickButton = () => {
     dispatch(
       sendData({
         action_id: 'clickButtonPicker',
-        parameters: pickerLabel ? pickerLabel : locationCity,
+        parameters: pickerLabel,
       })
     );
   }
@@ -39,10 +40,11 @@ const YourLocationPage = () => {
           citiesArray.length > 0 ? (
             <Picker
               items={citiesArray.map((item, index) => ({ value: item, label: item }))}
-              value={locationCity}
+              value={pickerLabel}
               enableNativeControl={true}
-              infiniteScroll={false}
+              infiniteScroll={true}
               className={styles.picker}
+              autofocus = {true}
               onChange={(value: PickerItem) => (setPickerLabel(value.value))}
 
             />

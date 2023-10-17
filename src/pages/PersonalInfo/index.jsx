@@ -6,6 +6,10 @@ import ICON_PRESENT from '../../assets/img/icons/present.svg';
 import styles from './PersonalInfo.module.scss';
 import { sendData } from '../../redux/assistant';
 import { getUsers, getAvatar, getTeams } from '../../redux/smallUserCard';
+import AVATAR from '../../assets/img/icons/avatar.svg'; 
+
+
+
 
 const PersonalInfo = () => {
   const users = useSelector(getUsers);
@@ -36,7 +40,7 @@ const PersonalInfo = () => {
                 styles.organizerMeet__avatarIcon,
                 styles.organizerMeet__avatarIcon_img
               )}
-              src={avatar}
+              src={avatar ? avatar: AVATAR}
               alt="Avatar"
             />
           )}
