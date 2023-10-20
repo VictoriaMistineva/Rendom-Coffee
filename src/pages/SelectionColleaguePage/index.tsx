@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './SelectionСolleaguesPage.module.scss'
 import cn from 'classnames';
@@ -11,7 +11,7 @@ import { sendData } from '../../redux/assistant';
 const SelectionColleaguesPage = () => {
   const dispatch = useDispatch();
   const methods = useSelector(getMethods);
-
+  const [isActiveButton, setIsActiveButton] = useState<boolean>(false)
   const handleChange = (index: number) => {
     dispatch(
       sendData({
@@ -29,6 +29,17 @@ const SelectionColleaguesPage = () => {
     );
   };
 
+
+  useEffect(() => {
+
+    methods.forEach((item, index) => {
+      if (item.selected === true) {
+        setIsActiveButton(true)
+      }
+    })
+  }, [methods])
+
+
   return (
     <div className={styles.selectionColleagues}>
       <div className={styles.selectionColleagues__container}>
@@ -41,6 +52,7 @@ const SelectionColleaguesPage = () => {
           {methods.map((item, index) => (
             <>
               <Radiobox
+                key={index}
                 label={item.title}
                 name={item.title}
                 className={styles.radiobox}
@@ -61,7 +73,7 @@ const SelectionColleaguesPage = () => {
         </RadioGroup>
       </div>
 
-      <button className={cn(styles.selectionColleagues__button, styles.selectionColleagues__button_green)}  onClick={handleClickButton}>
+      <button className={cn(styles.selectionColleagues__button, isActiveButton && styles.selectionColleagues__button_green)} onClick={handleClickButton} disabled={!isActiveButton}>
         Искать
       </button>
     </div>

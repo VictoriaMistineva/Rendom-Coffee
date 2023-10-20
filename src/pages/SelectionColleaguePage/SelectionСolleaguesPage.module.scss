@@ -5,7 +5,7 @@
   padding: 0 15px 0 15px;
 
   &__container {
-    padding-top: 163px;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,6 +34,7 @@
     height: 48px;
     border-radius: 12px;
     color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
+    background-color: rgba(255, 255, 255, 0.12);
     text-align: center;
     font-family: SB Sans Text;
     font-size: 22px;
@@ -93,32 +94,32 @@
   }
 
   &__radioGroupContainer {
-    margin-top: 92px;
+    margin-top: 80px;
   }
 }
 
-p{
+p {
   background: var(--text-icons-gradient-sber, linear-gradient(90deg, #0EB029 0%, #00A6C7 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: SB Sans Text;
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.228px;
-  
+  line-height: 15px;
+  letter-spacing: -0.019em;
+  text-align: left;
 }
 
 .radiobox span:first-of-type {
   color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
   font-family: SB Sans Text;
   font-size: 25px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.475px;
+  line-height: 31px;
+  letter-spacing: -0.019em;
+  text-align: left;
+
 }
 
 .radiobox label:first-of-type {

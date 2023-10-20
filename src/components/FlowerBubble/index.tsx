@@ -25,7 +25,7 @@ const FlowerBubble = () => {
                     <img src={COFFEE} className="avatar2" alt="description of image" />
                 </div>
                 {
-                    users.map((item, index) => (
+                    users.slice(0, 10).map((item, index) => (
                         <div className="avatarContainer" key={index} onClick={()=>{handleClickButton(item.id)}}>
                             <img src={item.avatar ? item.avatar : AVATAR} className="avatar" alt="description of image2" />
                         </div>

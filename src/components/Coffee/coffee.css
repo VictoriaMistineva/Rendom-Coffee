@@ -1,0 +1,535 @@
+.container {
+    position: absolute;
+    /* Center at Screen */
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.7);
+}
+
+#coffee,
+#cup {
+    position: fixed;
+}
+
+#coffee,
+#cup {
+    background-image: url("http://www.pngmart.com/files/4/Coffee-Cup-PNG-Photos.png");
+}
+
+.circle-container {
+    position: relative;
+    width: 20em;
+    height: 20em;
+    padding: 0;
+
+    border-radius: 50%;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* border: solid 1px #00A6C7; */
+}
+
+.circle-container>* {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3em;
+    height: 3em;
+    margin: -2em;
+}
+
+.circle-container>*:nth-of-type(1) {
+    transform: rotate(0deg) translate(10em) rotate(0deg);
+    will-change: transform;
+    animation-name: orbit;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container>*:nth-of-type(2) {
+    transform: rotate(45deg) translate(10em) rotate(-45deg);
+    will-change: transform;
+    animation-name: orbit2;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container>*:nth-of-type(3) {
+    transform: rotate(90deg) translate(10em) rotate(-90deg);
+    will-change: transform;
+    animation-name: orbit3;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container>*:nth-of-type(4) {
+    transform: rotate(135deg) translate(10em) rotate(-135deg);
+    will-change: transform;
+    animation-name: orbit4;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container>*:nth-of-type(5) {
+    transform: rotate(180deg) translate(10em) rotate(-180deg);
+    will-change: transform;
+    animation-name: orbit5;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container>*:nth-of-type(6) {
+    transform: rotate(225deg) translate(10em) rotate(-225deg);
+    will-change: transform;
+    animation-name: orbit6;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container>*:nth-of-type(7) {
+    transform: rotate(270deg) translate(10em) rotate(-270deg);
+    will-change: transform;
+    animation-name: orbit7;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container>*:nth-of-type(8) {
+    transform: rotate(315deg) translate(10em) rotate(-315deg);
+    will-change: transform;
+    animation-name: orbit8;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container img {
+    display: block;
+    max-width: 100%;
+    border-radius: 50%;
+    /* border: solid 1px #00A6C7; */
+    transition: 0.15s;
+}
+
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(10em);
+    }
+}
+
+@keyframes orbit2 {
+    from {
+        transform: rotate(45deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(405deg) translateX(10em);
+    }
+}
+
+@keyframes orbit3 {
+    from {
+        transform: rotate(90deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(450deg) translateX(10em);
+    }
+}
+
+@keyframes orbit4 {
+    from {
+        transform: rotate(135deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(495deg) translateX(10em);
+    }
+}
+
+@keyframes orbit5 {
+    from {
+        transform: rotate(180deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(540deg) translateX(10em);
+    }
+}
+
+@keyframes orbit6 {
+    from {
+        transform: rotate(225deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(585deg) translateX(10em);
+    }
+}
+
+@keyframes orbit7 {
+    from {
+        transform: rotate(270deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(630deg) translateX(10em);
+    }
+}
+
+@keyframes orbit8 {
+    from {
+        transform: rotate(315deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(675deg) translateX(10em);
+    }
+}
+
+.circle-container2 {
+    position: relative;
+    width: 30em;
+    height: 30em;
+    padding: 0;
+
+    /* border-radius: 50%; */
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* border: solid 1px #44b3de; */
+}
+
+.circle-container2>* {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3em;
+    height: 3em;
+    margin: -2em;
+}
+
+.circle-container2>*:nth-of-type(1) {
+    transform: rotate(0deg) translate(20em) rotate(0deg);
+    will-change: transform;
+    animation-name: sorbit;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container2>*:nth-of-type(2) {
+    transform: rotate(45deg) translate(20em) rotate(-45deg);
+    will-change: transform;
+    animation-name: sorbit2;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container2>*:nth-of-type(3) {
+    transform: rotate(90deg) translate(20em) rotate(-90deg);
+    will-change: transform;
+    animation-name: sorbit3;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container2>*:nth-of-type(4) {
+    transform: rotate(135deg) translate(20em) rotate(-135deg);
+    will-change: transform;
+    animation-name: sorbit4;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container2>*:nth-of-type(5) {
+    transform: rotate(180deg) translate(20em) rotate(-180deg);
+    will-change: transform;
+    animation-name: sorbit5;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container2>*:nth-of-type(6) {
+    transform: rotate(225deg) translate(20em) rotate(-225deg);
+    will-change: transform;
+    animation-name: sorbit6;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container2>*:nth-of-type(7) {
+    transform: rotate(270deg) translate(20em) rotate(-270deg);
+    will-change: transform;
+    animation-name: sorbit7;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container2>*:nth-of-type(8) {
+    transform: rotate(315deg) translate(20em) rotate(-315deg);
+    will-change: transform;
+    animation-name: sorbit8;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-container2 img {
+    display: block;
+    max-width: 100%;
+    border-radius: 50%;
+    /* border: solid 1px #00A6C7; */
+    transition: 0.15s;
+}
+
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(10em);
+    }
+}
+
+@keyframes orbit2 {
+    from {
+        transform: rotate(45deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(405deg) translateX(10em);
+    }
+}
+
+@keyframes orbit3 {
+    from {
+        transform: rotate(90deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(450deg) translateX(10em);
+    }
+}
+
+@keyframes orbit4 {
+    from {
+        transform: rotate(135deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(495deg) translateX(10em);
+    }
+}
+
+@keyframes orbit5 {
+    from {
+        transform: rotate(180deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(540deg) translateX(10em);
+    }
+}
+
+@keyframes orbit6 {
+    from {
+        transform: rotate(225deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(585deg) translateX(10em);
+    }
+}
+
+@keyframes orbit7 {
+    from {
+        transform: rotate(270deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(630deg) translateX(10em);
+    }
+}
+
+@keyframes orbit8 {
+    from {
+        transform: rotate(315deg) translate(10em);
+    }
+
+    to {
+        transform: rotate(675deg) translateX(10em);
+    }
+}
+
+@keyframes sorbit {
+    from {
+        transform: rotate(0deg) translate(15em);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(15em);
+    }
+}
+
+@keyframes sorbit2 {
+    from {
+        transform: rotate(45deg) translate(15em);
+    }
+
+    to {
+        transform: rotate(405deg) translateX(15em);
+    }
+}
+
+@keyframes sorbit3 {
+    from {
+        transform: rotate(90deg) translate(15em);
+    }
+
+    to {
+        transform: rotate(450deg) translateX(15em);
+    }
+}
+
+@keyframes sorbit4 {
+    from {
+        transform: rotate(135deg) translate(15em);
+    }
+
+    to {
+        transform: rotate(495deg) translateX(15em);
+    }
+}
+
+@keyframes sorbit5 {
+    from {
+        transform: rotate(180deg) translate(15em);
+    }
+
+    to {
+        transform: rotate(540deg) translateX(15em);
+    }
+}
+
+@keyframes sorbit6 {
+    from {
+        transform: rotate(225deg) translate(15em);
+    }
+
+    to {
+        transform: rotate(585deg) translateX(15em);
+    }
+}
+
+@keyframes sorbit7 {
+    from {
+        transform: rotate(270deg) translate(15em);
+    }
+
+    to {
+        transform: rotate(630deg) translateX(15em);
+    }
+}
+
+@keyframes sorbit8 {
+    from {
+        transform: rotate(315deg) translate(15em);
+    }
+
+    to {
+        transform: rotate(675deg) translateX(15em);
+    }
+}
+
+@-moz-keyframes spinnerRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes spinnerRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinnerRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#coffee {
+    position: absolute;
+    background-position: -110px -81px;
+    border-radius: 50%;
+    top: 75px;
+    left: 82px;
+    width: 175px;
+    height: 175px;
+    background-size: 360px 361px;
+    -webkit-animation-name: spinnerRotate;
+    -webkit-animation-duration: 100s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spinnerRotate;
+    -moz-animation-duration: 100s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spinnerRotate;
+    -ms-animation-duration: 100s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+
+#cup {
+    position: relative;
+    width: 330px;
+    height: 330px;
+    top: 0px;
+    left: 0;
+    background-size: 330px 330px;
+}

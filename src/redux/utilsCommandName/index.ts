@@ -33,6 +33,7 @@ const utilsCommandNameSlice = createSlice({
     turnOnMicrophone(state) {
       state.isMicrophoneOff = false;
     },
+
     turnOffMicrophone(state) {
       state.isMicrophoneOff = true;
     },
@@ -77,6 +78,16 @@ const utilsCommandNameSlice = createSlice({
             `Пользователи не найдены`,
           ];
           break;
+        case 'popUpGrantNotAccessButtonGrantAccess':
+          state.actionPopup.status = 'fail';
+          state.actionPopup.textItems = [
+            `Для выставления встреч<br/>
+            с помощью ассистента<br/>
+            необходимо предоставить<br/>
+            доступ к календарю<br/>`,
+          ];
+          state.actionPopup.buttonText = 'Предоставить доступ';
+          break
         default:
           break;
       }

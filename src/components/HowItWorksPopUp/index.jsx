@@ -35,9 +35,9 @@ const HowItWorksPopup = ({
 
         <div className={styles.connectionListPopup__contentText} >
           <ul>
-            <li className={styles.li}>Доверюсь судьбе - рандомный выбор</li>
-            <li className={styles.li}>По календарю - ассистент найдет коллег на вашей площадке, с которыми у вас есть ближайшее общее свободное время в календаре</li>
-            <li className={styles.li}>По интересам - ассистент сопоставит интересы и предложит коллегу с похожим запросом</li>
+            <li className={styles.li} style={{ listStyleType: 'disc' }}>Доверюсь судьбе - рандомный выбор</li>
+            <li className={styles.li} style={{ listStyleType: 'disc' }}>По календарю - ассистент найдет коллег на вашей площадке, с которыми у вас есть ближайшее общее свободное время в календаре</li>
+            <li className={styles.li} style={{ listStyleType: 'disc' }}>По интересам - ассистент сопоставит интересы и предложит коллегу с похожим запросом</li>
           </ul>
         </div>
 

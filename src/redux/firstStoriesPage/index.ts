@@ -7,7 +7,7 @@ export * from './selectors';
 const initialState: StartConfirmationPageSliceState = {
   access: true,
   checkboxAccess: false,
-  storiesPage: 1,
+  storiesPage: 0,
   sound: false, 
   microphone: false
 }
@@ -19,11 +19,8 @@ const startConfirmationSlice = createSlice({
     setData(state, action: PayloadAction<StartConfirmationPageSliceState>) {
       state.access = action.payload?.access ?? true;
       state.checkboxAccess = action.payload?.checkboxAccess ?? false;
-      state.storiesPage = action.payload?.storiesPage ?? 1;
+      state.storiesPage = action.payload?.storiesPage;
     },
-    // OpenInfoPopUp(state){
-    //   // state.infoPopUp.isShow = 
-    // }
   },
 });
 

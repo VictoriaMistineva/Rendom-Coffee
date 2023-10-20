@@ -23,6 +23,8 @@ import {
   openActionPopup,
   closeActionPopup,
   openHowItWorksPopUp,
+  closeHowItWorksPopUp,
+  openAlertPopup,
 } from '../utilsCommandName';
 import { selectionMethodPageSliceState } from '../selectionMethodPage/types';
 import { bubblesImageSliceState } from '../bubblesImage/types';
@@ -98,12 +100,10 @@ const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandPar
   switch (screenName) {
     case 'FirstStories':
       page = '/firstStories';
-      console.log(data)
       dispatch(setFirstStoriesPage(data as StartConfirmationPageSliceState))
       break;
     case 'SecondPage':
       page = '/SecondPage';
-      console.log(data);
       // dispatch()
       break;
     case 'CityChoose':
@@ -164,11 +164,11 @@ const processAssistantCommand = (dispatch: AppDispatch, commandName: string, get
         if (commandParams?.data as AlertPopUp)
           // @ts-ignore
           dispatch(
-            // @ts-ignore
             openAlertPopup({
               // @ts-ignore
               title: commandParams?.data?.title,
-              subTitle: commandParams?.data,
+              // @ts-ignore
+              subTitle: commandParams?.data?.subtitle,
             })
 
           );
@@ -199,10 +199,20 @@ const processAssistantCommand = (dispatch: AppDispatch, commandName: string, get
         openActionPopup({ commandName: commandName })
       );
       break;
+    case 'popUpGrantNotAccessButtonGrantAccess':
+      dispatch(
+        openActionPopup({ commandName: commandName })
+      );
+      break;
     case 'HowItWorks':
       dispatch(
         openHowItWorksPopUp()
       );
+      break;
+    // тут должны закрываться все попапы
+    case 'HidePopupOnScreen':
+      dispatch(closeActionPopup());
+      dispatch(closeHowItWorksPopUp());
       break;
     default:
       break;

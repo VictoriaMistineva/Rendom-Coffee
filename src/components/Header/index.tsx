@@ -26,7 +26,7 @@ const Header = ({ className }: HeaderProps) => {
 
   const isMicrophoneOff = useSelector(getIsMicrophoneOff);
   const isSoundOff = useSelector(getIsSoundOff);
-  const slidesPerView = useSelector(getStoriesPage);
+  const initialSlide = useSelector(getStoriesPage);
   
   const handleClickMicrophone = useCallback(() => {
     if (isMicrophoneOff) dispatch(turnOnMicrophone());
@@ -89,8 +89,9 @@ const Header = ({ className }: HeaderProps) => {
       </div>
       {routingTitle ? routingTitle :
         <div className={styles.header__paginationContainer}>
-          <PaginationLine isActive={location.pathname === '/firstStories' && slidesPerView == 1} />
-          <PaginationLine isActive={location.pathname === '/firstStories' && slidesPerView == 2} />
+          {/* <PaginationLine isActive={(location.pathname === '/firstStories' && initialSlide == 0 ) || location.pathname === '/'} /> */}
+          <PaginationLine isActive={location.pathname === '/firstStories' && initialSlide == 0 } />
+          <PaginationLine isActive={location.pathname === '/firstStories' && initialSlide == 1} />
         </div>
       }
       <div className={styles.header__buttons}>
