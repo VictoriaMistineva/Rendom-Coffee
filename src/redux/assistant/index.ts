@@ -130,6 +130,9 @@ const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandPar
       page = '/meetInfo'
       dispatch(setMeetingInfo(data as MeetInfoSliceState))
       break
+    case 'SberTopQrStoriesPage':
+      page = '/sberTopQrStoriesPage'
+      break
 
   }
 

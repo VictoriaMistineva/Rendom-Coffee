@@ -1,0 +1,14 @@
+.sberTopQrPage{
+    &__container{
+        padding-top: 106px;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        &_content{
+            width: 226px;
+        }
+
+    }
+
+
+}
