@@ -2,20 +2,8 @@
   "type": "smart_app_data",
   "smart_app_data": {
     "commandName": "SearchResult",
-              "commandParams": {
-                "data": {
-                  "users": [
-                    {
-                      "id": "1929881",
-                      "avatar": ""
-                    },
-                    {
-                      "id": "1929881",
-                      "avatar": ""
-                    }
-                  ]
-                },
-                "screenName": "SearchResult"
+    "commandParams": {
+      "screenName": "SberTopQrStoriasPage"
     }
   }
 }

@@ -29,14 +29,14 @@ const Coffee = () => {
             <ul className='circle-container'>
                 {
                     users.slice(0, 8).map((item, index) => (
-                        <li key={index} > <img src={item.avatar ? item.avatar : AVATAR} alt="..." onClick={()=>{handleClickButton(item.id)}}/></li>
+                        <li key={index} className='container1'> <img src={item.avatar ? item.avatar : AVATAR}  className="avatar" alt="..." onClick={()=>{handleClickButton(item.id)}}/></li>
                     ))
                 }
             </ul>
             <ul className='circle-container2'>
                 {
                     users.slice(8,16).map((item, index) => (
-                        <li key={index} onClick={()=>{handleClickButton(item.id)}}><img src={item.avatar ? item.avatar : AVATAR} alt="..." onClick={()=>{handleClickButton(item.id)}}/></li>
+                        <li key={index} className='container2' onClick={()=>{handleClickButton(item.id)}}><img src={item.avatar ? item.avatar : AVATAR} className="avatar" alt="..." onClick={()=>{handleClickButton(item.id)}}/></li>
                     ))
                 }
             </ul>
