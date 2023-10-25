@@ -1,8 +1,9 @@
-.containerCoffee{
+.containerCoffee {
     overflow-x: hidden;
     overflow-y: hidden;
     overflow: hidden;
 }
+
 .container {
     position: absolute;
     /* Center at Screen */
@@ -26,20 +27,17 @@
     width: 20em;
     height: 20em;
     padding: 0;
-
     border-radius: 50%;
     list-style: none;
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    /* border: solid 1px #00A6C7; */
     z-index: 100;
-}
-
-.circle-container>* {
+  }
+  
+  .circle-container > * {
     display: block;
     position: absolute;
     top: 50%;
@@ -47,169 +45,97 @@
     width: 3em;
     height: 3em;
     margin: -2em;
-}
-
-.circle-container>*:nth-of-type(1) {
-    transform: rotate(0deg) translate(10em) rotate(0deg);
-    will-change: transform;
+    transform-origin: center center;
     animation-name: orbit;
-    animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-}
-
-.circle-container>*:nth-of-type(2) {
+  }
+  
+  .circle-container> *:nth-of-type(1) {
+    transform: rotate(0deg) translate(10em) rotate(0deg);
+    animation-duration: 60s;
+  }
+  
+  .circle-container> *:nth-of-type(2) {
     transform: rotate(45deg) translate(10em) rotate(-45deg);
-    will-change: transform;
-    animation-name: orbit2;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-.circle-container>*:nth-of-type(3) {
-    transform: rotate(90deg) translate(10em) rotate(-90deg);
-    will-change: transform;
-    animation-name: orbit3;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-.circle-container>*:nth-of-type(4) {
-    transform: rotate(135deg) translate(10em) rotate(-135deg);
-    will-change: transform;
-    animation-name: orbit4;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-.circle-container>*:nth-of-type(5) {
-    transform: rotate(180deg) translate(10em) rotate(-180deg);
-    will-change: transform;
-    animation-name: orbit5;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-.circle-container>*:nth-of-type(6) {
-    transform: rotate(225deg) translate(10em) rotate(-225deg);
-    will-change: transform;
-    animation-name: orbit6;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-.circle-container>*:nth-of-type(7) {
-    transform: rotate(270deg) translate(10em) rotate(-270deg);
-    will-change: transform;
-    animation-name: orbit7;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-.circle-container>*:nth-of-type(8) {
-    transform: rotate(315deg) translate(10em) rotate(-315deg);
-    will-change: transform;
-    animation-name: orbit8;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-.circle-container img {
+    animation-duration: 66s;
+  }
+  
+  .circle-container img {
     display: block;
     width: 60px;
+    height: 60px;
     border-radius: 50%;
-    /* border: solid 1px #00A6C7; */
-    transition: 0.15s;
-    z-index: 101;
-}
-
-
-@keyframes orbit {
+    animation: spin 10s infinite linear;
+  }
+  
+  @keyframes orbit {
     from {
-        transform: rotate(0deg) translate(10em);
+      transform: rotate(0deg) translate(10em);
     }
-
+  
     to {
-        transform: rotate(360deg) translateX(10em);
+      transform: rotate(360deg) translateX(10em);
     }
-}
-
-@keyframes orbit2 {
+  }
+  
+  @keyframes spin {
     from {
-        transform: rotate(45deg) translate(10em);
+      transform: rotate(0);
     }
-
+  
     to {
-        transform: rotate(405deg) translateX(10em);
+      transform: rotate(360deg);
     }
-}
-
-@keyframes orbit3 {
+  }
+  
+  .circle-container img {
+    animation: none; 
+    animation-name: reverse-spin; 
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes reverse-spin {
     from {
-        transform: rotate(90deg) translate(10em);
+      transform: rotate(0);
     }
-
+  
     to {
-        transform: rotate(450deg) translateX(10em);
+      transform: rotate(-360deg);
     }
-}
+  }
 
-@keyframes orbit4 {
-    from {
-        transform: rotate(135deg) translate(10em);
-    }
 
-    to {
-        transform: rotate(495deg) translateX(10em);
-    }
-}
 
-@keyframes orbit5 {
-    from {
-        transform: rotate(180deg) translate(10em);
-    }
 
-    to {
-        transform: rotate(540deg) translateX(10em);
-    }
-}
 
-@keyframes orbit6 {
-    from {
-        transform: rotate(225deg) translate(10em);
-    }
 
-    to {
-        transform: rotate(585deg) translateX(10em);
-    }
-}
 
-@keyframes orbit7 {
-    from {
-        transform: rotate(270deg) translate(10em);
-    }
 
-    to {
-        transform: rotate(630deg) translateX(10em);
-    }
-}
 
-@keyframes orbit8 {
-    from {
-        transform: rotate(315deg) translate(10em);
-    }
 
-    to {
-        transform: rotate(675deg) translateX(10em);
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .circle-container2 {
     position: relative;
@@ -226,7 +152,7 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     /* border: solid 1px #44b3de; */
-    
+
 }
 
 .circle-container2>* {
