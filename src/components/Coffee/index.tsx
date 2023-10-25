@@ -21,26 +21,26 @@ const Coffee = () => {
     };
 
     return (
-        <>
+        <div className="containerCoffee">
             <div className="container">
                 <div id="cup" style={{ backgroundImage: `url(${cupImg})` }}></div>
                 <div id="coffee"></div>
             </div>
             <ul className='circle-container'>
                 {
-                    users.slice(0, 10).map((item, index) => (
+                    users.slice(0, 8).map((item, index) => (
                         <li key={index} > <img src={item.avatar ? item.avatar : AVATAR} alt="..." onClick={()=>{handleClickButton(item.id)}}/></li>
                     ))
                 }
             </ul>
             <ul className='circle-container2'>
                 {
-                    users.slice(10).map((item, index) => (
+                    users.slice(8,16).map((item, index) => (
                         <li key={index} onClick={()=>{handleClickButton(item.id)}}><img src={item.avatar ? item.avatar : AVATAR} alt="..." onClick={()=>{handleClickButton(item.id)}}/></li>
                     ))
                 }
             </ul>
-        </>
+        </div>
     );
 };
 

@@ -1,3 +1,8 @@
+.containerCoffee{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
+}
 .container {
     position: absolute;
     /* Center at Screen */
@@ -31,6 +36,7 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     /* border: solid 1px #00A6C7; */
+    z-index: 100;
 }
 
 .circle-container>* {
@@ -117,10 +123,11 @@
 
 .circle-container img {
     display: block;
-    max-width: 100%;
+    width: 60px;
     border-radius: 50%;
     /* border: solid 1px #00A6C7; */
     transition: 0.15s;
+    z-index: 101;
 }
 
 
@@ -219,6 +226,7 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     /* border: solid 1px #44b3de; */
+    
 }
 
 .circle-container2>* {
@@ -305,7 +313,7 @@
 
 .circle-container2 img {
     display: block;
-    max-width: 100%;
+    max-width: 70px;
     border-radius: 50%;
     /* border: solid 1px #00A6C7; */
     transition: 0.15s;

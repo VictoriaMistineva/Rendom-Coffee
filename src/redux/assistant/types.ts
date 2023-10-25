@@ -18,7 +18,8 @@ export type CommandParams = {
     eventName?: string,
     eventParams?: object
 }
+
 export type AlertPopUp = {
-    title?: object,
-    subTitle?: object
+    title?: string,
+    subTitle?: string
 }

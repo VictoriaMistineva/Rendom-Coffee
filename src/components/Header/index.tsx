@@ -16,9 +16,11 @@ import { getStoriesPage } from '../../redux/firstStoriesPage';
 
 interface HeaderProps {
   className?: string;
+  isWeb?: boolean;
+
 }
 
-const Header = ({ className }: HeaderProps) => {
+const Header = ({ className, isWeb }: HeaderProps) => {
 
   const location = useLocation();
   const dispatch = useDispatch();
@@ -85,8 +87,8 @@ const Header = ({ className }: HeaderProps) => {
 
           />
         </div>
-
       </div>
+
       {routingTitle ? routingTitle :
         <div className={styles.header__paginationContainer}>
           {/* <PaginationLine isActive={(location.pathname === '/firstStories' && initialSlide == 0 ) || location.pathname === '/'} /> */}
@@ -94,20 +96,25 @@ const Header = ({ className }: HeaderProps) => {
           <PaginationLine isActive={location.pathname === '/firstStories' && initialSlide == 1} />
         </div>
       }
-      <div className={styles.header__buttons}>
-        <button
-          onClick={handleClickMicrophone}
-          className={styles.header__button}
-        >
-          <img src={isMicrophoneOff ? MICROPHONE_OFF : MICROPHONE_ON} />
-        </button>
-        <button
-          onClick={handleClickSound}
-          className={styles.header__button}
-        >
-          {isSoundOff ? <IconSoundOff /> : <IconSoundOn />}
-        </button>
-      </div>
+      {
+        !isWeb ?
+          <div className={styles.header__buttons}>
+          <button
+            onClick={handleClickMicrophone}
+            className={styles.header__button}
+          >
+            <img src={isMicrophoneOff ? MICROPHONE_OFF : MICROPHONE_ON} />
+          </button>
+          <button
+            onClick={handleClickSound}
+            className={styles.header__button}
+          >
+            {isSoundOff ? <IconSoundOff /> : <IconSoundOn />}
+          </button>
+        </div>
+        :
+        <div></div>
+      }
     </header>
   );
 };

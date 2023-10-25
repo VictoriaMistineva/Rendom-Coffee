@@ -7,12 +7,12 @@ import Coffee from '../../components/Coffee';
 
 const BubblesImagePage = () => {
     return ( 
-        <>
+        <div style={{overflowY: "hidden"}}>
             {/* <Bubbles /> */}
             {/* <NewBubbles/> */}
-            <FlowerBubble/>
-            {/* <Coffee/> */}
-        </>
+            {/* <FlowerBubble/> */}
+            <Coffee/>
+        </div>
     );
 };
 

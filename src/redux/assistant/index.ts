@@ -93,7 +93,7 @@ export const {
 export default assistantSlice.reducer;
 
 const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandParams) => {
-  const screenName = commandParams.screenName
+  const screenName = commandParams.screenName;
   const data = commandParams.data;
 
   let page = '';
@@ -104,7 +104,6 @@ const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandPar
       break;
     case 'SecondPage':
       page = '/SecondPage';
-      // dispatch()
       break;
     case 'CityChoose':
       page = '/cityChoose';
@@ -130,12 +129,10 @@ const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandPar
       page = '/meetInfo'
       dispatch(setMeetingInfo(data as MeetInfoSliceState))
       break
-    case 'SberTopQrStoriesPage':
-      page = '/sberTopQrStoriesPage'
+    case 'SberTopQrStoriasPage':
+      page = '/sberTopQrStoriasPage'
       break
-
   }
-
   dispatch(setPage({ page }));
 };
 
@@ -159,21 +156,13 @@ const processAssistantCommand = (dispatch: AppDispatch, commandName: string, get
       break;
     case 'ShowNoMatchPopup':
       {
-        // TODO ignore fix
-        // @ts-ignore
-        const data = commandParams?.data.title
-        console.log(data)
-        // @ts-ignore
-        if (commandParams?.data as AlertPopUp)
-          // @ts-ignore
+        const data = commandParams?.data as AlertPopUp
+        if (data)
           dispatch(
             openAlertPopup({
-              // @ts-ignore
-              title: commandParams?.data?.title,
-              // @ts-ignore
-              subTitle: commandParams?.data?.subtitle,
+              title: data.title,
+              subTitle: data.subTitle,
             })
-
           );
       }
       break;
