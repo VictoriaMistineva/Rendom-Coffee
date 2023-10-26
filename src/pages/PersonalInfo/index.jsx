@@ -40,7 +40,7 @@ const PersonalInfo = () => {
                 styles.organizerMeet__avatarIcon,
                 styles.organizerMeet__avatarIcon_img
               )}
-              src={avatar ? avatar: AVATAR}
+              src={avatar}
               alt="Avatar"
             />
           )}

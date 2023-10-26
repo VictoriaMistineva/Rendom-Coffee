@@ -1,7 +1,6 @@
 
 export type smallUserCardSliceState = {
     user: Users,
-    avatar: string,
 }
 
 

@@ -37,6 +37,7 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     /* border: solid 1px #00A6C7; */
+    
     z-index: 100;
 }
 
@@ -48,13 +49,27 @@
     width: 3em;
     height: 3em;
     margin: -2em;
+    
 }
 
+@keyframes myAnim {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
 .circle-container>*:nth-of-type(1) {
     transform: rotate(0deg) translate(10em) rotate(0deg);
     will-change: transform;
     animation-name: orbit;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -63,7 +78,7 @@
     transform: rotate(45deg) translate(10em) rotate(-45deg);
     will-change: transform;
     animation-name: orbit2;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -72,7 +87,7 @@
     transform: rotate(90deg) translate(10em) rotate(-90deg);
     will-change: transform;
     animation-name: orbit3;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -81,7 +96,7 @@
     transform: rotate(135deg) translate(10em) rotate(-135deg);
     will-change: transform;
     animation-name: orbit4;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -90,7 +105,7 @@
     transform: rotate(180deg) translate(10em) rotate(-180deg);
     will-change: transform;
     animation-name: orbit5;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -99,7 +114,7 @@
     transform: rotate(225deg) translate(10em) rotate(-225deg);
     will-change: transform;
     animation-name: orbit6;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -108,7 +123,7 @@
     transform: rotate(270deg) translate(10em) rotate(-270deg);
     will-change: transform;
     animation-name: orbit7;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -117,7 +132,7 @@
     transform: rotate(315deg) translate(10em) rotate(-315deg);
     will-change: transform;
     animation-name: orbit8;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -209,13 +224,18 @@
     height: 60px;
     border-radius: 50%;
     /* animation: none; */
+    
 }
+/* li{
+    animation: myAnim 2s ease 0s 1 normal forwards;
+} */
+
 
 .container1:nth-of-type(1) img{
     transform: rotate(0deg) translate(10em) rotate(0deg);
     will-change: transform;
     animation-name: reverse-spin;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
@@ -225,7 +245,7 @@
     transform: rotate(45deg) translate(10em) rotate(-45deg);
     will-change: transform;
     animation-name: reverse-spin2;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -234,7 +254,7 @@
     transform: rotate(90deg) translate(10em) rotate(-90deg);
     will-change: transform;
     animation-name: reverse-spin3;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -243,7 +263,7 @@
     transform: rotate(135deg) translate(10em) rotate(-135deg);
     will-change: transform;
     animation-name: reverse-spin4;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
@@ -253,7 +273,7 @@
     transform: rotate(180deg) translate(10em) rotate(-180deg);
     will-change: transform;
     animation-name: reverse-spin5;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
@@ -263,7 +283,7 @@
     transform: rotate(225deg) translate(10em) rotate(-225deg);
     will-change: transform;
     animation-name: reverse-spin6;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
@@ -273,7 +293,7 @@
     transform: rotate(270deg) translate(10em) rotate(-270deg);
     will-change: transform;
     animation-name: reverse-spin7;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
@@ -283,7 +303,7 @@
     transform: rotate(315deg) translate(10em) rotate(-315deg);
     will-change: transform;
     animation-name: reverse-spin8;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
@@ -369,37 +389,6 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .circle-container2 {
     position: relative;
     width: 30em;
@@ -432,7 +421,7 @@
     transform: rotate(0deg) translate(20em) rotate(0deg);
     will-change: transform;
     animation-name: sorbit;
-    animation-duration: 30s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -441,7 +430,7 @@
     transform: rotate(45deg) translate(20em) rotate(-45deg);
     will-change: transform;
     animation-name: sorbit2;
-    animation-duration: 30s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -450,7 +439,7 @@
     transform: rotate(90deg) translate(20em) rotate(-90deg);
     will-change: transform;
     animation-name: sorbit3;
-    animation-duration: 30s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -459,7 +448,7 @@
     transform: rotate(135deg) translate(20em) rotate(-135deg);
     will-change: transform;
     animation-name: sorbit4;
-    animation-duration: 30s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -468,7 +457,7 @@
     transform: rotate(180deg) translate(20em) rotate(-180deg);
     will-change: transform;
     animation-name: sorbit5;
-    animation-duration: 30s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -477,7 +466,7 @@
     transform: rotate(225deg) translate(20em) rotate(-225deg);
     will-change: transform;
     animation-name: sorbit6;
-    animation-duration: 30s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -486,7 +475,7 @@
     transform: rotate(270deg) translate(20em) rotate(-270deg);
     will-change: transform;
     animation-name: sorbit7;
-    animation-duration: 30s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -495,7 +484,7 @@
     transform: rotate(315deg) translate(20em) rotate(-315deg);
     will-change: transform;
     animation-name: sorbit8;
-    animation-duration: 30s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -668,6 +657,91 @@
         transform: rotate(675deg) translateX(15em);
     }
 }
+
+.container2:nth-of-type(1) img{
+    transform: rotate(0deg) translate(10em) rotate(0deg);
+    will-change: transform;
+    animation-name: reverse-spin;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.container2:nth-of-type(2) img{
+    transform: rotate(45deg) translate(10em) rotate(-45deg);
+    will-change: transform;
+    animation-name: reverse-spin2;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.container2:nth-of-type(3) img {
+    transform: rotate(90deg) translate(10em) rotate(-90deg);
+    will-change: transform;
+    animation-name: reverse-spin3;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.container2:nth-of-type(4) img  {
+    transform: rotate(135deg) translate(10em) rotate(-135deg);
+    will-change: transform;
+    animation-name: reverse-spin4;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.container2:nth-of-type(5) img  {
+    transform: rotate(180deg) translate(10em) rotate(-180deg);
+    will-change: transform;
+    animation-name: reverse-spin5;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.container2:nth-of-type(6) img  {
+    transform: rotate(225deg) translate(10em) rotate(-225deg);
+    will-change: transform;
+    animation-name: reverse-spin6;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.container2:nth-of-type(7) img  {
+    transform: rotate(270deg) translate(10em) rotate(-270deg);
+    will-change: transform;
+    animation-name: reverse-spin7;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.container2:nth-of-type(8) img  {
+    transform: rotate(315deg) translate(10em) rotate(-315deg);
+    will-change: transform;
+    animation-name: reverse-spin8;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+
+
+
+
+
+
 
 @-moz-keyframes spinnerRotate {
     from {

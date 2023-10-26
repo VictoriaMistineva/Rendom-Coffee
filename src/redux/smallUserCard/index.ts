@@ -20,7 +20,6 @@ const initialState: smallUserCardSliceState = {
     teams: [],
     isBusy: false,
   },
-  avatar: '',
 }
 
 const smallUserCardSlice = createSlice({
@@ -29,7 +28,7 @@ const smallUserCardSlice = createSlice({
   reducers: {
     setData(state, action:PayloadAction<smallUserCardSliceState>) {
       state.user = action.payload.user ?? {};
-      state.avatar = action.payload.avatar ?? '';
+      state.user.avatar = action.payload.user.avatar ?? '';
       state.user.teams = action.payload.user.teams ?? '';
       
     },
