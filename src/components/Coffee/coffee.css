@@ -232,13 +232,13 @@
     animation: myAnim 2s ease 0s 1 normal forwards;
 } */
 
-.ct{
+/* .ct{
     animation: pulse 5s infinite;
 }
 .ct2{
     animation-delay: 5s;
     animation: pulse2 7s infinite;
-}
+} */
 @keyframes pulse2{
     0%,
     100% {
@@ -836,6 +836,23 @@
     top: 0px;
     left: 0;
     background-size: 330px 330px;
+}
+
+.ct{
+  -webkit-animation-name: animate11;
+    -webkit-animation-duration: 19.8s;
+    animation-name: animate11;
+    animation-duration: 19.8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+.ct2{
+  -webkit-animation-name: animate11;
+    -webkit-animation-duration: 19.8s;
+    animation-name: animate11;
+    animation-duration: 19.8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 
 .bubbleImg1 {
@@ -1452,25 +1469,18 @@
   }
   @keyframes animate11 {
     0% {
-      color: #333333;
     }
     25% {
-      color: #999999;
-      transform: rotate(-11deg) scale(1.4) translateY(11px) translateX(19px);
-      opacity: 0.8;
+      transform: rotate(-11deg) scale(1.1) translateY(11px) translateX(19px);
     }
     50% {
-      color: #6D1995;
-      transform: rotate(-11deg) scale(1.4) translateY(19px) translateX(19px);
-      opacity: 0.5;
+      transform: rotate(-11deg) scale(1.2) translateY(19px) translateX(19px);
+
     }
     75% {
-      color: #4FBBDD;
       transform: rotate(12deg) scale(1.3) translateY(20px) translateX(19px);
-      opacity: 0.7;
     }
     100% {
-      color: #84991C;
     }
   }
   @-webkit-keyframes animate12 {
