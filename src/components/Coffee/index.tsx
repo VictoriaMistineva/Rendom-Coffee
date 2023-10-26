@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import cupImg from './cup.png'
 import "./coffee.css";
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,7 +10,6 @@ import AVATAR from '../../assets/img/icons/avatar.svg';
 const Coffee = () => {
     const users = useSelector(geUsersBubbles);
     const dispatch = useDispatch();
-
     const handleClickButton = (id: string) => {
         dispatch(
             sendData({
@@ -20,6 +19,34 @@ const Coffee = () => {
         );
     };
 
+    useEffect(() => {
+
+        const timeout = setTimeout(() => {
+          const children = document.querySelectorAll('.circle-container > *');
+          children.forEach((child) => {
+            child.classList.add('stop-animation');
+          });
+
+          const circleContainer2 = document.querySelectorAll('.circle-container2 > *');
+          circleContainer2.forEach((child) => {
+            child.classList.add('stop-animation');
+          });
+
+          const container1Img = document.querySelectorAll('.container1 img');
+          container1Img .forEach((child) => {
+            child.classList.add('stop-animation');
+          });
+
+          const container1Img2 = document.querySelectorAll('.container2 img');
+          container1Img2 .forEach((child) => {
+            child.classList.add('stop-animation');
+          });
+          
+        }, 10000);
+        return () => clearTimeout(timeout);
+
+      }, []);
+      
     return (
         <div className="containerCoffee">
             <div className="container">

@@ -21,6 +21,9 @@
 #cup {
     background-image: url("http://www.pngmart.com/files/4/Coffee-Cup-PNG-Photos.png");
 }
+.stop-animation {
+    animation-play-state: paused;
+}
 
 .circle-container {
     position: relative;
@@ -49,7 +52,6 @@
     width: 3em;
     height: 3em;
     margin: -2em;
-    
 }
 
 @keyframes myAnim {
@@ -735,12 +737,6 @@
     animation-timing-function: linear;
 
 }
-
-
-
-
-
-
 
 
 @-moz-keyframes spinnerRotate {
