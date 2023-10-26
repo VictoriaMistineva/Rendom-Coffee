@@ -218,7 +218,6 @@
     animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    background: aqua;
 
 }
 
@@ -229,7 +228,6 @@
     animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    background: rgb(72, 255, 0);
 }
 
 .container1:nth-of-type(3) img {
@@ -239,7 +237,6 @@
     animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    background: rgb(195, 0, 255);
 }
 
 .container1:nth-of-type(4) img  {
@@ -249,23 +246,11 @@
     animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    background: rgb(255, 0, 55);
 
 }
 
-img:nth-of-type(5) {
-    
-    /* transform: rotate(135deg) translate(10em) rotate(-135deg); */
-    will-change: transform;
-    animation-name: reverse-spin4;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-
-}
-
-img:nth-of-type(5) {
-    /* transform: rotate(180deg) translate(10em) rotate(-180deg); */
+.container1:nth-of-type(5) img  {
+    transform: rotate(180deg) translate(10em) rotate(-180deg);
     will-change: transform;
     animation-name: reverse-spin5;
     animation-duration: 60s;
@@ -274,8 +259,8 @@ img:nth-of-type(5) {
 
 }
 
-img:nth-of-type(6) {
-    /* transform: rotate(225deg) translate(10em) rotate(-225deg); */
+.container1:nth-of-type(6) img  {
+    transform: rotate(225deg) translate(10em) rotate(-225deg);
     will-change: transform;
     animation-name: reverse-spin6;
     animation-duration: 60s;
@@ -284,8 +269,8 @@ img:nth-of-type(6) {
 
 }
 
-img:nth-of-type(7) {
-    /* transform: rotate(315deg) translate(10em) rotate(-315deg); */
+.container1:nth-of-type(7) img  {
+    transform: rotate(270deg) translate(10em) rotate(-270deg);
     will-change: transform;
     animation-name: reverse-spin7;
     animation-duration: 60s;
@@ -294,8 +279,8 @@ img:nth-of-type(7) {
 
 }
 
-img:nth-of-type(8) {
-    /* transform: rotate(315deg) translate(10em) rotate(-315deg); */
+.container1:nth-of-type(8) img  {
+    transform: rotate(315deg) translate(10em) rotate(-315deg);
     will-change: transform;
     animation-name: reverse-spin8;
     animation-duration: 60s;
@@ -344,7 +329,7 @@ img:nth-of-type(8) {
     }
 }
 
-/* @keyframes reverse-spin5 {
+@keyframes reverse-spin5 {
     from {
         transform: rotate(-180deg);
     }
@@ -383,7 +368,7 @@ img:nth-of-type(8) {
         transform: rotate(-675deg);
     }
 }
- */
+
 
 
 
