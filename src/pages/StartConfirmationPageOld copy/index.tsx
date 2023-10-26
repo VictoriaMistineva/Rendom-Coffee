@@ -58,7 +58,7 @@ const StartConfirmationPage = () => {
           <div className={styles.startConfirmation__container}>
             <div>
               <div className={styles.startConfirmation__title}>
-                РЭНДОМ<br />КОФЕ <br />В СБЕРЕ
+                РАНДОМ<br />КОФЕ <br />В СБЕРЕ
               </div>
               <div>
                 <Illustration />
@@ -94,10 +94,10 @@ const StartConfirmationPage = () => {
         <div className={secondPageStyles.secondStories}>
           <div className={secondPageStyles.secondStories__container}>
             <div className={secondPageStyles.secondStories__title}>
-              К дню рождения <br />Сбера
+              Ко дню рождения <br />Сбера
             </div>
             <div className={secondPageStyles.secondStories__title}>
-              Мы запускаем <br />РЭНДОМ КОФЕ
+              Мы запускаем <br />РАНДОМ КОФЕ
             </div>
             <div className={secondPageStyles.secondStories__title}>
               Расширьте свой<br />круг интересных<br />знакомств

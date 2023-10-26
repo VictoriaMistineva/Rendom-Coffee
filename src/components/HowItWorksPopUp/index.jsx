@@ -29,15 +29,15 @@ const HowItWorksPopup = ({
         >
           Вы и другие сотрудники<br />
           подтверждаете готовность<br />
-          к участию в рэндом кофе.<br />
-          Далее выбираете, как рекомендовать вам коллегу для встречи
+          к участию в рандом кофе.<br />
+          Для встречи за кофе выберите вариант, который вам больше нравится:
         </h5>
 
         <div className={styles.connectionListPopup__contentText} >
           <ul>
-            <li className={styles.li} style={{ listStyleType: 'disc' }}>Доверюсь судьбе - рандомный выбор</li>
-            <li className={styles.li} style={{ listStyleType: 'disc' }}>По календарю - ассистент найдет коллег на вашей площадке, с которыми у вас есть ближайшее общее свободное время в календаре</li>
-            <li className={styles.li} style={{ listStyleType: 'disc' }}>По интересам - ассистент сопоставит интересы и предложит коллегу с похожим запросом</li>
+            <li className={styles.li} style={{ listStyleType: 'disc' }}>Доверюсь судьбе: выбор собеседника будет случайным.</li>
+            <li className={styles.li} style={{ listStyleType: 'disc' }}>По календарю: виртуальный помощник  подберёт собеседника из тех, кто работает в вашем офисе и доступен тогда же, когда и вы.</li>
+            <li className={styles.li} style={{ listStyleType: 'disc' }}>По интересам: виртуальный помощник найдёт коллегу с похожими увлечениями.</li>
           </ul>
         </div>
 

@@ -47,7 +47,7 @@ const SberTopQrPage = () => {
                         <Illustration width={"142.123,true"} height={"147.001,true"} />
 
                         <div className={styles.sberTopQrPage__card1_title}>
-                            РЭНДОМ<br />КОФЕ <br />В СБЕРЕ
+                            РАНДОМ<br />КОФЕ <br />В СБЕРЕ
                         </div>
 
                     </div>
@@ -55,12 +55,12 @@ const SberTopQrPage = () => {
                 <div className={styles.sberTopQrPage_content}>
                     <div className={styles.sberTopQrPage__card2}>
                         <div className={styles.sberTopQrPage__card2_title}>
-                            К дню рождения<br />
+                            Ко дню рождения<br />
                             <strong> Сбера</strong>
                         </div>
                         <div className={styles.sberTopQrPage__card2_title}>
                             Мы запускаем<br />
-                            <strong>РЭНДОМ КОФЕ</strong>
+                            <strong>РАНДОМ КОФЕ</strong>
                         </div>
                         <Cup />
                         <div className={styles.sberTopQrPage__card2_subtitle}>

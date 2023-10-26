@@ -102,6 +102,10 @@ const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandPar
       page = '/firstStories';
       dispatch(setFirstStoriesPage(data as StartConfirmationPageSliceState))
       break;
+    case 'SecondStories':
+      page = '/secondStories';
+      dispatch(setFirstStoriesPage(data as StartConfirmationPageSliceState))
+      break;
     case 'SecondPage':
       page = '/SecondPage';
       break;

@@ -1,0 +1,176 @@
+import React, { ChangeEvent, useCallback, useState, useEffect } from 'react';
+// import styles from './StartConfirmationPage.module.scss'
+import cn from 'classnames';
+import { ReactComponent as Illustration } from '../../assets/img/icons/Illustration.svg';
+import { Checkbox } from '@salutejs/plasma-ui';
+import { RootState } from '../../redux';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { finishIsLoading, sendData, setPage } from '../../redux/assistant';
+import { getAccess, getCheckboxAccess, getStoriesPage } from '../../redux/firstStoriesPage';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import secondPageStyles from './SecondStoriesPage.module.scss'
+import styles from './StartConfirmationPage.module.scss'
+import "./swiper-custom.scss"
+// Import Swiper styles
+import 'swiper/css';
+import { Spinner } from '@salutejs/plasma-core';
+import SwiperType from 'swiper';
+
+const StartConfirmationPage = () => {
+  // store swiper instance
+  const [swiper, setSwiper] = useState<SwiperType | null>(null);
+
+  const slideTo = (index: number) => swiper?.slideTo(index);
+
+  const dispatch = useDispatch();
+
+  const checkboxAccess = useSelector(getCheckboxAccess);
+  const access = useSelector(getAccess);
+  const initialSlide = useSelector(getStoriesPage);
+
+  useEffect(() => {
+    console.log(initialSlide)
+    // if (initialSlide !== undefined) {
+    //   slideTo(initialSlide);
+    // }
+  }, [initialSlide]);
+
+  const handleClickSlider = () => {
+    swiper?.slideNext();
+    dispatch(
+      sendData({
+        action_id: 'changeStories',
+        parameters: { "page": (initialSlide === 1) ? 0 : 1 }
+      })
+    );
+    dispatch(finishIsLoading())
+
+  };
+
+  const handleSlideChange = () => {
+    dispatch(
+      sendData({
+        action_id: 'changeStories',
+        parameters: { "page": (initialSlide === 1) ? 0 : 1 }
+      })
+    );
+    dispatch(finishIsLoading())
+  };
+
+  const handleClickButtonParticipate = () => {
+    dispatch(
+      sendData({
+        action_id: 'clickParticipate',
+      })
+    );
+  };
+
+  const handleClickButtonHowItWorks = () => {
+    dispatch(
+      sendData({
+        action_id: 'HowItWorks',
+      })
+    );
+  };
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    dispatch(
+      sendData({
+        action_id: 'calendarPickerChange',
+        parameters: event.target.checked,
+      })
+    );
+  };
+
+
+  if (initialSlide === undefined) {
+    return (
+      <></>
+    );
+  }
+  else {
+    return (
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        initialSlide={initialSlide}
+        onSwiper={setSwiper}
+        onSlideChange={handleSlideChange}
+        loop={true}
+      >
+
+        <SwiperSlide>
+
+          <div className={styles.startConfirmation}>
+            <div className={styles.startConfirmation__container}>
+              <div>
+                <div className={styles.startConfirmation__title}>
+                  РАНДОМ<br />КОФЕ <br />В СБЕРЕ
+                </div>
+                <div>
+                  <Illustration />
+                </div>
+              </div>
+            </div>
+            <button
+              className={cn(styles.startConfirmation__button, styles.startConfirmation__button_green)}
+              onClick={handleClickButtonParticipate}
+            >
+              Участвовать
+            </button>
+            {
+              !access &&
+              <div className={styles.startConfirmation__buttonContainer}>
+                <Checkbox
+                  label={
+                    <div>
+                      Предоставить ассистенту доступ к<br />календарю для подбора<br />
+                      удобного времени встречи
+                    </div>
+                  }
+                  checked={checkboxAccess}
+                  onChange={(event: ChangeEvent<HTMLInputElement>) => { handleChange(event) }}
+                />
+              </div>
+            }
+          </div >
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className={secondPageStyles.secondStories}>
+            <div className={secondPageStyles.secondStories__container}>
+              <div className={secondPageStyles.secondStories__title}>
+                Ко дню рождения <br />Сбера
+              </div>
+              <div className={secondPageStyles.secondStories__title}>
+                Мы запускаем <br />РАНДОМ КОФЕ
+              </div>
+              <div className={secondPageStyles.secondStories__title}>
+                Расширьте свой<br />круг интересных<br />знакомств
+              </div>
+            </div>
+            <div className={secondPageStyles.secondStories__buttonContainer}>
+              <button
+                className={cn(secondPageStyles.secondStories__button, secondPageStyles.secondStories__button_green)}
+                onClick={handleClickButtonParticipate}
+              >
+                Участвовать
+              </button>
+              <button
+                className={cn(secondPageStyles.secondStories__button, secondPageStyles.secondStories__button_white)}
+                onClick={handleClickButtonHowItWorks}
+              >
+                Как это работает
+              </button>
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper >
+
+    );
+  }
+};
+
+export default StartConfirmationPage;

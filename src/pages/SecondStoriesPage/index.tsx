@@ -50,7 +50,7 @@ const SecondStoriesPage = () => {
         <div className={styles.secondStories}>
           <div className={styles.secondStories__container}>
             <div className={styles.secondStories__title}>
-              К дню рождения <br />Сбера
+              Ко дню рождения <br />Сбера
             </div>
             <div className={styles.secondStories__title}>
               Мы запускаем <br />РЭНДОМ КОФЕ
@@ -82,7 +82,7 @@ const SecondStoriesPage = () => {
           <div className={firstPageStyles.startConfirmation__container}>
             <div>
               <div className={firstPageStyles.startConfirmation__title}>
-                РЭНДОМ<br />КОФЕ <br />В СБЕРЕ
+                РАНДОМ<br />КОФЕ <br />В СБЕРЕ
               </div>
               <div>
                 <Illustration />

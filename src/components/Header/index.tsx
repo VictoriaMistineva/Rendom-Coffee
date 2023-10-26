@@ -62,12 +62,12 @@ const Header = ({ className, isWeb }: HeaderProps) => {
 
   const routingTitle = useMemo(() => {
     switch (location.pathname) {
-      case '/SecondPage':
+      case '/secondStories':
       case '/firstStories':
       case '/':
         return '';
       default:
-        return 'РЭНДОМ КОФЕ В СБЕРЕ';
+        return 'РАНДОМ КОФЕ В СБЕРЕ';
     }
   }, [location.pathname]);
 
@@ -92,8 +92,8 @@ const Header = ({ className, isWeb }: HeaderProps) => {
       {routingTitle ? routingTitle :
         <div className={styles.header__paginationContainer}>
           {/* <PaginationLine isActive={(location.pathname === '/firstStories' && initialSlide == 0 ) || location.pathname === '/'} /> */}
-          <PaginationLine isActive={location.pathname === '/firstStories' && initialSlide == 0 } />
-          <PaginationLine isActive={location.pathname === '/firstStories' && initialSlide == 1} />
+          <PaginationLine isActive={location.pathname === '/firstStories' || location.pathname === '/'} />
+          <PaginationLine isActive={location.pathname === '/secondStories'} />
         </div>
       }
       {

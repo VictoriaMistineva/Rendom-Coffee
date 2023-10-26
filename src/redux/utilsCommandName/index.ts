@@ -49,7 +49,7 @@ const utilsCommandNameSlice = createSlice({
         case 'popUpStatusSuccess':
           state.actionPopup.status = 'success';
           state.actionPopup.textItems = [
-            `<strong>Приглашение <br /> на встречу <br /> отправлено <br /></strong>`,
+            `<strong>Приглашение <br />на рандом-кофе <br /> отправлено <br /></strong>`,`Свяжитесь с коллегой и назначьте место и время встречи`,`<strong>Вкусного кофе и увлекательных бесед. <br />Пусть день рождения СберБанка принесёт вам <br />интересные знакомства и новых друзей!</strong>`
           ];
           break;
 

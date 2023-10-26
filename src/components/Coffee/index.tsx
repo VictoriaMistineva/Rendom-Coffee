@@ -22,31 +22,31 @@ const Coffee = () => {
     useEffect(() => {
 
         const timeout = setTimeout(() => {
-          const children = document.querySelectorAll('.circle-container > *');
-          children.forEach((child) => {
-            child.classList.add('stop-animation');
-          });
+            const children = document.querySelectorAll('.circle-container > *');
+            children.forEach((child) => {
+                child.classList.add('stop-animation');
+            });
 
-          const circleContainer2 = document.querySelectorAll('.circle-container2 > *');
-          circleContainer2.forEach((child) => {
-            child.classList.add('stop-animation');
-          });
+            const circleContainer2 = document.querySelectorAll('.circle-container2 > *');
+            circleContainer2.forEach((child) => {
+                child.classList.add('stop-animation');
+            });
 
-          const container1Img = document.querySelectorAll('.container1 img');
-          container1Img .forEach((child) => {
-            child.classList.add('stop-animation');
-          });
+            const container1Img = document.querySelectorAll('.container1 img');
+            container1Img.forEach((child) => {
+                child.classList.add('stop-animation');
+            });
 
-          const container1Img2 = document.querySelectorAll('.container2 img');
-          container1Img2 .forEach((child) => {
-            child.classList.add('stop-animation');
-          });
-          
+            const container1Img2 = document.querySelectorAll('.container2 img');
+            container1Img2.forEach((child) => {
+                child.classList.add('stop-animation');
+            });
+
         }, 10000);
         return () => clearTimeout(timeout);
 
-      }, []);
-      
+    }, []);
+
     return (
         <div className="containerCoffee">
             <div className="container">
@@ -56,14 +56,14 @@ const Coffee = () => {
             <ul className='circle-container'>
                 {
                     users.slice(0, 8).map((item, index) => (
-                        <li key={index} className='container1'> <img src={item.avatar ? item.avatar : AVATAR}  className="avatar" alt="..." onClick={()=>{handleClickButton(item.id)}}/></li>
+                        <li key={index} className='container1'> <div className='ct'><img src={item.avatar ? item.avatar : AVATAR} className="avatar" alt="..." onClick={() => { handleClickButton(item.id) }} /></div></li>
                     ))
                 }
             </ul>
             <ul className='circle-container2'>
                 {
-                    users.slice(8,16).map((item, index) => (
-                        <li key={index} className='container2' onClick={()=>{handleClickButton(item.id)}}><img src={item.avatar ? item.avatar : AVATAR} className="avatar" alt="..." onClick={()=>{handleClickButton(item.id)}}/></li>
+                    users.slice(8, 16).map((item, index) => (
+                        <li key={index} className='container2' onClick={() => { handleClickButton(item.id) }}><div className='ct2'><img src={item.avatar ? item.avatar : AVATAR} className="avatar" alt="..." onClick={() => { handleClickButton(item.id) }} /></div></li>
                     ))
                 }
             </ul>
