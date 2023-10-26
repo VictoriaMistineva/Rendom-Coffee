@@ -19,7 +19,7 @@
 
 #coffee,
 #cup {
-    background-image: url("http://www.pngmart.com/files/4/Coffee-Cup-PNG-Photos.png");
+    background-image: url("./cup2.png");
 }
 .stop-animation {
     animation-play-state: paused;
@@ -71,72 +71,72 @@
     transform: rotate(0deg) translate(10em) rotate(0deg);
     will-change: transform;
     animation-name: orbit;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container>*:nth-of-type(2) {
     transform: rotate(45deg) translate(10em) rotate(-45deg);
     will-change: transform;
     animation-name: orbit2;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container>*:nth-of-type(3) {
     transform: rotate(90deg) translate(10em) rotate(-90deg);
     will-change: transform;
     animation-name: orbit3;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container>*:nth-of-type(4) {
     transform: rotate(135deg) translate(10em) rotate(-135deg);
     will-change: transform;
     animation-name: orbit4;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container>*:nth-of-type(5) {
     transform: rotate(180deg) translate(10em) rotate(-180deg);
     will-change: transform;
     animation-name: orbit5;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container>*:nth-of-type(6) {
     transform: rotate(225deg) translate(10em) rotate(-225deg);
     will-change: transform;
     animation-name: orbit6;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container>*:nth-of-type(7) {
     transform: rotate(270deg) translate(10em) rotate(-270deg);
     will-change: transform;
     animation-name: orbit7;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container>*:nth-of-type(8) {
     transform: rotate(315deg) translate(10em) rotate(-315deg);
     will-change: transform;
     animation-name: orbit8;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes orbit {
@@ -237,9 +237,9 @@
     transform: rotate(0deg) translate(10em) rotate(0deg);
     will-change: transform;
     animation-name: reverse-spin;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 
 }
 
@@ -247,27 +247,27 @@
     transform: rotate(45deg) translate(10em) rotate(-45deg);
     will-change: transform;
     animation-name: reverse-spin2;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .container1:nth-of-type(3) img {
     transform: rotate(90deg) translate(10em) rotate(-90deg);
     will-change: transform;
     animation-name: reverse-spin3;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .container1:nth-of-type(4) img  {
     transform: rotate(135deg) translate(10em) rotate(-135deg);
     will-change: transform;
     animation-name: reverse-spin4;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 
 }
 
@@ -275,9 +275,9 @@
     transform: rotate(180deg) translate(10em) rotate(-180deg);
     will-change: transform;
     animation-name: reverse-spin5;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 
 }
 
@@ -285,9 +285,9 @@
     transform: rotate(225deg) translate(10em) rotate(-225deg);
     will-change: transform;
     animation-name: reverse-spin6;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 
 }
 
@@ -295,9 +295,9 @@
     transform: rotate(270deg) translate(10em) rotate(-270deg);
     will-change: transform;
     animation-name: reverse-spin7;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 
 }
 
@@ -305,9 +305,9 @@
     transform: rotate(315deg) translate(10em) rotate(-315deg);
     will-change: transform;
     animation-name: reverse-spin8;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 
 }
 
@@ -423,72 +423,72 @@
     transform: rotate(0deg) translate(20em) rotate(0deg);
     will-change: transform;
     animation-name: sorbit;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container2>*:nth-of-type(2) {
     transform: rotate(45deg) translate(20em) rotate(-45deg);
     will-change: transform;
     animation-name: sorbit2;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container2>*:nth-of-type(3) {
     transform: rotate(90deg) translate(20em) rotate(-90deg);
     will-change: transform;
     animation-name: sorbit3;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container2>*:nth-of-type(4) {
     transform: rotate(135deg) translate(20em) rotate(-135deg);
     will-change: transform;
     animation-name: sorbit4;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container2>*:nth-of-type(5) {
     transform: rotate(180deg) translate(20em) rotate(-180deg);
     will-change: transform;
     animation-name: sorbit5;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container2>*:nth-of-type(6) {
     transform: rotate(225deg) translate(20em) rotate(-225deg);
     will-change: transform;
     animation-name: sorbit6;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container2>*:nth-of-type(7) {
     transform: rotate(270deg) translate(20em) rotate(-270deg);
     will-change: transform;
     animation-name: sorbit7;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container2>*:nth-of-type(8) {
     transform: rotate(315deg) translate(20em) rotate(-315deg);
     will-change: transform;
     animation-name: sorbit8;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .circle-container2 img {
@@ -500,244 +500,250 @@
 }
 
 
-@keyframes orbit {
-    from {
-        transform: rotate(0deg) translate(10em);
-    }
-
-    to {
-        transform: rotate(360deg) translateX(10em);
-    }
-}
-
-@keyframes orbit2 {
-    from {
-        transform: rotate(45deg) translate(10em);
-    }
-
-    to {
-        transform: rotate(405deg) translateX(10em);
-    }
-}
-
-@keyframes orbit3 {
-    from {
-        transform: rotate(90deg) translate(10em);
-    }
-
-    to {
-        transform: rotate(450deg) translateX(10em);
-    }
-}
-
-@keyframes orbit4 {
-    from {
-        transform: rotate(135deg) translate(10em);
-    }
-
-    to {
-        transform: rotate(495deg) translateX(10em);
-    }
-}
-
-@keyframes orbit5 {
-    from {
-        transform: rotate(180deg) translate(10em);
-    }
-
-    to {
-        transform: rotate(540deg) translateX(10em);
-    }
-}
-
-@keyframes orbit6 {
-    from {
-        transform: rotate(225deg) translate(10em);
-    }
-
-    to {
-        transform: rotate(585deg) translateX(10em);
-    }
-}
-
-@keyframes orbit7 {
-    from {
-        transform: rotate(270deg) translate(10em);
-    }
-
-    to {
-        transform: rotate(630deg) translateX(10em);
-    }
-}
-
-@keyframes orbit8 {
-    from {
-        transform: rotate(315deg) translate(10em);
-    }
-
-    to {
-        transform: rotate(675deg) translateX(10em);
-    }
-}
-
 @keyframes sorbit {
     from {
-        transform: rotate(0deg) translate(15em);
+        transform: rotate(-0deg) translate(15em);
     }
 
     to {
-        transform: rotate(360deg) translateX(15em);
+        transform: rotate(-360deg) translateX(15em);
     }
 }
 
 @keyframes sorbit2 {
     from {
-        transform: rotate(45deg) translate(15em);
+        transform: rotate(-45deg) translate(15em);
     }
 
     to {
-        transform: rotate(405deg) translateX(15em);
+        transform: rotate(-405deg) translateX(15em);
     }
 }
 
 @keyframes sorbit3 {
     from {
-        transform: rotate(90deg) translate(15em);
+        transform: rotate(-90deg) translate(15em);
     }
 
     to {
-        transform: rotate(450deg) translateX(15em);
+        transform: rotate(-450deg) translateX(15em);
     }
 }
 
 @keyframes sorbit4 {
     from {
-        transform: rotate(135deg) translate(15em);
+        transform: rotate(-135deg) translate(15em);
     }
 
     to {
-        transform: rotate(495deg) translateX(15em);
+        transform: rotate(-495deg) translateX(15em);
     }
 }
 
 @keyframes sorbit5 {
     from {
-        transform: rotate(180deg) translate(15em);
+        transform: rotate(-180deg) translate(15em);
     }
 
     to {
-        transform: rotate(540deg) translateX(15em);
+        transform: rotate(-540deg) translateX(15em);
     }
 }
 
 @keyframes sorbit6 {
     from {
-        transform: rotate(225deg) translate(15em);
+        transform: rotate(-225deg) translate(15em);
     }
 
     to {
-        transform: rotate(585deg) translateX(15em);
+        transform: rotate(-585deg) translateX(15em);
     }
 }
 
 @keyframes sorbit7 {
     from {
-        transform: rotate(270deg) translate(15em);
+        transform: rotate(-270deg) translate(15em);
     }
 
     to {
-        transform: rotate(630deg) translateX(15em);
+        transform: rotate(-630deg) translateX(15em);
     }
 }
 
 @keyframes sorbit8 {
     from {
-        transform: rotate(315deg) translate(15em);
+        transform: rotate(-315deg) translate(15em);
     }
 
     to {
-        transform: rotate(675deg) translateX(15em);
+        transform: rotate(-675deg) translateX(15em);
     }
 }
+
+
+/* img animation  2 */
+
 
 .container2:nth-of-type(1) img{
     transform: rotate(0deg) translate(10em) rotate(0deg);
     will-change: transform;
-    animation-name: reverse-spin;
-    animation-duration: 40s;
+    animation-name: reverse2-spin;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 
 }
 
 .container2:nth-of-type(2) img{
     transform: rotate(45deg) translate(10em) rotate(-45deg);
     will-change: transform;
-    animation-name: reverse-spin2;
-    animation-duration: 40s;
+    animation-name: reverse2-spin2;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .container2:nth-of-type(3) img {
     transform: rotate(90deg) translate(10em) rotate(-90deg);
     will-change: transform;
-    animation-name: reverse-spin3;
-    animation-duration: 40s;
+    animation-name: reverse2-spin3;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 .container2:nth-of-type(4) img  {
     transform: rotate(135deg) translate(10em) rotate(-135deg);
     will-change: transform;
-    animation-name: reverse-spin4;
-    animation-duration: 40s;
+    animation-name: reverse2-spin4;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 
 }
 
 .container2:nth-of-type(5) img  {
     transform: rotate(180deg) translate(10em) rotate(-180deg);
     will-change: transform;
-    animation-name: reverse-spin5;
-    animation-duration: 40s;
+    animation-name: reverse2-spin5;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 
 }
 
 .container2:nth-of-type(6) img  {
     transform: rotate(225deg) translate(10em) rotate(-225deg);
     will-change: transform;
-    animation-name: reverse-spin6;
-    animation-duration: 40s;
+    animation-name: reverse2-spin6;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 
 }
 
 .container2:nth-of-type(7) img  {
     transform: rotate(270deg) translate(10em) rotate(-270deg);
     will-change: transform;
-    animation-name: reverse-spin7;
-    animation-duration: 40s;
+    animation-name: reverse2-spin7;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 
 }
 
 .container2:nth-of-type(8) img  {
     transform: rotate(315deg) translate(10em) rotate(-315deg);
     will-change: transform;
-    animation-name: reverse-spin8;
-    animation-duration: 40s;
+    animation-name: reverse2-spin8;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 
 }
 
+@keyframes reverse2-spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes reverse2-spin2 {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(405deg);
+    }
+}
+
+@keyframes reverse2-spin3 {
+    from {
+        transform: rotate(90deg);
+    }
+
+    to {
+        transform: rotate(450deg);
+    }
+}
+
+@keyframes reverse2-spin4 {
+    from {
+        transform: rotate(135deg);
+    }
+
+    to {
+        transform: rotate(495deg);
+    }
+}
+
+@keyframes reverse2-spin5 {
+    from {
+        transform: rotate(180deg);
+    }
+
+    to {
+        transform: rotate(540deg);
+    }
+}
+
+@keyframes reverse2-spin6 {
+    from {
+        transform: rotate(225deg);
+    }
+
+    to {
+        transform: rotate(585deg);
+    }
+}
+
+@keyframes reverse2-spin7 {
+    from {
+        transform: rotate(270deg);
+    }
+
+    to {
+        transform: rotate(630deg);
+    }
+}
+
+@keyframes reverse2-spin8 {
+    from {
+        transform: rotate(315deg);
+    }
+
+    to {
+        transform: rotate(675deg);
+    }
+}
+
+
+/* End img 2 animation */
 
 @-moz-keyframes spinnerRotate {
     from {
@@ -779,15 +785,15 @@
     height: 175px;
     background-size: 360px 361px;
     -webkit-animation-name: spinnerRotate;
-    -webkit-animation-duration: 100s;
+    -webkit-animation-duration: 50s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-name: spinnerRotate;
-    -moz-animation-duration: 100s;
+    -moz-animation-duration: 50s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: linear;
     -ms-animation-name: spinnerRotate;
-    -ms-animation-duration: 100s;
+    -ms-animation-duration: 50s;
     -ms-animation-iteration-count: infinite;
     -ms-animation-timing-function: linear;
 }
