@@ -6,8 +6,8 @@ import { Checkbox } from '@salutejs/plasma-ui';
 import { RootState } from '../../redux';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { sendData, setPage } from '../../redux/assistant';
-import { getAccess, getCheckboxAccess } from '../../redux/firstStoriesPage';
+import { finishIsLoading, sendData, setPage } from '../../redux/assistant';
+import { getAccess, getCheckboxAccess, getStoriesPage } from '../../redux/firstStoriesPage';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import secondPageStyles from './SecondStoriesPage.module.scss'
@@ -20,11 +20,22 @@ const StartConfirmationPage = () => {
 
   const checkboxAccess = useSelector(getCheckboxAccess);
   const access = useSelector(getAccess);
-
+  const slidesPerView = useSelector(getStoriesPage);
   // After switching slides to Mock, the page will be loaded (Please check out that content of mock and real pages are the same)
+
+
   const handleSlideChange = () => {
     const page = "/secondStories"
-    dispatch(setPage({ page }))
+    dispatch(setPage({ page }));
+
+    dispatch(
+      sendData({
+        action_id: 'changeStories',
+        parameters: { "page":  (slidesPerView === 1) ? 0 : 1}
+      })
+    );
+
+    dispatch(finishIsLoading())
   };
 
   const handleClickButton = () => {
@@ -55,11 +66,11 @@ const StartConfirmationPage = () => {
       <SwiperSlide>
 
         <div className={cn(styles.startConfirmation)}>
-          <div className={styles.startConfirmation__container}>
+          {/* <div className={styles.startConfirmation__container}>
               <div className={styles.startConfirmation__title}>
                 РАНДОМ КОФЕ <br />В СБЕРЕ
               </div>
-          </div>
+          </div> */}
           <button
             className={cn(styles.startConfirmation__button, styles.startConfirmation__button_green)}
             onClick={handleClickButton}
@@ -87,7 +98,7 @@ const StartConfirmationPage = () => {
       {/* Mock Page Slide - will be shown while real page loads */}
       <SwiperSlide>
       <div className={secondPageStyles.secondStories}>
-          <div className={secondPageStyles.secondStories__container}>
+          {/* <div className={secondPageStyles.secondStories__container}>
             <div className={secondPageStyles.secondStories__containerTitle}>
               <div className={secondPageStyles.secondStories__title}>
               Ко дню рождения  <br /><strong>Сбербанка</strong><br />мы запускаем внутренний <br />сервис для интересных<br />знакомств
@@ -96,7 +107,7 @@ const StartConfirmationPage = () => {
               Давайте расширять круг <br />своего общения <br /> и знакомиться с коллегами <br /> из других подразделений.
               </div>
             </div>
-          </div>
+          </div> */}
           <div className={secondPageStyles.secondStories__buttonContainer}>
             <button
               className={cn(secondPageStyles.secondStories__button, secondPageStyles.secondStories__button_green)}

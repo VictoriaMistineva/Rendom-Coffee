@@ -25,7 +25,7 @@ import { closeActionPopup, closeAlertPopup, getActionPopup, getAlertPopup, close
 import StatusPopupOpacityAndIsButton from '../components/StatusPopupOpacityAndIsButton';
 import HowItWorksPopUp from '../components/HowItWorksPopUp';
 import { getIsMicrophoneOff, getIsSoundOff, turnOffMicrophone, turnOffSound, turnOnMicrophone, turnOnSound } from '../redux/utilsCommandName';
-
+import AVATAR from './cat.png';
 
 interface LayoutProps {
   children?: ReactNode
@@ -115,6 +115,7 @@ const Layout = ({ children }: LayoutProps) => {
         })}
       >
         <Header isWeb={isWeb} />
+        {/* <img  className={styles.layout__catImg} src={ AVATAR } alt="cat" /> */}
         <div className={isWeb ? styles.layoutWeb__content : styles.layout__content}>{children}</div>
         {isLoading && (
           <Portal className={styles.layout__spinerContainer}>
@@ -148,7 +149,6 @@ const Layout = ({ children }: LayoutProps) => {
           />
         )}
       </div>
-      
     </div>
   );
 };

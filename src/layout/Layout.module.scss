@@ -31,38 +31,28 @@
   }
 
   &__cat {
-    // position:absolute;
-    background-image: url('../assets/img/icons/кот\ без\ текста.png');
-
-
-    background-size: 100% 100%; /* Задайте размер фонового изображения на 100% */
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    transition: all 0.1s linear;
-    height: 100%; /* Задайте высоту элемента на 100% */
-    transition: all 0.1s linear;
-    @media (max-height: 900px) {
-      background-position: center center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    }
-
-    // height: 100%; 
-    // max-width: 375px;
-    // max-height: 886px;
-    // пропорционально уменьшается
-    // background-position: center center;
-    // background-repeat: no-repeat;
-    // background-size: auto 100%;
-
-  }
-
-  &__cat2 {
-    background-image: url('../assets/img/icons/Template.png');
+    background-image: url('../assets/img/icons/catbgMobile1.png'); 
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto 100%;
     transition: all 0.1s linear;
+    @media (min-width: 650px) {
+      background-image: url('../assets/img/icons/bgWebCatBubble.png'); 
+    }
+    
+
+
+  }
+
+  &__cat2 {
+    background-image: url('../assets/img/icons/bgCat2Text.png'); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all 0.1s linear;
+    @media (min-width: 650px) {
+      background-image: url('../assets/img/icons/bgCat2TextWeb.png') 
+    }
     // height: 100%; 
   }
 
