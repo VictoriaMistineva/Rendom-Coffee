@@ -113,7 +113,7 @@
 }
 
 .circle-container>*:nth-of-type(6) {
-    transform: rotate(225deg) translate(10em) rotate(-225deg);
+    transform: rotate(225deg) translate(10em) rotate(-224deg);
     will-change: transform;
     animation-name: orbit6;
     animation-duration: 10s;
@@ -311,7 +311,7 @@
 }
 
 .container1:nth-of-type(6) img  {
-    transform: rotate(225deg) translate(10em) rotate(-225deg);
+    transform: rotate(225deg) translate(10em) rotate(-224deg);
     will-change: transform;
     animation-name: reverse-spin6;
     animation-duration: 10s;
@@ -386,13 +386,13 @@
     }
 
     to {
-        transform: rotate(-540deg);
+        transform: rotate(-524deg);
     }
 }
 
 @keyframes reverse-spin6 {
     from {
-        transform: rotate(-225deg);
+        transform: rotate(-224deg);
     }
 
     to {
@@ -432,8 +432,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)  rotateZ(-24deg);
+    transform: translate(-50%, -50%)  rotateZ(-24deg);
     /* border: solid 1px #44b3de; */
 
 }
@@ -446,6 +446,7 @@
     width: 3em;
     height: 3em;
     margin: -2em;
+   
     
 }
 
@@ -459,7 +460,7 @@
 }
 
 .circle-container2>*:nth-of-type(2) {
-    transform: rotate(45deg) translate(20em) rotate(-45deg);
+    transform: rotate(45deg) translate(20em) rotate(-45deg) ;
     will-change: transform;
     animation-name: sorbit2;
     animation-duration: 10s;
@@ -468,7 +469,7 @@
 }
 
 .circle-container2>*:nth-of-type(3) {
-    transform: rotate(90deg) translate(20em) rotate(-90deg);
+    transform: rotate(90deg) translate(20em) rotate(-90deg) ;
     will-change: transform;
     animation-name: sorbit3;
     animation-duration: 10s;
@@ -477,7 +478,7 @@
 }
 
 .circle-container2>*:nth-of-type(4) {
-    transform: rotate(135deg) translate(20em) rotate(-135deg);
+    transform: rotate(135deg) translate(20em) rotate(-135deg) ;
     will-change: transform;
     animation-name: sorbit4;
     animation-duration: 10s;
@@ -486,7 +487,7 @@
 }
 
 .circle-container2>*:nth-of-type(5) {
-    transform: rotate(180deg) translate(20em) rotate(-180deg);
+    transform: rotate(180deg) translate(20em) rotate(-180deg) ;
     will-change: transform;
     animation-name: sorbit5;
     animation-duration: 10s;
@@ -495,7 +496,7 @@
 }
 
 .circle-container2>*:nth-of-type(6) {
-    transform: rotate(225deg) translate(20em) rotate(-225deg);
+    transform: rotate(225deg) translate(20em) rotate(-224deg);
     will-change: transform;
     animation-name: sorbit6;
     animation-duration: 10s;
@@ -533,81 +534,81 @@
 
 @keyframes sorbit {
     from {
-        transform: rotate(-0deg) translate(15em);
+        transform: rotate(-0deg) translate(15em) rotateZ(24deg);
     }
 
     to {
-        transform: rotate(-360deg) translateX(15em);
+        transform: rotate(-360deg) translateX(15em) rotateZ(24deg);
     }
 }
 
 @keyframes sorbit2 {
     from {
-        transform: rotate(-45deg) translate(15em);
+        transform: rotate(-45deg) translate(15em) rotateZ(24deg);
     }
 
     to {
-        transform: rotate(-405deg) translateX(15em);
+        transform: rotate(-405deg) translateX(15em) rotateZ(24deg);
     }
 }
 
 @keyframes sorbit3 {
     from {
-        transform: rotate(-90deg) translate(15em);
+        transform: rotate(-90deg) translate(15em) rotateZ(24deg);
     }
 
     to {
-        transform: rotate(-450deg) translateX(15em);
+        transform: rotate(-450deg) translateX(15em) rotateZ(24deg);
     }
 }
 
 @keyframes sorbit4 {
     from {
-        transform: rotate(-135deg) translate(15em);
+        transform: rotate(-135deg) translate(15em) rotateZ(24deg);
     }
 
     to {
-        transform: rotate(-495deg) translateX(15em);
+        transform: rotate(-495deg) translateX(15em) rotateZ(24deg);
     }
 }
 
 @keyframes sorbit5 {
     from {
-        transform: rotate(-180deg) translate(15em);
+        transform: rotate(-180deg) translate(15em) rotateZ(24deg);
     }
 
     to {
-        transform: rotate(-540deg) translateX(15em);
+        transform: rotate(-540deg) translateX(15em) rotateZ(24deg);
     }
 }
 
 @keyframes sorbit6 {
     from {
-        transform: rotate(-225deg) translate(15em);
+        transform: rotate(-225deg) translate(15em) rotateZ(24deg);
     }
 
     to {
-        transform: rotate(-585deg) translateX(15em);
+        transform: rotate(-585deg) translateX(15em) rotateZ(24deg);
     }
 }
 
 @keyframes sorbit7 {
     from {
-        transform: rotate(-270deg) translate(15em);
+        transform: rotate(-270deg) translate(15em) rotateZ(24deg);
     }
 
     to {
-        transform: rotate(-630deg) translateX(15em);
+        transform: rotate(-630deg) translateX(15em) rotateZ(24deg);
     }
 }
 
 @keyframes sorbit8 {
     from {
-        transform: rotate(-315deg) translate(15em);
+        transform: rotate(-315deg) translate(15em) rotateZ(24deg);
     }
 
     to {
-        transform: rotate(-675deg) translateX(15em);
+        transform: rotate(-675deg) translateX(15em) rotateZ(24deg);
     }
 }
 
@@ -664,7 +665,7 @@
 }
 
 .container2:nth-of-type(6) img  {
-    transform: rotate(225deg) translate(10em) rotate(-225deg);
+    transform: rotate(225deg) translate(10em) rotate(-224deg);
     will-change: transform;
     animation-name: reverse2-spin6;
     animation-duration: 10s;
@@ -739,13 +740,13 @@
     }
 
     to {
-        transform: rotate(540deg);
+        transform: rotate(524deg);
     }
 }
 
 @keyframes reverse2-spin6 {
     from {
-        transform: rotate(225deg);
+        transform: rotate(224deg);
     }
 
     to {
@@ -840,17 +841,17 @@
 
 .ct{
   -webkit-animation-name: animate11;
-    -webkit-animation-duration: 19.8s;
+    -webkit-animation-duration: 10.8s;
     animation-name: animate11;
-    animation-duration: 19.8s;
+    animation-duration: 10.8s;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
 }
 .ct2{
   -webkit-animation-name: animate11;
-    -webkit-animation-duration: 19.8s;
+    -webkit-animation-duration: 10.8s;
     animation-name: animate11;
-    animation-duration: 19.8s;
+    animation-duration: 10.8s;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
 }
@@ -1446,39 +1447,36 @@
   }
   @-webkit-keyframes animate11 {
     0% {
-      color: #333333;
     }
     25% {
-      color: #999999;
-      transform: rotate(-11deg) scale(1.4) translateY(11px) translateX(19px);
-      opacity: 0.8;
+      transform: rotate(-11deg) scale(0.9) translateY(11px) translateX(19px);
+
     }
     50% {
-      color: #6D1995;
-      transform: rotate(-11deg) scale(1.4) translateY(19px) translateX(19px);
-      opacity: 0.5;
+
+      transform: rotate(-11deg) scale(1) translateY(19px) translateX(19px);
+
     }
     75% {
-      color: #4FBBDD;
-      transform: rotate(12deg) scale(1.3) translateY(20px) translateX(19px);
-      opacity: 0.7;
+      transform: rotate(12deg) scale(1.05) translateY(20px) translateX(19px);
     }
     100% {
-      color: #84991C;
     }
   }
   @keyframes animate11 {
     0% {
     }
     25% {
-      transform: rotate(-11deg) scale(1.1) translateY(11px) translateX(19px);
+      transform: rotate(-11deg) scale(1) translateY(11px) translateX(19px);
+
     }
     50% {
-      transform: rotate(-11deg) scale(1.2) translateY(19px) translateX(19px);
+
+      transform: rotate(-11deg) scale(1.1) translateY(19px) translateX(19px);
 
     }
     75% {
-      transform: rotate(12deg) scale(1.3) translateY(20px) translateX(19px);
+      transform: rotate(12deg) scale(1.05) translateY(20px) translateX(19px);
     }
     100% {
     }

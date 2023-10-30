@@ -1,10 +1,11 @@
 @import "../assets/styles/var.scss";
 
 @media screen and (min-width: 650px) {
-  .contentlayout  {
+  .contentlayout {
     display: flex;
     flex-direction: column;
     align-items: center;
+
   }
 
 }
@@ -16,8 +17,53 @@
   flex-direction: column;
   position: relative;
 
+
+
   @media (min-width: 650px) {
     width: 650px;
+  }
+
+  &__catContan {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: aquamarine;
+  }
+
+  &__cat {
+    // position:absolute;
+    background-image: url('../assets/img/icons/кот\ без\ текста.png');
+
+
+    background-size: 100% 100%; /* Задайте размер фонового изображения на 100% */
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all 0.1s linear;
+    height: 100%; /* Задайте высоту элемента на 100% */
+    transition: all 0.1s linear;
+    @media (max-height: 900px) {
+      background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    }
+
+    // height: 100%; 
+    // max-width: 375px;
+    // max-height: 886px;
+    // пропорционально уменьшается
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    // background-size: auto 100%;
+
+  }
+
+  &__cat2 {
+    background-image: url('../assets/img/icons/Template.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all 0.1s linear;
+    // height: 100%; 
   }
 
   &__content {
@@ -50,7 +96,22 @@
 
 .container {
   background-image: url(../assets/img/icons/bg4Green.png);
-  background-position: 50%,left 1px bottom -20px;
+  background-position: 50%, left 1px bottom -20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  transition: all .15s linear;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.containerCat {
+  background-image: url('../assets/img/icons/кот\ без\ текста.png');
+  background-position: 50%, left 1px bottom -20px;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;

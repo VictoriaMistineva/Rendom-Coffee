@@ -1,0 +1,72 @@
+.containerCoffee {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    /* Center at Screen */
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.7);
+}
+
+#coffee,
+#cup {
+    position: fixed;
+}
+
+#coffee,
+#cup {
+    background-image: url("./cup2.png");
+}
+#coffee {
+    position: absolute;
+    background-position: -110px -81px;
+    border-radius: 50%;
+    top: 75px;
+    left: 82px;
+    width: 175px;
+    height: 175px;
+    background-size: 360px 361px;
+    -webkit-animation-name: spinnerRotate;
+    -webkit-animation-duration: 50s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spinnerRotate;
+    -moz-animation-duration: 50s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spinnerRotate;
+    -ms-animation-duration: 50s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+
+#cup {
+    position: relative;
+    width: 330px;
+    height: 330px;
+    top: 0px;
+    left: 0;
+    background-size: 330px 330px;
+}
+.textContainer{
+
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
+    text-align: center;
+    font-family: SB Sans Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
+    letter-spacing: 0.304px;
+    margin-top: 190px;
+}

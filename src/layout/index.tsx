@@ -50,6 +50,8 @@ const Layout = ({ children }: LayoutProps) => {
   const alertPopup = useSelector(getAlertPopup);
   const howItWorksPopUpIsOpen = useSelector(getHowItWorksPopUpIsOpen);
   const [isWeb, setIsWeb] = useState<boolean>(false);
+  const [isBgCat, setIsBgCat] = useState<boolean>(false);
+  const [isBgCat2, setIsBgCat2] = useState<boolean>(false);
 
   useEffect(() => {
     // @ts-ignore
@@ -80,21 +82,39 @@ const Layout = ({ children }: LayoutProps) => {
   const bgCup = useMemo(() => {
     switch (location.pathname) {
       case '/sberTopQrStoriasPage':
-        return setIsWeb(true);
+        setIsWeb(true);
+        break
+      case '/':
+        setIsBgCat2(false);
+        setIsBgCat(true);
+        break;
+      case '/firstStories':
+        setIsBgCat2(false);
+        setIsBgCat(true);
+        break;
+      case '/secondStories':
+        setIsBgCat(false);
+        setIsBgCat2(true);
+        break
       default:
-        return setIsWeb(false);
+        setIsWeb(false);
+        setIsBgCat(false);
+        setIsBgCat2(false)
+        break
     }
   }, [location.pathname])
 
   return (
     <div className={cn(!isWeb ? styles.contentlayout : styles.container)}>
       <div
-        className={cn(isWeb ? styles.layoutWeb  : styles.layout, {
+        className={cn(isWeb ? styles.layoutWeb : styles.layout, {
           [styles.layout_blur]:
-            isBlur
+            isBlur, [styles.layout__cat]:
+            isBgCat, [styles.layout__cat2]:
+            isBgCat2
         })}
       >
-        <Header isWeb={isWeb } />
+        <Header isWeb={isWeb} />
         <div className={isWeb ? styles.layoutWeb__content : styles.layout__content}>{children}</div>
         {isLoading && (
           <Portal className={styles.layout__spinerContainer}>
@@ -128,6 +148,7 @@ const Layout = ({ children }: LayoutProps) => {
           />
         )}
       </div>
+      
     </div>
   );
 };

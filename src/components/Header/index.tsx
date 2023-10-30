@@ -28,7 +28,9 @@ const Header = ({ className, isWeb }: HeaderProps) => {
 
   const isMicrophoneOff = useSelector(getIsMicrophoneOff);
   const isSoundOff = useSelector(getIsSoundOff);
+  // const isMicrofoneWeb =  useSelector(getMicrophoneWeb);
   const initialSlide = useSelector(getStoriesPage);
+
   
   const handleClickMicrophone = useCallback(() => {
     if (isMicrophoneOff) dispatch(turnOnMicrophone());
@@ -122,3 +124,5 @@ const Header = ({ className, isWeb }: HeaderProps) => {
 Header.propTypes = {};
 
 export default React.memo(Header);
+
+

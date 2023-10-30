@@ -136,6 +136,10 @@ const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandPar
     case 'SberTopQrStoriasPage':
       page = '/sberTopQrStoriasPage'
       break
+    case 'UsersNotFound':
+      page = '/usersNotFound'
+      break
+
   }
   dispatch(setPage({ page }));
 };
@@ -186,11 +190,6 @@ const processAssistantCommand = (dispatch: AppDispatch, commandName: string, get
       );
       break;
     case 'opUpRequestAccess':
-      dispatch(
-        openActionPopup({ commandName: commandName })
-      );
-      break;
-    case 'UsersNotFound':
       dispatch(
         openActionPopup({ commandName: commandName })
       );

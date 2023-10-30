@@ -9,7 +9,7 @@ import { sendData, setPage } from '../../redux/assistant';
 import { getAccess, getCheckboxAccess } from '../../redux/firstStoriesPage';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import firstPageStyles from '../StartConfirmationPage/StartConfirmationPage.module.scss'
+import firstPageStyle from './StartConfirmationPage.module.scss'
 import "./swiper-custom.scss"
 // Import Swiper styles
 import 'swiper/css';
@@ -49,14 +49,13 @@ const SecondStoriesPage = () => {
       <SwiperSlide>
         <div className={styles.secondStories}>
           <div className={styles.secondStories__container}>
-            <div className={styles.secondStories__title}>
-              Ко дню рождения <br />Сбера
-            </div>
-            <div className={styles.secondStories__title}>
-              Мы запускаем <br />РЭНДОМ КОФЕ
-            </div>
-            <div className={styles.secondStories__title}>
-              Расширьте свой<br />круг интересных<br />знакомств
+            <div className={styles.secondStories__containerTitle}>
+              <div className={styles.secondStories__title}>
+                Ко дню рождения  <br /><strong>Сбербанка</strong><br />мы запускаем внутренний <br />сервис для интересных<br />знакомств
+              </div>
+              <div className={styles.secondStories__title}>
+                Давайте расширять круг <br />своего общения <br /> и знакомиться с коллегами <br /> из других подразделений.
+              </div>
             </div>
           </div>
           <div className={styles.secondStories__buttonContainer}>
@@ -78,26 +77,22 @@ const SecondStoriesPage = () => {
 
       {/* Mock Page Slide - will be shown while real page loads */}
       <SwiperSlide>
-      <div className={firstPageStyles.startConfirmation}>
-          <div className={firstPageStyles.startConfirmation__container}>
-            <div>
-              <div className={firstPageStyles.startConfirmation__title}>
-                РАНДОМ<br />КОФЕ <br />В СБЕРЕ
+      <div className={cn(firstPageStyle.startConfirmation)}>
+          <div className={firstPageStyle.startConfirmation__container}>
+              <div className={firstPageStyle.startConfirmation__title}>
+                РАНДОМ КОФЕ <br />В СБЕРЕ
               </div>
-              <div>
-                <Illustration />
-              </div>
-            </div>
           </div>
           <button
-            className={cn(firstPageStyles.startConfirmation__button, firstPageStyles.startConfirmation__button_green)}
+            className={cn(firstPageStyle.startConfirmation__button, firstPageStyle.startConfirmation__button_green)}
+            onClick={handleClickButton}
           >
             Участвовать
           </button>
         </div >
-      </SwiperSlide>
+    </SwiperSlide>
       
-    </Swiper>
+    </Swiper >
   );
 };
 

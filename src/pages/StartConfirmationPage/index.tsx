@@ -10,7 +10,7 @@ import { sendData, setPage } from '../../redux/assistant';
 import { getAccess, getCheckboxAccess } from '../../redux/firstStoriesPage';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import secondPageStyles from '../SecondStoriesPage/SecondStoriesPage.module.scss'
+import secondPageStyles from './SecondStoriesPage.module.scss'
 import "./swiper-custom.scss"
 // Import Swiper styles
 import 'swiper/css';
@@ -54,16 +54,11 @@ const StartConfirmationPage = () => {
 
       <SwiperSlide>
 
-        <div className={styles.startConfirmation}>
+        <div className={cn(styles.startConfirmation)}>
           <div className={styles.startConfirmation__container}>
-            <div>
               <div className={styles.startConfirmation__title}>
-                РАНДОМ<br />КОФЕ <br />В СБЕРЕ
+                РАНДОМ КОФЕ <br />В СБЕРЕ
               </div>
-              <div>
-                <Illustration />
-              </div>
-            </div>
           </div>
           <button
             className={cn(styles.startConfirmation__button, styles.startConfirmation__button_green)}
@@ -91,21 +86,21 @@ const StartConfirmationPage = () => {
 
       {/* Mock Page Slide - will be shown while real page loads */}
       <SwiperSlide>
-        <div className={secondPageStyles.secondStories}>
+      <div className={secondPageStyles.secondStories}>
           <div className={secondPageStyles.secondStories__container}>
-            <div className={secondPageStyles.secondStories__title}>
-              Ко дню рождения <br />Сбера
-            </div>
-            <div className={secondPageStyles.secondStories__title}>
-              Мы запускаем <br />РАНДОМ КОФЕ
-            </div>
-            <div className={secondPageStyles.secondStories__title}>
-              Расширьте свой<br />круг интересных<br />знакомств
+            <div className={secondPageStyles.secondStories__containerTitle}>
+              <div className={secondPageStyles.secondStories__title}>
+              Ко дню рождения  <br /><strong>Сбербанка</strong><br />мы запускаем внутренний <br />сервис для интересных<br />знакомств
+              </div>
+              <div className={secondPageStyles.secondStories__title}>
+              Давайте расширять круг <br />своего общения <br /> и знакомиться с коллегами <br /> из других подразделений.
+              </div>
             </div>
           </div>
           <div className={secondPageStyles.secondStories__buttonContainer}>
             <button
               className={cn(secondPageStyles.secondStories__button, secondPageStyles.secondStories__button_green)}
+              onClick={handleClickButton}
             >
               Участвовать
             </button>

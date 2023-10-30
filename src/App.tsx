@@ -19,6 +19,7 @@ import MeetingPage from './pages/MeetingPage';
 import PersonalInfo from './pages/PersonalInfo';
 import SberTopQrPage from './pages/SberTopQrPage';
 import SecondStoriesPage from './pages/SecondStoriesPage';
+import UsersNotFoundPage from './pages/UsersNotFoundPage';
 
 const history = createBrowserHistory();
 
@@ -38,6 +39,7 @@ function App() {
             <Route path="/extendedUserCard" element = {<PersonalInfo/>}/>
             <Route path="/sberTopQrStoriasPage" element = {<SberTopQrPage/>}/>
             <Route path="/secondStories" element = {<SecondStoriesPage/>}/>
+            <Route path="/usersNotFound"  element = {<UsersNotFoundPage/>}/>
           </Routes>
         </Layout>    
       </HistoryRouter>

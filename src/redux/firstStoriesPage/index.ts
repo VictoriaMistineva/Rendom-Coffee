@@ -9,7 +9,7 @@ const initialState: StartConfirmationPageSliceState = {
   checkboxAccess: false,
   storiesPage: 0,
   sound: false, 
-  microphone: false
+  microphone: false,
 }
 
 const startConfirmationSlice = createSlice({
@@ -20,6 +20,8 @@ const startConfirmationSlice = createSlice({
       state.access = action.payload?.access ?? true;
       state.checkboxAccess = action.payload?.checkboxAccess ?? false;
       state.storiesPage = action.payload?.storiesPage;
+      state.microphone = action.payload?.microphone ?? false;
+      state.sound = action.payload?.sound ?? false;
     },
   },
 });
