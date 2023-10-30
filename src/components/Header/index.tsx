@@ -68,6 +68,8 @@ const Header = ({ className, isWeb }: HeaderProps) => {
       case '/firstStories':
       case '/':
         return '';
+      case '/changeMeetingPlace':
+        return 'Место встречи';
       default:
         return 'РАНДОМ КОФЕ В СБЕРЕ';
     }

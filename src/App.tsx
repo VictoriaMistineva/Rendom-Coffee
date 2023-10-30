@@ -20,6 +20,7 @@ import PersonalInfo from './pages/PersonalInfo';
 import SberTopQrPage from './pages/SberTopQrPage';
 import SecondStoriesPage from './pages/SecondStoriesPage';
 import UsersNotFoundPage from './pages/UsersNotFoundPage';
+import ChangeMeetingPlacePage from './pages/ChangeMeetingPlacePage';
 
 const history = createBrowserHistory();
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/sberTopQrStoriasPage" element = {<SberTopQrPage/>}/>
             <Route path="/secondStories" element = {<SecondStoriesPage/>}/>
             <Route path="/usersNotFound"  element = {<UsersNotFoundPage/>}/>
+            <Route path="/changeMeetingPlace"  element = {<ChangeMeetingPlacePage/>}/>
           </Routes>
         </Layout>    
       </HistoryRouter>

@@ -14,6 +14,8 @@ import { setData as setBubblesImage } from '../bubblesImage';
 import { setData as setSmallUserCard } from '../smallUserCard';
 import { setData as setMeetingInfo } from '../meetInfo';
 
+import { setData as setChangeMeeting } from '../changeMeetingPlace';
+
 export * from './selectors';
 import {
   turnOffMicrophone,
@@ -30,6 +32,7 @@ import { selectionMethodPageSliceState } from '../selectionMethodPage/types';
 import { bubblesImageSliceState } from '../bubblesImage/types';
 import { smallUserCardSliceState } from '../smallUserCard/types';
 import { MeetInfoSliceState } from '../meetInfo/types';
+import { ChangeMeetingPlaceSliceState } from '../changeMeetingPlace/types';
 
 
 let assistant: any = null;
@@ -139,7 +142,10 @@ const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandPar
     case 'UsersNotFound':
       page = '/usersNotFound'
       break
-
+    case 'ChangeMeetingPlace':
+      page = '/changeMeetingPlace'
+      dispatch(setChangeMeeting(data as ChangeMeetingPlaceSliceState))
+      break
   }
   dispatch(setPage({ page }));
 };
@@ -189,7 +195,7 @@ const processAssistantCommand = (dispatch: AppDispatch, commandName: string, get
         openActionPopup({ commandName: commandName })
       );
       break;
-    case 'opUpRequestAccess':
+    case 'popUpRequestAccess':
       dispatch(
         openActionPopup({ commandName: commandName })
       );

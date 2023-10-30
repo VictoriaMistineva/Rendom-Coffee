@@ -1,16 +1,12 @@
 {
   "type": "smart_app_data",
   "smart_app_data": {
-    "commandName": "StartPage",
+    "commandName": "ChangeMeetingPlace",
           "commandParams": {
             "data": {
-              "access": true,
-              "checkboxAccess": true,
-              "storiesPage": 1,
-              "sound": false,
-              "microphone": false
+              "meetingPoint":""
             },
-            "screenName": "FirstStories"
+            "screenName": "ChangeMeetingPlace"
     }
   }
 }

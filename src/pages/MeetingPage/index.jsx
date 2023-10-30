@@ -24,6 +24,30 @@ const MeetingPage = () => {
   const meetingInfo = useSelector(getMeetInfo);
   const attendees = useSelector(getAttendees);
 
+
+  const handleChange = useCallback((e) => {
+    clearTimeout(timerRef.current);
+    setValue(e.target.value);
+
+    timerRef.current = setTimeout(() => {
+      dispatch(
+        sendData({
+          action_id: 'MeetingMessagesText',
+          parameters: {
+            userText: e.target.value,
+          },
+        })
+      );
+    }, 300);
+
+    e.target.style.height = `${FIELD_MIN_HEIGHT}px`;
+    const { scrollHeight } = e.target;
+    e.target.style.height =
+      scrollHeight >= FIELD_MIN_HEIGHT
+        ? `${scrollHeight + 10}px`
+        : `${FIELD_MIN_HEIGHT}px`;
+  }, []);
+  
   const handleClickButton = () => {
     dispatch(
       sendData({
@@ -31,6 +55,14 @@ const MeetingPage = () => {
       })
     );
   };
+
+  const handleClickButtonMeetingInfo = () => {
+    dispatch(
+      sendData({
+        action_id: 'ChangeMeetingPlace',
+      })
+    );
+  }
 
   return (
     <>
@@ -92,7 +124,7 @@ const MeetingPage = () => {
                 styles.eventPage__text_main
               )}
             >
-              Переговорка{' '}
+              Место встречи{' '}
               <span className={styles.eventPage__darkerText}>{meetingInfo.location}</span>
               <IconChevronLeft className={styles.eventPage__arrow} />
             </div>
@@ -105,6 +137,7 @@ const MeetingPage = () => {
               styles.eventPage__section_center,
               styles.eventPage__section_button
             )}
+            onClick={handleClickButtonMeetingInfo}
           >
             <div
               className={cn(styles.eventPage__icon, styles.eventPage__icon_m)}

@@ -9,6 +9,7 @@ import selectionMethod from './selectionMethodPage';
 import bubblesImage from './bubblesImage'
 import smallUserCard from './smallUserCard'
 import meetInfo from './meetInfo';
+import changeMeetingPlace from './changeMeetingPlace';
 const rootReducer = combineReducers({
     app,
     assistant,
@@ -19,7 +20,8 @@ const rootReducer = combineReducers({
     selectionMethod,
     bubblesImage,
     smallUserCard,
-    meetInfo
+    meetInfo,
+    changeMeetingPlace
 });
 
 const store = configureStore({
