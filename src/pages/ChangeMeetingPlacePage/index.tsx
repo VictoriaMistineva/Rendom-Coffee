@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import styles from './ChangeMeetingPlacePage.module.scss'
 import { useDispatch, useSelector } from 'react-redux';
 import { finishIsLoading, sendData } from '../../redux/assistant';
@@ -9,9 +9,11 @@ import cn from 'classnames';
 const ChangeMeetingPlacePage = () => {
     const meetingPoint = useSelector(getMeetingPoint);
     const dispatch = useDispatch();
-    const [value, setValue] = useState<string>(meetingPoint);
+    const [value, setValue] = useState<string>("");
     const timerRef = useRef(null);
-    console.log(meetingPoint)
+
+    console.log(meetingPoint + " ---meetingPoint")
+    console.log(value + " ---value")
     const handleChange = useCallback((e: { target: { value: any; }; }) => {
         const { value } = e.target;
         // @ts-ignore
@@ -43,6 +45,10 @@ const ChangeMeetingPlacePage = () => {
         );
     };
 
+    useEffect(() => {
+        setValue(meetingPoint);
+      }, [meetingPoint]);
+      
     return (
         <>
             <div>

@@ -1,12 +1,10 @@
 {
   "type": "smart_app_data",
   "smart_app_data": {
-    "commandName": "ChangeMeetingPlace",
+    "commandName": "SberTopQrStoriasPage",
           "commandParams": {
-            "data": {
-              "meetingPoint":""
-            },
-            "screenName": "ChangeMeetingPlace"
+            "data": {},
+            "screenName": "SberTopQrStoriasPage"
     }
   }
 }

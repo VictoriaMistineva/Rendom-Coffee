@@ -64,6 +64,14 @@ const MeetingPage = () => {
     );
   }
 
+  const handleClickButtonGoToCalendar = () => {
+    dispatch(
+      sendData({
+        action_id: 'GoToCalendar',
+      })
+    );
+  }
+
   return (
     <>
       <div className={cn(styles.eventPage)}>
@@ -72,6 +80,7 @@ const MeetingPage = () => {
             styles.eventPage__section,
             styles.eventPage__section_main
           )}
+          // onClick={handleClickButtonGoToCalendar}
         >
           <div className={styles.eventPage__rightColumnSection}>
             <div
@@ -111,6 +120,7 @@ const MeetingPage = () => {
               styles.eventPage__section_center,
               styles.eventPage__section_button
             )}
+            onClick={handleClickButtonMeetingInfo}
           >
             <div
               className={cn(styles.eventPage__icon, styles.eventPage__icon_m)}
@@ -137,7 +147,6 @@ const MeetingPage = () => {
               styles.eventPage__section_center,
               styles.eventPage__section_button
             )}
-            onClick={handleClickButtonMeetingInfo}
           >
             <div
               className={cn(styles.eventPage__icon, styles.eventPage__icon_m)}
@@ -155,7 +164,7 @@ const MeetingPage = () => {
               <span className={styles.eventPage__darkerText}>
                 {meetingInfo.jazzLink}
               </span>
-              <IconChevronLeft className={styles.eventPage__arrow} />
+              {/* <IconChevronLeft className={styles.eventPage__arrow} /> */}
             </div>
           </button>
         )}
@@ -209,7 +218,7 @@ const MeetingPage = () => {
           >
             <div className={styles.eventPage__text_main}>
               Участники{' '}
-              <IconChevronLeft className={styles.eventPage__arrow} />
+              {/* <IconChevronLeft className={styles.eventPage__arrow} /> */}
             </div>
             <div className={styles.eventPage__darkerText}>
               {attendees

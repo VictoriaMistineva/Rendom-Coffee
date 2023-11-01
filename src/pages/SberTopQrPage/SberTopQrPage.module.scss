@@ -23,8 +23,9 @@
         display: flex;
         // justify-content: center;
         align-items: center;
-        flex-direction: column;
-        margin: 24px 38.86px 44px 47px;
+        // flex-direction: column;
+        justify-content: center;
+        // margin: 24px 38.86px 44px 47px;
 
         &_title {
             padding-top: 26px;
@@ -41,8 +42,8 @@
     }
 
     &__card2 {
-        margin: 54px 0px 35.97px 0px;
-        gap: 18px;
+        margin: 21px 5px 0px 5px;
+        gap: 14px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -52,12 +53,11 @@
             color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
             text-align: center;
             font-family: SB Sans Text;
-            font-size: 18px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 400;
-            line-height: 25px;
-            /* 138.889% */
-            letter-spacing: -0.342px;
+            line-height: 23px; /* 143.75% */
+            letter-spacing: -0.304px;
         }
 
         &_subtitle {
@@ -75,11 +75,11 @@
         strong {
             color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
             font-family: SB Sans Text;
-            font-size: 20px;
+            font-size: 16px;
             font-style: normal;
-            font-weight: 600;
-            line-height: 25px;
-            letter-spacing: -0.38px;
+            font-weight: 700;
+            line-height: 23px;
+            letter-spacing: -0.304px;
         }
     }
 

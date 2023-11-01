@@ -83,16 +83,21 @@ const Layout = ({ children }: LayoutProps) => {
     switch (location.pathname) {
       case '/sberTopQrStoriasPage':
         setIsWeb(true);
+        setIsBgCat(false);
+        setIsBgCat2(false)
         break
       case '/':
+        setIsWeb(false);
         setIsBgCat2(false);
         setIsBgCat(true);
         break;
       case '/firstStories':
+        setIsWeb(false);
         setIsBgCat2(false);
         setIsBgCat(true);
         break;
       case '/secondStories':
+        setIsWeb(false);
         setIsBgCat(false);
         setIsBgCat2(true);
         break

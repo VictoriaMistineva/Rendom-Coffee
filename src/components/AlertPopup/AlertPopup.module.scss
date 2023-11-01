@@ -4,9 +4,13 @@
 
 .connectionListPopup {
   &__content {
-    padding: 19px 27.8px 100px 0;
+    padding: 19px 0 100px 0;
     overflow: auto;
     background: radial-gradient(72.02% 60.82% at 50.15% 0,#4c3123 0,#1a1a1a 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   &__iconContainer {

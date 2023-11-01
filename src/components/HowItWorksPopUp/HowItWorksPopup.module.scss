@@ -4,8 +4,12 @@
 
 .connectionListPopup {
   &__content {
-    padding: 19px 27.8px 100px 0;
+    padding: 19px 0 100px 0;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
   }
 
