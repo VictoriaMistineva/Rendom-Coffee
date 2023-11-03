@@ -6,7 +6,7 @@ import ICON_PRESENT from '../../assets/img/icons/present.svg';
 import styles from './PersonalInfo.module.scss';
 import { sendData } from '../../redux/assistant';
 import { getUsers, getAvatar, getTeams } from '../../redux/smallUserCard';
-import AVATAR from '../../assets/img/icons/avatar.svg'; 
+import AVATAR from '../../assets/img/icons/avatar.svg';
 
 
 
@@ -117,9 +117,9 @@ const PersonalInfo = () => {
           </div >
         )}
       </div>
-      <div className={styles.organizerMeet__textMeeting} onClick={handleClickButton}>
-        Предложить встречу
-      </div>
+        <div className={styles.organizerMeet__textMeeting} onClick={handleClickButton}>
+          Предложить встречу
+        </div>
     </div>
   );
 };

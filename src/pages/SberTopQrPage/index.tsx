@@ -2,8 +2,8 @@ import React, { useCallback } from 'react';
 import styles from './SberTopQrPage.module.scss'
 import { ReactComponent as Illustration } from '../../assets/img/icons/Illustration.svg';
 import CAT from '../../assets/img/icons/SberTOPbg.png';
-import { ReactComponent as Cup } from '../../assets/img/icons/CupGreen.svg';
-import QR from '../../assets/img/icons/QRSberTop.png';
+import { ReactComponent as Cup } from '../../assets/img/icons/Cup3.svg';
+import QR from '../../assets/img/icons/Qrsbertopblue.png';
 import MICROPHONE_OFF from '../../assets/img/icons/microphoneOff.svg';
 import MICROPHONE_ON from '../../assets/img/icons/microphoneOn.svg';
 import { ReactComponent as IconSoundOff } from '../../assets/img/icons/soundOff.svg';
@@ -66,7 +66,7 @@ const SberTopQrPage = () => {
                 </div>
                 <div className={styles.sberTopQrPage_content}>
                     <div className={styles.sberTopQrPage__card3}>
-                        <img src={QR} alt="qr" />
+                        <img src={QR} alt="qr"/>
                     </div>
                 </div>
             </div>

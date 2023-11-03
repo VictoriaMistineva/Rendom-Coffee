@@ -1,10 +1,37 @@
 {
   "type": "smart_app_data",
   "smart_app_data": {
-    "commandName": "SberTopQrStoriasPage",
-          "commandParams": {
-            "data": {},
-            "screenName": "SberTopQrStoriasPage"
+    "commandName": "SmallUserCard",
+    "commandParams": {
+      "data": {
+        "user": {
+          "fullName": "Литаш-Сорокина Елена Александровна",
+          "position": "Руководитель направления",
+          "department": "Департамент современных цифровых пользовательских решений (SberUser)",
+          "birthdayToday": false,
+          "phoneMobile": "8-917-561-7857",
+          "phoneInner": "8-55769911",
+          "emailExternal": "sorokina.elena.aleks@sberbank.ru",
+          "emailInternal": "sorokina.elena.aleks@mail.ca.sbrf.ru",
+          "emailMain": "sorokina.elena.aleks@sberbank.ru",
+          "teams": [
+            {
+              "deptName": "VAS.VEGAS",
+              "role": "Владелец продукта"
+            },
+            {
+              "deptName": "WELCOME. BOARD",
+              "role": "Владелец продукта"
+            },
+            {
+              "deptName": "SMART.VEGAS",
+              "role": "Владелец продукта"
+            }
+          ],
+          "avatar": ""
+        }
+      },
+      "screenName": "SmallUserCard"
     }
   }
 }
