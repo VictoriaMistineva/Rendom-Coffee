@@ -8,8 +8,8 @@ const initialState: StartConfirmationPageSliceState = {
   access: true,
   checkboxAccess: false,
   storiesPage: 0,
-  sound: false, 
-  microphone: false,
+  sound: true, 
+  microphone: true,
 }
 
 const startConfirmationSlice = createSlice({

@@ -51,7 +51,7 @@ const YourLocationPage = () => {
           )
             :
             (
-              <div className={styles.yourLocation__textLocationContainer}>
+              <div className={styles.yourLocation__textLocationContainer} onClick={handleClickLoupe}>
                 <div className={styles.yourLocation__textCity}>
                   {locationCity}
                 </div>

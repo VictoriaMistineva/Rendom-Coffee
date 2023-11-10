@@ -11,7 +11,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import PaginationLine from '../PaginationLine';
 import { getIsMicrophoneOff, getIsSoundOff, turnOffMicrophone, turnOffSound, turnOnMicrophone, turnOnSound } from '../../redux/utilsCommandName';
 import { sendData } from '../../redux/assistant';
-import { getStoriesPage } from '../../redux/firstStoriesPage';
+import { getSoundWeb, getMicrophoneWeb, getStoriesPage } from '../../redux/firstStoriesPage';
 
 
 interface HeaderProps {
@@ -28,7 +28,10 @@ const Header = ({ className, isWeb }: HeaderProps) => {
 
   const isMicrophoneOff = useSelector(getIsMicrophoneOff);
   const isSoundOff = useSelector(getIsSoundOff);
-  // const isMicrofoneWeb =  useSelector(getMicrophoneWeb);
+  
+  const isMicrophoneWeb =  useSelector(getMicrophoneWeb);
+  const isSoundWeb =  useSelector(getSoundWeb);
+  
   const initialSlide = useSelector(getStoriesPage);
 
   
@@ -41,7 +44,7 @@ const Header = ({ className, isWeb }: HeaderProps) => {
         action_id: isMicrophoneOff ? 'MicrophoneTurnOn' : 'MicrophoneTurnOff',
       })
     );
-  }, [isMicrophoneOff]);
+  }, [isMicrophoneOff,isMicrophoneWeb]);
 
   const handleClickSound = useCallback(() => {
     if (isSoundOff) dispatch(turnOnSound());
@@ -49,10 +52,10 @@ const Header = ({ className, isWeb }: HeaderProps) => {
 
     dispatch(
       sendData({
-        action_id: isSoundOff ? 'SoundTurnOn' : 'SoundTurnOff',
+        action_id: isSoundOff  ? 'SoundTurnOn' : 'SoundTurnOff',
       })
     );
-  }, [isSoundOff]);
+  }, [isSoundOff,isSoundWeb ]);
 
   const handleClickButton = () => {
     dispatch(
@@ -71,7 +74,7 @@ const Header = ({ className, isWeb }: HeaderProps) => {
       case '/changeMeetingPlace':
         return 'Место встречи';
       default:
-        return 'РАНДОМ КОФЕ В СБЕРЕ';
+        return 'РАНДОМ-КОФЕ В СБЕРЕ';
     }
   }, [location.pathname]);
 
@@ -113,7 +116,7 @@ const Header = ({ className, isWeb }: HeaderProps) => {
             onClick={handleClickSound}
             className={styles.header__button}
           >
-            {isSoundOff ? <IconSoundOff /> : <IconSoundOn />}
+            {isSoundOff  ? <IconSoundOff /> : <IconSoundOn />}
           </button>
         </div>
         :

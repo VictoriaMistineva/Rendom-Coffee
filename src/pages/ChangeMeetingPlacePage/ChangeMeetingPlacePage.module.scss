@@ -14,6 +14,7 @@
 
     &__field {
         margin-top: 40px;
+        margin-left: 5px;
         display: block;
         width: 100%;
         background: none;
@@ -51,6 +52,29 @@
         background-color: rgba(255, 255, 255, 0.12);
         height: 20px;
         width: 90px;
+        border-radius: 12px;
+        padding: 0;
+        color: inherit;
+        line-height: inherit;
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+        appearance: none;
+        text-decoration: none;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.12);
+        height: 36px;
+        width: 125px;
+        border-radius: 12px;
+        padding: 8px 12px;
+        border-radius: 18px;
+        color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
+        font-family: SB Sans Text;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 125% */
+        letter-spacing: -0.304px;
 
         &_green {
             background: linear-gradient(93.97deg, #1DD13B 6.49%, #27C6E5 93.51%);

@@ -44,7 +44,7 @@ const SelectionColleaguesPage = () => {
     <div className={styles.selectionColleagues}>
       <div className={styles.selectionColleagues__container}>
         <div className={styles.selectionColleagues__title}>
-          Я подберу для вас<br></br> коллег, с которыми <br></br> вы еще не знакомы
+          Я подберу для вас<br></br>приятных собеседников
         </div>
       </div>
       <div className={styles.selectionColleagues__radioGroupContainer}>

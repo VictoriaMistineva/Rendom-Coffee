@@ -47,7 +47,7 @@ const MeetingPage = () => {
         ? `${scrollHeight + 10}px`
         : `${FIELD_MIN_HEIGHT}px`;
   }, []);
-  
+
   const handleClickButton = () => {
     dispatch(
       sendData({
@@ -108,6 +108,9 @@ const MeetingPage = () => {
                 {meetingInfo.start} - {meetingInfo.end}
               </div>
             </div>
+            {/* <div style={{paddingTop:"10px"}}>
+              <IconChevronLeft className={styles.eventPage__arrow} />
+            </div> */}
           </div>
         </div>
 
@@ -200,47 +203,47 @@ const MeetingPage = () => {
 
         {attendees.length !== 0 && (
           <button
-          className={cn(
-            styles.eventPage__section,
-            styles.eventPage__section_button
-          )}
-        >
-          <div
-            className={cn(styles.eventPage__icon, styles.eventPage__icon_m)}
-          >
-            <IconParticipants className={styles.eventPage__iconPoint} />
-          </div>
-          <div
             className={cn(
-              styles.eventPage__text,
-              styles.eventPage__text_full
+              styles.eventPage__section,
+              styles.eventPage__section_button
             )}
           >
-            <div className={styles.eventPage__text_main}>
-              Участники{' '}
-              {/* <IconChevronLeft className={styles.eventPage__arrow} /> */}
+            <div
+              className={cn(styles.eventPage__icon, styles.eventPage__icon_m)}
+            >
+              <IconParticipants className={styles.eventPage__iconPoint} />
             </div>
-            <div className={styles.eventPage__darkerText}>
-              {attendees
-                .map((el) => el.mailboxUser.name)
-                .join(', ')}
+            <div
+              className={cn(
+                styles.eventPage__text,
+                styles.eventPage__text_full
+              )}
+            >
+              <div className={styles.eventPage__text_main}>
+                Участники{' '}
+                {/* <IconChevronLeft className={styles.eventPage__arrow} /> */}
+              </div>
+              <div className={styles.eventPage__darkerText}>
+                {attendees
+                  .map((el) => el.mailboxUser.name)
+                  .join(', ')}
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
         )}
         <div className={styles.eventPage__buttonContainer} >
           <button className={cn(
-              styles.eventPage__section,
-              styles.eventPage__section_button,
-            )}
+            styles.eventPage__section,
+            styles.eventPage__section_button,
+          )}
             onClick={handleClickButton}
-            >
+          >
             <div className={styles.eventPage__textButton}>
               Пригласить
             </div>
           </button>
         </div>
-    </div >
+      </div >
     </>
   );
 };

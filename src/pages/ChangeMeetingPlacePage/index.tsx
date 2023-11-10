@@ -12,8 +12,8 @@ const ChangeMeetingPlacePage = () => {
     const [value, setValue] = useState<string>("");
     const timerRef = useRef(null);
 
-    console.log(meetingPoint + " ---meetingPoint")
-    console.log(value + " ---value")
+    // console.log(meetingPoint + " ---meetingPoint")
+    // console.log(value + " ---value")
     const handleChange = useCallback((e: { target: { value: any; }; }) => {
         const { value } = e.target;
         // @ts-ignore
@@ -66,7 +66,7 @@ const ChangeMeetingPlacePage = () => {
                     className={cn(styles.meetingMessages__button, value && styles.meetingMessages__button_green)}
                     onClick={ value ? handleSendData : undefined}
                 >
-                    Отправить
+                   Продолжить
                 </button>
             </div>
         </>
