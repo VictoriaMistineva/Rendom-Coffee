@@ -16,7 +16,7 @@ const initialState: UtilsCommandNameSliceState = {
   alertPopup: {
     isShow: false,
     title: '',
-    subTitle: '',
+    subtitle: '',
     list: [],
   },
   howItWorksPopUpIsOpen:false,
@@ -102,7 +102,7 @@ const utilsCommandNameSlice = createSlice({
     openAlertPopup(state, { payload }) {
       state.alertPopup.isShow = true;
       state.alertPopup.title = payload.title ?? '';
-      state.alertPopup.subTitle = payload.subTitle ?? '';
+      state.alertPopup.subtitle = payload.subtitle ?? '';
     },
     closeAlertPopup(state) {
       state.alertPopup.isShow = false;

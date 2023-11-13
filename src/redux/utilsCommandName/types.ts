@@ -20,6 +20,6 @@ export type ActionPopUp = {
 export type AlertPopup = {
     isShow: boolean,
     title: string,
-    subTitle: string,
+    subtitle: string,
     list: string[],
 }

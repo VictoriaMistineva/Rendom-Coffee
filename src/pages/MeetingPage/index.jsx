@@ -80,7 +80,7 @@ const MeetingPage = () => {
             styles.eventPage__section,
             styles.eventPage__section_main
           )}
-          // onClick={handleClickButtonGoToCalendar}
+          onClick={handleClickButtonGoToCalendar}
         >
           <div className={styles.eventPage__rightColumnSection}>
             <div
@@ -108,9 +108,9 @@ const MeetingPage = () => {
                 {meetingInfo.start} - {meetingInfo.end}
               </div>
             </div>
-            {/* <div style={{paddingTop:"10px"}}>
+            <div style={{paddingTop:"10px"}}>
               <IconChevronLeft className={styles.eventPage__arrow} />
-            </div> */}
+            </div>
           </div>
         </div>
 

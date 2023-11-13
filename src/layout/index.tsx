@@ -132,7 +132,7 @@ const Layout = ({ children }: LayoutProps) => {
             isOpen={alertPopup.isShow}
             inset={[]}
             title={alertPopup.title}
-            subTitle={alertPopup.subTitle}
+            subTitle={alertPopup.subtitle}
             onClose={handleCloseAlertPopup}
             closeCanvas={() => {
               dispatch(close());
