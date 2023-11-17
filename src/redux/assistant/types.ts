@@ -21,5 +21,5 @@ export type CommandParams = {
 
 export type AlertPopUp = {
     title?: string,
-    subTitle?: string
+    subtitle?: string
 }

@@ -1,38 +1,10 @@
 {
   "type": "smart_app_data",
   "smart_app_data": {
-    "commandName": "MeetInfo",
+    "commandName": "SberTopQrStoriasPage",
           "commandParams": {
-            "data": {
-              "meetInfo": {
-                "subject": "Рэндом кофе в Сбере",
-                "location": "Втречаемся в холле",
-                "start": "14:31",
-                "end": "15:01",
-                "duration": "30",
-                "date": "09.10.2023",
-                "jazzLink": "https://jazz.sber.ru/me0llp?psw=OBIIDwINE0dbAg8ZXRkEVFQIEg",
-                "participants": {
-                  "attendees": [
-                    {
-                      "mailboxUser": {
-                        "name": "Сафронов Артем Андреевич",
-                        "address": "AAndSafronov@alpha-exchtest.sbrf.ru"
-                      },
-                      "response": "Нет ответа"
-                    },
-                    {
-                      "mailboxUser": {
-                        "name": "Черныш Александр СЕргеевич",
-                        "address": "chernysh.a.ser@alpha-exchtest.sbrf.ru"
-                      },
-                      "response": "Нет ответа"
-                    }
-                  ]
-                }
-              }
-            },
-            "screenName": "MeetInfo"
+            "data": {},
+            "screenName": "SberTopQrStoriasPage"
     }
   }
 }

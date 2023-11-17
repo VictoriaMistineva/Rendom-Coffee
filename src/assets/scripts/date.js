@@ -8,6 +8,16 @@ const days = [
   'Суббота',
 ];
 
+export const weekdays = [
+  "воскресенье",
+  "понедельник",
+  "вторник",
+  "среда",
+  "четверг",
+  "пятница",
+  "суббота"
+];
+
 export const shortNameDays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 
 export const months = [
@@ -79,6 +89,7 @@ export const getWeekDays = (currentDate) => {
 };
 
 export const getDateMeetInfo = (date) => {
+  console.log(date)
   const modifedDate = date.split('.').map((el) => Number(el));
   return `${modifedDate[0]} ${
     months[modifedDate[1] - 1]

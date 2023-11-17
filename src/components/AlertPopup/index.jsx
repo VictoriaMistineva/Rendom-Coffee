@@ -10,7 +10,7 @@ const AlertPopup = ({
   isOpen,
   inset,
   title,
-  subTitle,
+  subtitle,
   onClose,
   closeCanvas,
 }) => {
@@ -44,7 +44,7 @@ const AlertPopup = ({
         />
         <h5
           className={styles.connectionListPopup__subtitle}
-          dangerouslySetInnerHTML={{ __html: subTitle }}
+          dangerouslySetInnerHTML={{ __html: subtitle }}
         />
       </div>
     </PopupSheet>

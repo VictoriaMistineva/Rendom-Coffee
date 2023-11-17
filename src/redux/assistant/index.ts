@@ -175,7 +175,7 @@ const processAssistantCommand = (dispatch: AppDispatch, commandName: string, get
           dispatch(
             openAlertPopup({
               title: data.title,
-              subTitle: data.subTitle,
+              subtitle: data.subtitle,
             })
           );
       }

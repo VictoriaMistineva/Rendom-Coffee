@@ -89,7 +89,7 @@ const Header = ({ className, isWeb }: HeaderProps) => {
         <div onClick={handleClickButton}>
           <IconChevronLeft
             className={cn(styles.header__icon, {
-              [styles.header__icon_close]: location.pathname === '/firstStories' || location.pathname === '/',
+              [styles.header__icon_close]: location.pathname === '/firstStories' || location.pathname === '/' || location.pathname === '/sberTopQrStoriasPage',
             })}
 
           />

@@ -23,16 +23,15 @@
         display: flex;
         // justify-content: center;
         align-items: center;
-        // flex-direction: column;
-        justify-content: center;
-        // margin: 24px 38.86px 44px 47px;
+        flex-direction: column;
+        margin: 24px 38.86px 44px 47px;
 
         &_title {
             padding-top: 26px;
             color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
             text-align: center;
             font-family: SB Sans Text;
-            font-size: 25px;
+            font-size: 18px;
             font-style: normal;
             font-weight: 500;
             line-height: 32px;

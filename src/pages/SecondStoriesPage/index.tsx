@@ -28,7 +28,7 @@ const SecondStoriesPage = () => {
         parameters: { "page": (slidesPerView === 1) ? 0 : 1 }
       })
     );
-    
+
     dispatch(finishIsLoading())
   };
 
@@ -58,14 +58,14 @@ const SecondStoriesPage = () => {
       <SwiperSlide>
         <div className={styles.secondStories}>
           <div className={styles.secondStories__container}>
-            {/* <div className={styles.secondStories__containerTitle}>
+            <div className={styles.secondStories__containerTitle}>
               <div className={styles.secondStories__title}>
                 Ко дню рождения  <br /><strong>Сбербанка</strong><br />мы запускаем внутренний <br />сервис для интересных<br />знакомств
               </div>
               <div className={styles.secondStories__title}>
                 Давайте расширять круг <br />своего общения <br /> и знакомиться с коллегами <br /> из других подразделений.
               </div>
-            </div> */}
+            </div>
           </div>
           <div className={styles.secondStories__buttonContainer}>
             <button
@@ -86,19 +86,22 @@ const SecondStoriesPage = () => {
 
       {/* Mock Page Slide - will be shown while real page loads */}
       <SwiperSlide>
-      <div className={cn(firstPageStyle.startConfirmation)}>
-          {/* <div className={firstPageStyle.startConfirmation__container}>
-              <div className={firstPageStyle.startConfirmation__title}>
-                РАНДОМ КОФЕ <br />В СБЕРЕ
-              </div>
-          </div> */}
-          <button
-            className={cn(firstPageStyle.startConfirmation__button, firstPageStyle.startConfirmation__button_green)}
-            onClick={handleClickButton}
-          >
-            Участвовать
-          </button>
-        </div >
+        <div className={cn(firstPageStyle.startConfirmation)}>
+          <div>
+            <div className={styles.startConfirmation__title}>
+              РАНДОМ-КОФЕ<br />В СБЕРЕ
+            </div>
+            <div>
+              <Illustration />
+            </div>
+          </div>
+        <button
+          className={cn(firstPageStyle.startConfirmation__button, firstPageStyle.startConfirmation__button_green)}
+          onClick={handleClickButton}
+        >
+          Участвовать
+        </button>
+      </div >
     </SwiperSlide>
       
     </Swiper >

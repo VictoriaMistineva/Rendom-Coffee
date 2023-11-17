@@ -83,77 +83,60 @@ const Layout = ({ children }: LayoutProps) => {
     switch (location.pathname) {
       case '/sberTopQrStoriasPage':
         setIsWeb(true);
-        setIsBgCat(false);
-        setIsBgCat2(false)
-        break
-      case '/':
-        setIsWeb(false);
-        setIsBgCat2(false);
-        setIsBgCat(true);
-        break;
-      case '/firstStories':
-        setIsWeb(false);
-        setIsBgCat2(false);
-        setIsBgCat(true);
-        break;
-      case '/secondStories':
-        setIsWeb(false);
-        setIsBgCat(false);
-        setIsBgCat2(true);
         break
       default:
         setIsWeb(false);
-        setIsBgCat(false);
-        setIsBgCat2(false)
         break
     }
   }, [location.pathname])
 
   return (
-    <div className={cn(!isWeb ? styles.contentlayout : styles.container)}>
-      <div
-        className={cn(isWeb ? styles.layoutWeb : styles.layout, {
-          [styles.layout_blur]:
-            isBlur, [styles.layout__cat]:
-            isBgCat, [styles.layout__cat2]:
-            isBgCat2
-        })}
-      >
-        <Header isWeb={isWeb} />
-        {/* <img  className={styles.layout__catImg} src={ AVATAR } alt="cat" /> */}
-        <div className={isWeb ? styles.layoutWeb__content : styles.layout__content}>{children}</div>
-        {isLoading && (
-          <Portal className={styles.layout__spinerContainer}>
-            <Spinner size={128} />
-          </Portal>
-        )}
-        {alertPopup.isShow &&
-          <AlertPopup
-            isOpen={alertPopup.isShow}
-            inset={[]}
-            title={alertPopup.title}
-            subTitle={alertPopup.subtitle}
-            onClose={handleCloseAlertPopup}
-            closeCanvas={() => {
-              dispatch(close());
-            }}
-          />
-        }
-        {actionPopup.isOpen && (
-          <StatusPopupOpacityAndIsButton
-            status={actionPopup.status}
-            textItems={actionPopup.textItems}
-            buttonText={actionPopup.buttonText}
-            onClose={handleCloseActionPopup}
-          />
-        )}
-        {howItWorksPopUpIsOpen && (
-          <HowItWorksPopUp
-            isOpen={howItWorksPopUpIsOpen}
-            onClose={handleCloseHowItWorksPopUp}
-          />
-        )}
-      </div>
+    // 
+      <div className={cn(!isWeb ? styles.contentlayout : styles.container)}>
+        <div className={styles.nativePanel}>
+        </div>
+        <div
+          className={cn(isWeb ? styles.layoutWeb : styles.layout, {
+            [styles.layout_blur]:
+              isBlur
+          })}
+        >
+          <Header isWeb={isWeb} />
+          {/* <img  className={styles.layout__catImg} src={ AVATAR } alt="cat" /> */}
+          <div className={isWeb ? styles.layoutWeb__content : styles.layout__content}>{children}</div>
+          {isLoading && (
+            <Portal className={styles.layout__spinerContainer}>
+              <Spinner size={128} />
+            </Portal>
+          )}
+          {alertPopup.isShow &&
+            <AlertPopup
+              isOpen={alertPopup.isShow}
+              inset={[]}
+              title={alertPopup.title}
+              subtitle={alertPopup.subtitle}
+              onClose={handleCloseAlertPopup}
+              closeCanvas={() => {
+                dispatch(close());
+              }}
+            />
+          }
+          {actionPopup.isOpen && (
+            <StatusPopupOpacityAndIsButton
+              status={actionPopup.status}
+              textItems={actionPopup.textItems}
+              buttonText={actionPopup.buttonText}
+              onClose={handleCloseActionPopup}
+            />
+          )}
+          {howItWorksPopUpIsOpen && (
+            <HowItWorksPopUp
+              isOpen={howItWorksPopUpIsOpen}
+              onClose={handleCloseHowItWorksPopUp}
+            />
+          )}
+        </div>
+      
     </div>
   );
 };

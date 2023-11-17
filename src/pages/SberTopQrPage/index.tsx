@@ -45,7 +45,11 @@ const SberTopQrPage = () => {
             <div className={styles.sberTopQrPage} >
                 <div className={styles.sberTopQrPage_content}>
                     <div className={styles.sberTopQrPage__card1}>
-                        <img src={CAT} alt="cat" />
+                        <Illustration width={"142.123,true"} height={"147.001,true"} />
+
+                        <div className={styles.sberTopQrPage__card1_title}>
+                            РАНДОМ-КОФЕ <br />В СБЕРЕ
+                        </div>
 
                     </div>
                 </div>
@@ -66,7 +70,7 @@ const SberTopQrPage = () => {
                 </div>
                 <div className={styles.sberTopQrPage_content}>
                     <div className={styles.sberTopQrPage__card3}>
-                        <img src={QR} alt="qr"/>
+                        <img src={QR} alt="qr" />
                     </div>
                 </div>
             </div>
@@ -76,13 +80,15 @@ const SberTopQrPage = () => {
                         onClick={handleClickSound}
                         className={styles.sberTopQrPage__button}
                     >
-                        {isSoundOff ? <IconSoundOff /> : <IconSoundOn />}
+                        {/* {isSoundOff ? <IconSoundOff /> : <IconSoundOn />} */}
+                        {<IconSoundOff />}
                     </button>
                     <button
                         onClick={handleClickMicrophone}
                         className={styles.sberTopQrPage__button}
                     >
-                        <img src={isMicrophoneOff ? MICROPHONE_OFF : MICROPHONE_ON} />
+                        {/* <img src={isMicrophoneOff ? MICROPHONE_OFF : MICROPHONE_ON} /> */}
+                        <img src={MICROPHONE_OFF} />
                     </button>
 
                 </div>

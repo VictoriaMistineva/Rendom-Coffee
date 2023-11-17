@@ -10,6 +10,19 @@
 
 }
 
+.nativePanel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  // z-index: 999;
+  height: 100px;
+  width: 100%;
+  // box-sizing: border-box;
+  // display: flex;
+  backdrop-filter: blur(5px);
+  background: linear-gradient(#ffffff00, #000000);
+}
+
 .layout {
   // background: $mainBgColor;
   height: 100vh;
@@ -23,12 +36,7 @@
     width: 650px;
   }
 
-  &__catContan {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: aquamarine;
-  }
+  
 
   &__cat {
     background-image: url('../assets/img/icons/catbgMobile1.png'); 

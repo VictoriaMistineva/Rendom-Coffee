@@ -31,7 +31,7 @@ const StartConfirmationPage = () => {
     dispatch(
       sendData({
         action_id: 'changeStories',
-        parameters: { "page":  (slidesPerView === 1) ? 0 : 1}
+        parameters: { "page": (slidesPerView === 1) ? 0 : 1 }
       })
     );
 
@@ -66,11 +66,15 @@ const StartConfirmationPage = () => {
       <SwiperSlide>
 
         <div className={cn(styles.startConfirmation)}>
-          {/* <div className={styles.startConfirmation__container}>
-              <div className={styles.startConfirmation__title}>
-                РАНДОМ КОФЕ <br />В СБЕРЕ
-              </div>
-          </div> */}
+          <div className={styles.startConfirmation__container}>
+
+            <div className={styles.startConfirmation__title}>
+              РАНДОМ-КОФЕ<br />В СБЕРЕ
+            </div>
+            <div>
+              <Illustration />
+            </div>
+          </div>
           <button
             className={cn(styles.startConfirmation__button, styles.startConfirmation__button_green)}
             onClick={handleClickButton}
@@ -97,17 +101,17 @@ const StartConfirmationPage = () => {
 
       {/* Mock Page Slide - will be shown while real page loads */}
       <SwiperSlide>
-      <div className={secondPageStyles.secondStories}>
-          {/* <div className={secondPageStyles.secondStories__container}>
+        <div className={secondPageStyles.secondStories}>
+          <div className={secondPageStyles.secondStories__container}>
             <div className={secondPageStyles.secondStories__containerTitle}>
               <div className={secondPageStyles.secondStories__title}>
-              Ко дню рождения  <br /><strong>Сбербанка</strong><br />мы запускаем внутренний <br />сервис для интересных<br />знакомств
+                Ко дню рождения  <br /><strong>Сбербанка</strong><br />мы запускаем внутренний <br />сервис для интересных<br />знакомств
               </div>
               <div className={secondPageStyles.secondStories__title}>
-              Давайте расширять круг <br />своего общения <br /> и знакомиться с коллегами <br /> из других подразделений.
+                Давайте расширять круг <br />своего общения <br /> и знакомиться с коллегами <br /> из других подразделений.
               </div>
             </div>
-          </div> */}
+          </div>
           <div className={secondPageStyles.secondStories__buttonContainer}>
             <button
               className={cn(secondPageStyles.secondStories__button, secondPageStyles.secondStories__button_green)}

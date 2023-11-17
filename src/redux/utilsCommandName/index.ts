@@ -17,6 +17,7 @@ const initialState: UtilsCommandNameSliceState = {
     isShow: false,
     title: '',
     subtitle: '',
+    
     list: [],
   },
   howItWorksPopUpIsOpen:false,

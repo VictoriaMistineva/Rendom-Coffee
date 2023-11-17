@@ -18,6 +18,7 @@
     // }
 
   }
+
   &__containerTitle {
     padding-top: 22px;
     display: flex;
@@ -32,125 +33,122 @@
 
   }
 
+
   &__title {
+    color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
     text-align: center;
     font-family: SB Sans Text;
     font-size: 20px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 30px; /* 150% */
+    font-weight: 500;
+    line-height: 35px;
+    /* 175% */
     letter-spacing: -0.38px;
-    background: linear-gradient(90deg, #0EB029 0%, #3C5070 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    strong{
-      background: linear-gradient(90deg, #0EB029 0%, #3C5070 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  
+
+  strong {
     font-family: SB Sans Text;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 30px;
     letter-spacing: -0.456px;
-    }
+  }
+
+}
+
+&__subTitle {
+  text-align: center;
+  font-family: SB Sans Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  /* 156.25% */
+  letter-spacing: -0.304px;
+  opacity: 0.7;
+  background: var(--text-icons-gradient-sber, linear-gradient(94deg, #1DD13B 6.49%, #27C6E5 93.51%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+&__button {
+  position: absolute;
+  bottom: 0;
+  @include btnReset;
+  display: block;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: 54px;
+  border-radius: 12px;
+  color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
+  text-align: center;
+  font-family: SB Sans Text;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25px;
+  /* 113.636% */
+  letter-spacing: -0.418px;
+  cursor: pointer;
+
+  &:first-of-type {
+    margin-bottom: 100px;
+    margin-top: 54px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 162px;
 
   }
 
-  &__subTitle {
-    text-align: center;
-    font-family: SB Sans Text;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-    /* 156.25% */
-    letter-spacing: -0.304px;
-    opacity: 0.7;
-    background: var(--text-icons-gradient-sber, linear-gradient(94deg, #1DD13B 6.49%, #27C6E5 93.51%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  &+& {
+    margin-top: 12px;
   }
 
-  &__button {
-    position: absolute;
-    bottom: 0;
-    @include btnReset;
-    display: block;
-    left: 20px;
-    width: calc(100% - 40px);
-    height: 54px;
-    border-radius: 12px;
-    color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
-    text-align: center;
-    font-family: SB Sans Text;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 25px;
-    /* 113.636% */
-    letter-spacing: -0.418px;
-    cursor: pointer;
+  &_green {
+    background: linear-gradient(93.97deg, #1DD13B 6.49%, #27C6E5 93.51%);
+  }
 
-    &:first-of-type {
-      margin-bottom: 100px;
-      margin-top: 54px;
-    }
+  &_gray {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
 
-    &:last-of-type {
-      margin-bottom: 162px;
+  &_white {
+    background-color: var(--text-icons-glbl-white-primary, #FFF);
+    color: var(--text-icons-inverse, #080808);
+  }
+}
 
-    }
+&__buttonIcon {
+  @include btnReset;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 
-    &+& {
-      margin-top: 12px;
-    }
+  margin-left: 6px;
 
-    &_green {
-      background: linear-gradient(93.97deg, #1DD13B 6.49%, #27C6E5 93.51%);
-    }
+  &:disabled {
+    opacity: 0.28;
 
-    &_gray {
-      background-color: rgba(255, 255, 255, 0.12);
-    }
-    &_white{
-      background-color: var(--text-icons-glbl-white-primary, #FFF);     
-      color: var(--text-icons-inverse, #080808);
+    & path {
+      fill: #fff;
     }
   }
 
-  &__buttonIcon {
-    @include btnReset;
-    height: 24px;
-    width: 24px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+  &_active {
+    opacity: 0.28;
 
-    margin-left: 6px;
-
-    &:disabled {
-      opacity: 0.28;
-
-      & path {
-        fill: #fff;
-      }
-    }
-
-    &_active {
-      opacity: 0.28;
-
-      & path {
-        fill: #fff;
-      }
+    & path {
+      fill: #fff;
     }
   }
+}
 
-  &__buttonContainer{
-    flex-direction: column;
-  }
+&__buttonContainer {
+  flex-direction: column;
+}
 }
