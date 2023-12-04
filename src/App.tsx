@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { Provider, useDispatch } from 'react-redux';
 import './App.css';
 import store from './redux';
-import { createBrowserHistory } from 'history';
 import HistoryRouter from './HistoryRouter';
 import MainPage from './pages/MainPage';
 import Layout from './layout';
@@ -21,32 +20,37 @@ import SberTopQrPage from './pages/SberTopQrPage';
 import SecondStoriesPage from './pages/SecondStoriesPage';
 import UsersNotFoundPage from './pages/UsersNotFoundPage';
 import ChangeMeetingPlacePage from './pages/ChangeMeetingPlacePage';
+import { createBrowserHistory, Location, Action, History } from 'history';
+import { sendData } from './redux/assistant';
+
+
 
 const history = createBrowserHistory();
 
 function App() {
-  return (
-    <Provider store={store}>
-      <HistoryRouter history={history}>
-        <Layout>
-          <Routes>
-            <Route path="/" element={< StartConfirmationPage  />} />
-            <Route path="/firstStories" element={< StartConfirmationPage />} />
-            <Route path="/cityChoose" element={< YourLocationPage />} />
-            <Route path = "/selectionMethod" element={<SelectionColleaguesPage/>}/>
-            <Route path="/searchResult" element={<BubblesImagePage/>} />
-            <Route path="/smallUserCard" element = {<SmallUserCardPage/>}/>
-            <Route path="/meetInfo" element= {<MeetingPage/>}/>
-            <Route path="/extendedUserCard" element = {<PersonalInfo/>}/>
-            <Route path="/sberTopQrStoriasPage" element = {<SberTopQrPage/>}/>
-            <Route path="/secondStories" element = {<SecondStoriesPage/>}/>
-            <Route path="/usersNotFound"  element = {<UsersNotFoundPage/>}/>
-            <Route path="/changeMeetingPlace"  element = {<ChangeMeetingPlacePage/>}/>
-          </Routes>
-        </Layout>    
-      </HistoryRouter>
-    </Provider>
-  );
-}
+    return (
+      <Provider store={store}>
+        <HistoryRouter history={history}>
+          <Layout>
+            <Routes>
+              <Route path="/" element={< StartConfirmationPage />} />
+              <Route path="/firstStories" element={< StartConfirmationPage />} />
+              <Route path="/cityChoose" element={< YourLocationPage />} />
+              <Route path="/selectionMethod" element={<SelectionColleaguesPage />} />
+              <Route path="/searchResult" element={<BubblesImagePage />} />
+              <Route path="/smallUserCard" element={<SmallUserCardPage />} />
+              <Route path="/meetInfo" element={<MeetingPage />} />
+              <Route path="/extendedUserCard" element={<PersonalInfo />} />
+              <Route path="/sberTopQrStoriasPage" element={<SberTopQrPage />} />
+              <Route path="/secondStories" element={<SecondStoriesPage />} />
+              <Route path="/usersNotFound" element={<UsersNotFoundPage />} />
+              <Route path="/changeMeetingPlace" element={<ChangeMeetingPlacePage />} />
+            </Routes>
+          </Layout>
+        </HistoryRouter>
+      </Provider>
+    );
+  }
 
 export default React.memo(App);
+

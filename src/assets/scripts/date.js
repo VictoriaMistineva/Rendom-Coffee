@@ -89,11 +89,14 @@ export const getWeekDays = (currentDate) => {
 };
 
 export const getDateMeetInfo = (date) => {
-  console.log(date)
+  
+  
   const modifedDate = date.split('.').map((el) => Number(el));
+  const inputDate = new Date(modifedDate[2], modifedDate[1] - 1, modifedDate[0]);
+  const dayOfWeek = days[inputDate.getDay()];
   return `${modifedDate[0]} ${
     months[modifedDate[1] - 1]
-  } ${new Date().getFullYear()}, ${days[new Date().getDay()]}`;
+  } ${new Date().getFullYear()}, ${dayOfWeek}`;
 };
 
 export const getMonthLength = (date) => {

@@ -19,7 +19,7 @@ const StatusPopupOpacityAndIsButton = ({
   const handleClick = () => {
     dispatch(
       sendData({
-        action_id: 'GrandAccessButton',
+        action_id: 'GrantAccessButton',
       })
     );
   };

@@ -55,7 +55,7 @@ const SelectionColleaguesPage = () => {
                 key={index}
                 label={item.title}
                 name={item.title}
-                className={styles.radiobox}
+                className={item.canUse ? styles.radiobox : styles.radioboxGrey}
                 disabled={!item.canUse}
                 checked={item.selected}
                 onChange={(event: ChangeEvent<HTMLInputElement>) => (handleChange(index))}

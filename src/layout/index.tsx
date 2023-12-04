@@ -50,8 +50,6 @@ const Layout = ({ children }: LayoutProps) => {
   const alertPopup = useSelector(getAlertPopup);
   const howItWorksPopUpIsOpen = useSelector(getHowItWorksPopUpIsOpen);
   const [isWeb, setIsWeb] = useState<boolean>(false);
-  const [isBgCat, setIsBgCat] = useState<boolean>(false);
-  const [isBgCat2, setIsBgCat2] = useState<boolean>(false);
 
   useEffect(() => {
     // @ts-ignore
@@ -91,10 +89,11 @@ const Layout = ({ children }: LayoutProps) => {
   }, [location.pathname])
 
   return (
-    // 
       <div className={cn(!isWeb ? styles.contentlayout : styles.container)}>
-        <div className={styles.nativePanel}>
-        </div>
+        {!isWeb && 
+          <div className={styles.nativePanel}>
+          </div>
+        }
         <div
           className={cn(isWeb ? styles.layoutWeb : styles.layout, {
             [styles.layout_blur]:

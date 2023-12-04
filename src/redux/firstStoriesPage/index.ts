@@ -20,8 +20,8 @@ const startConfirmationSlice = createSlice({
       state.access = action.payload?.access ?? true;
       state.checkboxAccess = action.payload?.checkboxAccess ?? false;
       state.storiesPage = action.payload?.storiesPage;
-      state.microphone = action.payload?.microphone ?? false;
-      state.sound = action.payload?.sound ?? false;
+      state.microphone = action.payload?.microphone ?? true;
+      state.sound = action.payload?.sound ?? true;
     },
   },
 });

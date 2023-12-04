@@ -34,7 +34,17 @@ const Header = ({ className, isWeb }: HeaderProps) => {
   
   const initialSlide = useSelector(getStoriesPage);
 
-  
+  useEffect(()=>{
+    console.log(isMicrophoneOff)
+    if(!isSoundWeb){
+      dispatch(turnOffSound());
+    }
+    console.log(isSoundWeb + "isSoundWeb")
+    if(!isMicrophoneWeb){
+      dispatch(turnOffMicrophone())
+    }
+  },[isSoundWeb,isMicrophoneWeb])
+
   const handleClickMicrophone = useCallback(() => {
     if (isMicrophoneOff) dispatch(turnOnMicrophone());
     else dispatch(turnOffMicrophone());
@@ -44,7 +54,7 @@ const Header = ({ className, isWeb }: HeaderProps) => {
         action_id: isMicrophoneOff ? 'MicrophoneTurnOn' : 'MicrophoneTurnOff',
       })
     );
-  }, [isMicrophoneOff,isMicrophoneWeb]);
+  }, [isMicrophoneOff]);
 
   const handleClickSound = useCallback(() => {
     if (isSoundOff) dispatch(turnOnSound());
@@ -55,7 +65,7 @@ const Header = ({ className, isWeb }: HeaderProps) => {
         action_id: isSoundOff  ? 'SoundTurnOn' : 'SoundTurnOff',
       })
     );
-  }, [isSoundOff,isSoundWeb ]);
+  }, [isSoundOff]);
 
   const handleClickButton = () => {
     dispatch(
@@ -96,7 +106,7 @@ const Header = ({ className, isWeb }: HeaderProps) => {
         </div>
       </div>
 
-      {routingTitle ? routingTitle :
+      {routingTitle ? routingTitle:
         <div className={styles.header__paginationContainer}>
           {/* <PaginationLine isActive={(location.pathname === '/firstStories' && initialSlide == 0 ) || location.pathname === '/'} /> */}
           <PaginationLine isActive={location.pathname === '/firstStories' || location.pathname === '/'} />
