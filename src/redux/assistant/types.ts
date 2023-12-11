@@ -2,6 +2,7 @@ export type AssistantSliceState = {
     page: string,
     isLoading: boolean,
     errorInfo: null | string | number,
+    isMobile: boolean,
 }
 
 export type SmartAppResponseType = {
@@ -13,7 +14,7 @@ export type SmartAppResponseType = {
 }
 
 export type CommandParams = {
-    data?: object | AlertPopUp,
+    data?: object | AlertPopUp,  // в processAssistantParams 
     screenName?: string,
     eventName?: string,
     eventParams?: object

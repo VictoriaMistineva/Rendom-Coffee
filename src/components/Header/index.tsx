@@ -11,7 +11,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import PaginationLine from '../PaginationLine';
 import { getIsMicrophoneOff, getIsSoundOff, turnOffMicrophone, turnOffSound, turnOnMicrophone, turnOnSound } from '../../redux/utilsCommandName';
 import { sendData } from '../../redux/assistant';
-import { getSoundWeb, getMicrophoneWeb, getStoriesPage } from '../../redux/firstStoriesPage';
+import {getStoriesPage } from '../../redux/firstStoriesPage';
+import { getMicrophoneWeb, getSoundWeb } from '../../redux/determineWinner';
 
 
 interface HeaderProps {
@@ -77,14 +78,12 @@ const Header = ({ className, isWeb }: HeaderProps) => {
 
   const routingTitle = useMemo(() => {
     switch (location.pathname) {
-      case '/secondStories':
-      case '/firstStories':
-      case '/':
-        return '';
-      case '/changeMeetingPlace':
-        return 'Место встречи';
+      case '/determineWinnerPage':
+        return "СберКвест Ассистента";
+      case '/winnerPage':
+        return 'Победители\n СберКвеста Ассистента';
       default:
-        return 'РАНДОМ-КОФЕ В СБЕРЕ';
+        return "СберКвест Ассистента";
     }
   }, [location.pathname]);
 
@@ -99,20 +98,15 @@ const Header = ({ className, isWeb }: HeaderProps) => {
         <div onClick={handleClickButton}>
           <IconChevronLeft
             className={cn(styles.header__icon, {
-              [styles.header__icon_close]: location.pathname === '/firstStories' || location.pathname === '/' || location.pathname === '/sberTopQrStoriasPage',
+              [styles.header__icon_close]: location.pathname === '/determineWinnerPage' || location.pathname === '/' || location.pathname === '/userRegistration'
             })}
 
           />
         </div>
       </div>
 
-      {routingTitle ? routingTitle:
-        <div className={styles.header__paginationContainer}>
-          {/* <PaginationLine isActive={(location.pathname === '/firstStories' && initialSlide == 0 ) || location.pathname === '/'} /> */}
-          <PaginationLine isActive={location.pathname === '/firstStories' || location.pathname === '/'} />
-          <PaginationLine isActive={location.pathname === '/secondStories'} />
-        </div>
-      }
+      <div className={styles.header__title}>{routingTitle}</div>
+
       {
         !isWeb ?
           <div className={styles.header__buttons}>

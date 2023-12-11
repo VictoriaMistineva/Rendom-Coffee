@@ -11,7 +11,10 @@ import {
   getPage,
   initAssistant,
   sendData,
-  close
+  close,
+  getIsMobile,
+  setIsMobile,
+  finishIsLoading,
 } from '../redux/assistant';
 import {
   getIsBlur,
@@ -26,6 +29,8 @@ import StatusPopupOpacityAndIsButton from '../components/StatusPopupOpacityAndIs
 import HowItWorksPopUp from '../components/HowItWorksPopUp';
 import { getIsMicrophoneOff, getIsSoundOff, turnOffMicrophone, turnOffSound, turnOnMicrophone, turnOnSound } from '../redux/utilsCommandName';
 import AVATAR from './cat.png';
+import MicrophoneWeb from '../components/MicrophoneWeb';
+
 
 interface LayoutProps {
   children?: ReactNode
@@ -49,7 +54,11 @@ const Layout = ({ children }: LayoutProps) => {
   const actionPopup = useSelector(getActionPopup);
   const alertPopup = useSelector(getAlertPopup);
   const howItWorksPopUpIsOpen = useSelector(getHowItWorksPopUpIsOpen);
-  const [isWeb, setIsWeb] = useState<boolean>(false);
+  // const [isWeb, setIsWeb] = useState<boolean>(false);
+  const [isWin, setWin] = useState<boolean>(false);
+  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [containerBackgroundClassName, setContainerBackgroundClassName] = useState<string>("backgroundDefault");
+  const isMobile = useSelector(getIsMobile);
 
   useEffect(() => {
     // @ts-ignore
@@ -61,6 +70,29 @@ const Layout = ({ children }: LayoutProps) => {
     if (location.pathname !== pageWithoutSearch) navigate(`${page}`);
   }, [page]);
 
+  
+
+  React.useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    }
+  }, []);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  React.useEffect(() => {
+    if (width < 1200) {
+      dispatch(setIsMobile(true));
+    } else {
+      dispatch(setIsMobile(false));
+    }
+  }, [width]);
+
+  
   const handleCloseActionPopup = useCallback(() => {
     dispatch(closeActionPopup());
   }, []);
@@ -73,69 +105,73 @@ const Layout = ({ children }: LayoutProps) => {
     dispatch(closeHowItWorksPopUp());
   }, []);
 
-
-
-
-
   const bgCup = useMemo(() => {
     switch (location.pathname) {
-      case '/sberTopQrStoriasPage':
-        setIsWeb(true);
+      case '/winnerPage':
+        setContainerBackgroundClassName("backgroundWin");
+        break
+      case '/searchResult':
+        setContainerBackgroundClassName("backgroundAnimationSpin");
+        break
+      case '/determineWinnerPage':
+        setContainerBackgroundClassName("backgroundDetermineWinner");
         break
       default:
-        setIsWeb(false);
+        setContainerBackgroundClassName("backgroundDefault");
         break
     }
   }, [location.pathname])
 
+
+
   return (
-      <div className={cn(!isWeb ? styles.contentlayout : styles.container)}>
-        {!isWeb && 
-          <div className={styles.nativePanel}>
-          </div>
-        }
-        <div
-          className={cn(isWeb ? styles.layoutWeb : styles.layout, {
-            [styles.layout_blur]:
-              isBlur
-          })}
-        >
-          <Header isWeb={isWeb} />
-          {/* <img  className={styles.layout__catImg} src={ AVATAR } alt="cat" /> */}
-          <div className={isWeb ? styles.layoutWeb__content : styles.layout__content}>{children}</div>
-          {isLoading && (
-            <Portal className={styles.layout__spinerContainer}>
-              <Spinner size={128} />
-            </Portal>
-          )}
-          {alertPopup.isShow &&
-            <AlertPopup
-              isOpen={alertPopup.isShow}
-              inset={[]}
-              title={alertPopup.title}
-              subtitle={alertPopup.subtitle}
-              onClose={handleCloseAlertPopup}
-              closeCanvas={() => {
-                dispatch(close());
-              }}
-            />
-          }
-          {actionPopup.isOpen && (
-            <StatusPopupOpacityAndIsButton
-              status={actionPopup.status}
-              textItems={actionPopup.textItems}
-              buttonText={actionPopup.buttonText}
-              onClose={handleCloseActionPopup}
-            />
-          )}
-          {howItWorksPopUpIsOpen && (
-            <HowItWorksPopUp
-              isOpen={howItWorksPopUpIsOpen}
-              onClose={handleCloseHowItWorksPopUp}
-            />
-          )}
+    <div className={cn(styles.container, isMobile ? styles["backgroundDefault"] : styles[containerBackgroundClassName])}>
+      {!isMobile &&
+        <div className={styles.nativePanel}>
         </div>
-      
+      }
+      <div
+        className={cn(styles.layoutWeb, {
+          [styles.layout_blur]:
+            isBlur
+        })}
+      >
+        <Header isWeb={!isMobile} />
+        {!isMobile && <MicrophoneWeb/>}
+        <div className={!isMobile ? styles.layoutWeb__content : styles.layout__content}>{children}</div>
+        {isLoading && (
+          <Portal className={styles.layout__spinerContainer}>
+            <Spinner size={128} />
+          </Portal>
+        )}
+        {alertPopup.isShow &&
+          <AlertPopup
+            isOpen={alertPopup.isShow}
+            inset={[]}
+            title={alertPopup.title}
+            subtitle={alertPopup.subtitle}
+            onClose={handleCloseAlertPopup}
+            closeCanvas={() => {
+              dispatch(close());
+            }}
+          />
+        }
+        {actionPopup.isOpen && (
+          <StatusPopupOpacityAndIsButton
+            status={actionPopup.status}
+            textItems={actionPopup.textItems}
+            buttonText={actionPopup.buttonText}
+            onClose={handleCloseActionPopup}
+          />
+        )}
+        {howItWorksPopUpIsOpen && (
+          <HowItWorksPopUp
+            isOpen={howItWorksPopUpIsOpen}
+            onClose={handleCloseHowItWorksPopUp}
+          />
+        )}
+      </div>
+
     </div>
   );
 };

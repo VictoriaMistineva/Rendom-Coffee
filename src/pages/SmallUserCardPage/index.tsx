@@ -55,17 +55,17 @@ const SmallUserCard = () => {
           <div className={styles.smallCardUser__subTitle}>
             {users.department}
           </div>
-          <div className={styles.smallCardUser__cardContainer} onClick={handleClickAction}>
+          {/* <div className={styles.smallCardUser__cardContainer} onClick={handleClickAction}>
             <div className={styles.smallCardUser__titleGreen}>
               Смотреть карточку
             </div>
             <IconAction />
-          </div>
+          </div> */}
 
         </div>
-        <div className={styles.smallCardUser__textMeeting} onClick={handleClickButton}>
+        {/* <div className={styles.smallCardUser__textMeeting} onClick={handleClickButton}>
           Предложить встречу
-        </div>
+        </div> */}
       </div>
     </div>
   );

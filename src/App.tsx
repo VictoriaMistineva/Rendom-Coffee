@@ -22,6 +22,9 @@ import UsersNotFoundPage from './pages/UsersNotFoundPage';
 import ChangeMeetingPlacePage from './pages/ChangeMeetingPlacePage';
 import { createBrowserHistory, Location, Action, History } from 'history';
 import { sendData } from './redux/assistant';
+import WinnerPage from './pages/WinnerPage';
+import UserRegistrationPage from './pages/UserRegistrationPage';
+import DetermineWinnerPage from './pages/DetermineWinnerPage';
 
 
 
@@ -33,18 +36,13 @@ function App() {
         <HistoryRouter history={history}>
           <Layout>
             <Routes>
-              <Route path="/" element={< StartConfirmationPage />} />
-              <Route path="/firstStories" element={< StartConfirmationPage />} />
-              <Route path="/cityChoose" element={< YourLocationPage />} />
-              <Route path="/selectionMethod" element={<SelectionColleaguesPage />} />
+              <Route path="/"/>
               <Route path="/searchResult" element={<BubblesImagePage />} />
               <Route path="/smallUserCard" element={<SmallUserCardPage />} />
-              <Route path="/meetInfo" element={<MeetingPage />} />
               <Route path="/extendedUserCard" element={<PersonalInfo />} />
-              <Route path="/sberTopQrStoriasPage" element={<SberTopQrPage />} />
-              <Route path="/secondStories" element={<SecondStoriesPage />} />
-              <Route path="/usersNotFound" element={<UsersNotFoundPage />} />
-              <Route path="/changeMeetingPlace" element={<ChangeMeetingPlacePage />} />
+              <Route path="/winnerPage" element={<WinnerPage/>} />
+              <Route path="/determineWinnerPage" element={<DetermineWinnerPage/>} />
+              <Route path="/userRegistration" element={<UserRegistrationPage/>} />
             </Routes>
           </Layout>
         </HistoryRouter>

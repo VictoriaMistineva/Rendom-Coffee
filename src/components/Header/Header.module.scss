@@ -22,14 +22,15 @@
   }
 
   &__titleDay {
+    color: var(--text-icons-primary, rgba(255, 255, 255, 0.96));
     text-align: center;
     font-family: SB Sans Text;
-    font-size: 19px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 105.263% */
-    letter-spacing: -0.361px;
-    text-align: center;
+    line-height: 20px;
+    /* 76.923% */
+    letter-spacing: -0.494px;
     color: $white;
     padding: 0 20px;
     font-weight: 600;
@@ -45,7 +46,7 @@
     cursor: pointer;
     width: 24px;
     height: 24px;
-    
+
     &+& {
       margin-left: 5px;
       margin-right: 5px;
@@ -56,12 +57,28 @@
       position: absolute;
     }
   }
-  &__paginationContainer{
+
+  &__paginationContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap:10px;
+    gap: 10px;
     margin: 0 12px;
+  }
+
+  &__title {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+    text-align: center;
+    white-space: pre-line;
+    @media screen and (max-width: 1199px){
+      margin-left: 20px;
+    }
+    @media screen and (min-width: 1200px){
+      margin-right: 30px;
+    }
   }
 }

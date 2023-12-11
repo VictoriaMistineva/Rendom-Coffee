@@ -10,6 +10,9 @@ import bubblesImage from './bubblesImage'
 import smallUserCard from './smallUserCard'
 import meetInfo from './meetInfo';
 import changeMeetingPlace from './changeMeetingPlace';
+import userRegistration from './userRegistration';
+import determineWinner from './determineWinner';
+import winner from './winner';
 const rootReducer = combineReducers({
     app,
     assistant,
@@ -21,7 +24,10 @@ const rootReducer = combineReducers({
     bubblesImage,
     smallUserCard,
     meetInfo,
-    changeMeetingPlace
+    changeMeetingPlace,
+    userRegistration,
+    determineWinner,
+    winner,
 });
 
 const store = configureStore({

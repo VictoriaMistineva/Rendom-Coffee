@@ -12,6 +12,7 @@ const initialState: StartConfirmationPageSliceState = {
   microphone: true,
 }
 
+
 const startConfirmationSlice = createSlice({
   name: 'startConfirmation',
   initialState: initialState,

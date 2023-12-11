@@ -13,9 +13,10 @@ import { YourLocationPageSliceState } from '../yourLocationPage/types';
 import { setData as setBubblesImage } from '../bubblesImage';
 import { setData as setSmallUserCard } from '../smallUserCard';
 import { setData as setMeetingInfo } from '../meetInfo';
-
+import { setData as setDetermineWinner } from '../determineWinner'
 import { setData as setChangeMeeting } from '../changeMeetingPlace';
-
+import { setData as setUserRegistration } from '../userRegistration'
+import { setData as setWinner } from '../winner'
 export * from './selectors';
 import {
   turnOffMicrophone,
@@ -33,6 +34,9 @@ import { bubblesImageSliceState } from '../bubblesImage/types';
 import { smallUserCardSliceState } from '../smallUserCard/types';
 import { MeetInfoSliceState } from '../meetInfo/types';
 import { ChangeMeetingPlaceSliceState } from '../changeMeetingPlace/types';
+import { UserRegistrationSliceState } from '../userRegistration/types';
+import { DetermineWinnerSliceState } from '../determineWinner/types';
+import { WinnerSliceState } from '../winner/types';
 
 
 let assistant: any = null;
@@ -41,6 +45,7 @@ const initialState: AssistantSliceState = {
   page: '',
   isLoading: true,
   errorInfo: null,
+  isMobile: false,
 }
 
 const assistantSlice = createSlice({
@@ -81,7 +86,11 @@ const assistantSlice = createSlice({
     },
     setErrorInfo(state, { payload }) {
       state.errorInfo = payload ?? '';
-    }
+    },
+    setIsMobile(state, { payload }) {
+      state.isMobile = payload ?? false;
+    },
+
   },
 });
 
@@ -91,7 +100,8 @@ export const {
   startIsLoading,
   setPage,
   close,
-  setErrorInfo
+  setErrorInfo,
+  setIsMobile
 } = assistantSlice.actions;
 export default assistantSlice.reducer;
 
@@ -145,6 +155,18 @@ const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandPar
     case 'ChangeMeetingPlace':
       page = '/changeMeetingPlace'
       dispatch(setChangeMeeting(data as ChangeMeetingPlaceSliceState))
+      break
+    case 'WinnerPage':
+      page = "/winnerPage"
+      dispatch(setWinner(data as WinnerSliceState))
+      break
+    case 'UserRegistration':
+      page = "/userRegistration"
+      dispatch(setUserRegistration(data as UserRegistrationSliceState))
+      break
+    case 'DetermineWinnerPage':
+      page = "/determineWinnerPage"
+      dispatch(setDetermineWinner(data as DetermineWinnerSliceState))
       break
   }
   dispatch(setPage({ page }));

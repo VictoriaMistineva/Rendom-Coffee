@@ -46,11 +46,11 @@
 
 #cup {
     position: relative;
-    width: 330px;
+    width: 350px;
     height: 330px;
     top: 0px;
     left: 0;
-    background-size: 330px 330px;
+    background-size: 350px 330px;
 }
 .textContainer{
 
