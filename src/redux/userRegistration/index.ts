@@ -6,7 +6,9 @@ export * from './selectors';
 
 const initialState: UserRegistrationSliceState = {
   status: "",
-  text: []
+  text: [],
+  sound: true, 
+  microphone: true,
 }
 
 const userRegistrationSlice = createSlice({
@@ -16,6 +18,8 @@ const userRegistrationSlice = createSlice({
     setData(state, action:PayloadAction<UserRegistrationSliceState>) {
       state.status = action.payload.status ?? "";
       state.text = action.payload.text ?? [];
+      state.microphone = action.payload?.microphone ?? true;
+      state.sound = action.payload?.sound ?? true;
     },
 
   },

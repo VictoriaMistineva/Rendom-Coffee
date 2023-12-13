@@ -10,6 +10,7 @@ import MICROPHONE_OFF from '../../assets/img/icons/microphoneOff.svg';
 import MICROPHONE_ON from '../../assets/img/icons/microphoneOn.svg';
 import { ReactComponent as IconSoundOff } from '../../assets/img/icons/soundOff.svg';
 import { ReactComponent as IconSoundOn } from '../../assets/img/icons/soundOn.svg';
+import { getMicrophoneRegistrationWeb, getSoundRegistrationWeb } from '../../redux/userRegistration';
 
 const MicrophoneWeb = () => {
     const location = useLocation();
@@ -21,19 +22,20 @@ const MicrophoneWeb = () => {
 
     const isMicrophoneWeb = useSelector(getMicrophoneWeb);
     const isSoundWeb = useSelector(getSoundWeb);
-
+    const isMicrophoneWebRegistration = useSelector(getMicrophoneRegistrationWeb);
+    const isSoundWebRegistration = useSelector(getSoundRegistrationWeb);
     const initialSlide = useSelector(getStoriesPage);
 
     useEffect(() => {
-        console.log(isMicrophoneOff)
-        if (!isSoundWeb) {
+        // console.log(isSoundWeb)
+        if (!isSoundWeb || !isSoundWebRegistration) {
             dispatch(turnOffSound());
         }
-        console.log(isSoundWeb + "isSoundWeb")
-        if (!isMicrophoneWeb) {
+        console.log(isMicrophoneWeb + "isMicrophoneWeb")
+        if (!isMicrophoneWeb || !isMicrophoneWebRegistration) {
             dispatch(turnOffMicrophone())
         }
-    }, [isSoundWeb, isMicrophoneWeb])
+    }, [isSoundWeb, isMicrophoneWeb,isMicrophoneWebRegistration,isSoundWebRegistration])
 
     const handleClickMicrophone = useCallback(() => {
         if (isMicrophoneOff) dispatch(turnOnMicrophone());

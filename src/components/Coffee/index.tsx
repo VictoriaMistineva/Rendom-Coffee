@@ -27,12 +27,12 @@ const Coffee = () => {
     useEffect(() => {
 
         const timeout = setTimeout(() => {
-            const children = document.querySelectorAll('.circle-container > *');
+            const children = document.querySelectorAll('.circle-container-web > *');
             children.forEach((child) => {
                 child.classList.add('stop-animation');
             });
 
-            const circleContainer2 = document.querySelectorAll('.circle-container2 > *');
+            const circleContainer2 = document.querySelectorAll('.circle-container-web2 > *');
             circleContainer2.forEach((child) => {
                 child.classList.add('stop-animation');
             });
@@ -59,14 +59,14 @@ const Coffee = () => {
             />
             <div className="containerCoffee">
                     <img src={treeAndSanta} alt="treeAndSanta" className="containerImg"/> 
-                <ul className='circle-container'>
+                <ul className='circle-container-web'>
                     {
                         users.slice(0, 8).map((item, index) => (
                             <li key={index} className='container1'> <div className='ct1'><img src={item.avatar ? item.avatar : AVATAR} className="avatar" alt="..." onClick={() => { handleClickButton(item.id) }} /></div></li>
                         ))
                     }
                 </ul>
-                <ul className='circle-container2'>
+                <ul className='circle-container-web2'>
                     {
                         users.slice(8, 16).map((item, index) => (
                             <li key={index} className='container2' onClick={() => { handleClickButton(item.id) }}><div className='ct21'><img src={item.avatar ? item.avatar : AVATAR} className="avatar" alt="..." onClick={() => { handleClickButton(item.id) }} /></div></li>

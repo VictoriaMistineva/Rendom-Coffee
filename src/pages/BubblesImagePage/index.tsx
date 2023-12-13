@@ -15,6 +15,7 @@ const BubblesImagePage = () => {
             
             {!isMobile ?  <Coffee/> : <RandomSpinerAnimationMobile/>}
             {/* <Coffee/>  */}
+            {/* <RandomSpinerAnimationMobile/> */}
         </div>
     );
 };

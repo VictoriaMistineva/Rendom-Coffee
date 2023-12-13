@@ -4,6 +4,7 @@ import sberTime from '../../assets/img/icons/sberTime.png'
 import sberboomMini from '../../assets/img/icons/sberboom.png'
 import sberboom from '../../assets/img/icons/SberBoom1.png'
 import ded from '../../assets/img/icons/Деды.png'
+import present  from '../../assets/img/icons/подарок.png'
 import Snowfall from 'react-snowfall';
 import { useSelector } from 'react-redux';
 import { getParticipantCount, getWinners } from '../../redux/winner';
@@ -105,13 +106,13 @@ const WinnerPage = () => {
                             </div>
                         </div>
 
-                        <div className={styles.winnerPage}>
+                        <div className={styles.winnerPageContentMobile }>
 
                             <div className={styles.containerPrize}>
                                 <div className={styles.containerPrize_text}>
                                     <strong>Первый приз-</strong> умная колонка SberBoom</div>
                                 <div style={{ display: "flex", alignItems: "center"}}>
-                                    <img src={sberboom} alt="sberboom" />
+                                    <img src={sberboom} alt="sberboom" style={{paddingLeft:"15px"}}/>
                                     <div className={styles.winnerText}>
                                         <div className={styles.winnerText_text}>
                                             {winner.length > 0 ? winner[0].name : ""}
@@ -127,7 +128,7 @@ const WinnerPage = () => {
                                 <div className={styles.containerPrize_text}>
                                     <strong>Второй приз -</strong> умная колонка Sberbox time</div>
                                 <div style={{ display: "flex", alignItems: "center" }}>
-                                    <img src={sberTime} alt="sberTime"  />
+                                    <img src={sberTime} alt="sberTime"  style={{paddingRight:"22px", paddingLeft:"15px"}}/>
                                     <div className={styles.winnerText} >
                                         <div className={styles.winnerText_text}>
                                             {winner.length > 0 ? winner[1].name : ""}
@@ -141,7 +142,7 @@ const WinnerPage = () => {
                                 <div className={styles.containerPrize_text}>
                                     <strong>Третий приз -</strong> умная колонка SberBoom mini</div>
                                 <div style={{ display: "flex", alignItems: "center"}}>
-                                    <img src={sberboomMini} alt="sberboomMini" />
+                                    <img src={sberboomMini} alt="sberboomMini" style={{paddingRight:"20px", paddingLeft:"15px"}}/>
                                     <div className={styles.winnerText}>
                                         <div className={styles.winnerText_text}>
                                             {winner.length > 0 ? winner[2].name : ""}
@@ -152,7 +153,11 @@ const WinnerPage = () => {
                             </div>
 
                         </div>
+                        <div className={styles.present}>
+                            <img src={present} alt="present" />
+                        </div>
                     </div>
+                    
                 )
             }
         </>

@@ -5,8 +5,8 @@ import "./style.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { geUsersBubbles } from '../../redux/bubblesImage';
 import { sendData } from '../../redux/assistant';
-// import AVATAR from '../../assets/img/icons/снежинка.png';
-import AVATAR from '../../assets/img/icons/avatar.svg';
+import AVATAR from '../../assets/img/icons/снежинка.png';
+// import AVATAR from '../../assets/img/icons/avatar.svg';
 import Snowfall from 'react-snowfall'
 
 const RandomSpinerAnimationMobile = () => {
@@ -55,8 +55,8 @@ const RandomSpinerAnimationMobile = () => {
     return (
 
         <div className="containerCoffee">
-            <div className="containerImg">
-                <div id="cup" style={{ backgroundImage: `url(${treeAndSanta})` }}>
+            <div className="containerImgMobile">
+                <div id="cupMobile" style={{ backgroundImage: `url(${treeAndSanta})` }}>
                 </div>
                 <ul className='circle-container'>
                     {

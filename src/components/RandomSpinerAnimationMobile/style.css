@@ -4,6 +4,16 @@
   overflow: hidden;
 }
 
+.containerImgMobile {
+  position: absolute;
+  display: block;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 50px;
+  
+}
+
 .container {
   position: absolute;
   /* Center at Screen */
@@ -13,10 +23,14 @@
 }
 
 #coffee,
-#cup {
+#cupMobile {
   position: fixed;
 }
 
+/* #coffee,
+#cupMobile {
+  background-image: url("./cup2.png");
+} */
 .stop-animation {
   animation-play-state: paused;
 }
@@ -66,7 +80,7 @@
 .circle-container>*:nth-of-type(1) {
   transform: rotate(0deg) translate(10em) rotate(0deg);
   will-change: transform;
-  animation-name: orbit;
+  animation-name: orbitMobile;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -75,7 +89,7 @@
 .circle-container>*:nth-of-type(2) {
   transform: rotate(45deg) translate(10em) rotate(-45deg);
   will-change: transform;
-  animation-name: orbit2;
+  animation-name: orbitMobile2;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -84,7 +98,7 @@
 .circle-container>*:nth-of-type(3) {
   transform: rotate(90deg) translate(10em) rotate(-90deg);
   will-change: transform;
-  animation-name: orbit3;
+  animation-name: orbitMobile3;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -93,7 +107,7 @@
 .circle-container>*:nth-of-type(4) {
   transform: rotate(135deg) translate(10em) rotate(-135deg);
   will-change: transform;
-  animation-name: orbit4;
+  animation-name: orbitMobile4;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -102,7 +116,7 @@
 .circle-container>*:nth-of-type(5) {
   transform: rotate(180deg) translate(10em) rotate(-180deg);
   will-change: transform;
-  animation-name: orbit5;
+  animation-name: orbitMobile5;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -111,7 +125,7 @@
 .circle-container>*:nth-of-type(6) {
   transform: rotate(225deg) translate(10em) rotate(-224deg);
   will-change: transform;
-  animation-name: orbit6;
+  animation-name: orbitMobile6;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -120,7 +134,7 @@
 .circle-container>*:nth-of-type(7) {
   transform: rotate(270deg) translate(10em) rotate(-270deg);
   will-change: transform;
-  animation-name: orbit7;
+  animation-name: orbitMobile7;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -129,13 +143,13 @@
 .circle-container>*:nth-of-type(8) {
   transform: rotate(315deg) translate(10em) rotate(-315deg);
   will-change: transform;
-  animation-name: orbit8;
+  animation-name: orbitMobile8;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
-@keyframes orbit {
+@keyframes orbitMobile {
   from {
       transform: rotate(0deg) translate(10em);
   }
@@ -145,7 +159,7 @@
   }
 }
 
-@keyframes orbit2 {
+@keyframes orbitMobile2 {
   from {
       transform: rotate(45deg) translate(10em);
   }
@@ -155,7 +169,7 @@
   }
 }
 
-@keyframes orbit3 {
+@keyframes orbitMobile3 {
   from {
       transform: rotate(90deg) translate(10em);
   }
@@ -165,7 +179,7 @@
   }
 }
 
-@keyframes orbit4 {
+@keyframes orbitMobile4 {
   from {
       transform: rotate(135deg) translate(10em);
   }
@@ -175,7 +189,7 @@
   }
 }
 
-@keyframes orbit5 {
+@keyframes orbitMobile5 {
   from {
       transform: rotate(180deg) translate(10em);
   }
@@ -185,7 +199,7 @@
   }
 }
 
-@keyframes orbit6 {
+@keyframes orbitMobile6 {
   from {
       transform: rotate(225deg) translate(10em);
   }
@@ -195,7 +209,7 @@
   }
 }
 
-@keyframes orbit7 {
+@keyframes orbitMobile7 {
   from {
       transform: rotate(270deg) translate(10em);
   }
@@ -205,7 +219,7 @@
   }
 }
 
-@keyframes orbit8 {
+@keyframes orbitMobile8 {
   from {
       transform: rotate(315deg) translate(10em);
   }
@@ -449,7 +463,7 @@
 .circle-container2>*:nth-of-type(1) {
   transform: rotate(0deg) translate(20em) rotate(0deg);
   will-change: transform;
-  animation-name: sorbit;
+  animation-name: sorbitMobile;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -458,7 +472,7 @@
 .circle-container2>*:nth-of-type(2) {
   transform: rotate(45deg) translate(20em) rotate(-45deg) ;
   will-change: transform;
-  animation-name: sorbit2;
+  animation-name: sorbitMobile2;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -467,7 +481,7 @@
 .circle-container2>*:nth-of-type(3) {
   transform: rotate(90deg) translate(20em) rotate(-90deg) ;
   will-change: transform;
-  animation-name: sorbit3;
+  animation-name: sorbitMobile3;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -476,7 +490,7 @@
 .circle-container2>*:nth-of-type(4) {
   transform: rotate(135deg) translate(20em) rotate(-135deg) ;
   will-change: transform;
-  animation-name: sorbit4;
+  animation-name: sorbitMobile4;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -485,7 +499,7 @@
 .circle-container2>*:nth-of-type(5) {
   transform: rotate(180deg) translate(20em) rotate(-180deg) ;
   will-change: transform;
-  animation-name: sorbit5;
+  animation-name: sorbitMobile5;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -494,7 +508,7 @@
 .circle-container2>*:nth-of-type(6) {
   transform: rotate(225deg) translate(20em) rotate(-224deg);
   will-change: transform;
-  animation-name: sorbit6;
+  animation-name: sorbitMobile6;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -503,7 +517,7 @@
 .circle-container2>*:nth-of-type(7) {
   transform: rotate(270deg) translate(20em) rotate(-270deg);
   will-change: transform;
-  animation-name: sorbit7;
+  animation-name: sorbitMobile7;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -512,7 +526,7 @@
 .circle-container2>*:nth-of-type(8) {
   transform: rotate(315deg) translate(20em) rotate(-315deg);
   will-change: transform;
-  animation-name: sorbit8;
+  animation-name: sorbitMobile8;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -528,7 +542,7 @@
 }
 
 
-@keyframes sorbit {
+@keyframes sorbitMobile {
   from {
       transform: rotate(-0deg) translate(15em) rotateZ(24deg);
   }
@@ -538,7 +552,7 @@
   }
 }
 
-@keyframes sorbit2 {
+@keyframes sorbitMobile2 {
   from {
       transform: rotate(-45deg) translate(15em) rotateZ(24deg);
   }
@@ -548,7 +562,7 @@
   }
 }
 
-@keyframes sorbit3 {
+@keyframes sorbitMobile3 {
   from {
       transform: rotate(-90deg) translate(15em) rotateZ(24deg);
   }
@@ -558,7 +572,7 @@
   }
 }
 
-@keyframes sorbit4 {
+@keyframes sorbitMobile4 {
   from {
       transform: rotate(-135deg) translate(15em) rotateZ(24deg);
   }
@@ -568,7 +582,7 @@
   }
 }
 
-@keyframes sorbit5 {
+@keyframes sorbitMobile5 {
   from {
       transform: rotate(-180deg) translate(15em) rotateZ(24deg);
   }
@@ -578,7 +592,7 @@
   }
 }
 
-@keyframes sorbit6 {
+@keyframes sorbitMobile6 {
   from {
       transform: rotate(-225deg) translate(15em) rotateZ(24deg);
   }
@@ -588,7 +602,7 @@
   }
 }
 
-@keyframes sorbit7 {
+@keyframes sorbitMobile7 {
   from {
       transform: rotate(-270deg) translate(15em) rotateZ(24deg);
   }
@@ -598,7 +612,7 @@
   }
 }
 
-@keyframes sorbit8 {
+@keyframes sorbitMobile8 {
   from {
       transform: rotate(-315deg) translate(15em) rotateZ(24deg);
   }
@@ -826,13 +840,14 @@
   -ms-animation-timing-function: linear;
 }
 
-#cup {
+#cupMobile {
   position: relative;
-  width: 330px;
-  height: 330px;
-  top: 0px;
+  width: 340px;
+  height: 400px;
+  /* top: 0px; */
   left: 0;
-  background-size: 330px 330px;
+  bottom: 20px;
+  background-size: 340px 410px;
 }
 
 .ct{

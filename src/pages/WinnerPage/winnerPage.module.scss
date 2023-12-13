@@ -56,8 +56,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    align-items: center;
-
+    gap: 20px;
+    overflow-y: scroll !important;
+    overflow: scroll !important;
+    padding-bottom: 150px;
 
 }
 
@@ -67,6 +69,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    
 
 }
 
@@ -214,4 +217,11 @@
             letter-spacing: 1.76px;
         }
     }
+}
+
+.present {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
 }
