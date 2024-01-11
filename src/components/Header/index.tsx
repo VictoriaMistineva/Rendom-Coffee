@@ -11,8 +11,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import PaginationLine from '../PaginationLine';
 import { getIsMicrophoneOff, getIsSoundOff, turnOffMicrophone, turnOffSound, turnOnMicrophone, turnOnSound } from '../../redux/utilsCommandName';
 import { sendData } from '../../redux/assistant';
-import {getStoriesPage } from '../../redux/firstStoriesPage';
+import { getStoriesPage } from '../../redux/firstStoriesPage';
 import { getMicrophoneWeb, getSoundWeb } from '../../redux/determineWinner';
+import { getMicrophoneRegistrationWeb, getSoundRegistrationWeb } from '../../redux/userRegistration';
 
 
 interface HeaderProps {
@@ -29,22 +30,26 @@ const Header = ({ className, isWeb }: HeaderProps) => {
 
   const isMicrophoneOff = useSelector(getIsMicrophoneOff);
   const isSoundOff = useSelector(getIsSoundOff);
-  
-  const isMicrophoneWeb =  useSelector(getMicrophoneWeb);
-  const isSoundWeb =  useSelector(getSoundWeb);
-  
+
+  const isMicrophoneWeb = useSelector(getMicrophoneWeb);
+  const isSoundWeb = useSelector(getSoundWeb);
+
   const initialSlide = useSelector(getStoriesPage);
 
-  useEffect(()=>{
-    console.log(isMicrophoneOff)
-    if(!isSoundWeb){
+  const isMicrophoneWebRegistration = useSelector(getMicrophoneRegistrationWeb);
+  const isSoundWebRegistration = useSelector(getSoundRegistrationWeb);
+
+
+  useEffect(() => {
+    console.log(isMicrophoneWebRegistration + " fe")
+    if (!isSoundWeb || !isSoundWebRegistration) {
       dispatch(turnOffSound());
     }
-    console.log(isSoundWeb + "isSoundWeb")
-    if(!isMicrophoneWeb){
+    // console.log(isMicrophoneWeb + "isMicrophoneWeb")
+    if (!isMicrophoneWeb || !isMicrophoneWebRegistration) {
       dispatch(turnOffMicrophone())
     }
-  },[isSoundWeb,isMicrophoneWeb])
+  }, [isSoundWeb, isMicrophoneWeb, isMicrophoneWebRegistration, isSoundWebRegistration])
 
   const handleClickMicrophone = useCallback(() => {
     if (isMicrophoneOff) dispatch(turnOnMicrophone());
@@ -63,7 +68,7 @@ const Header = ({ className, isWeb }: HeaderProps) => {
 
     dispatch(
       sendData({
-        action_id: isSoundOff  ? 'SoundTurnOn' : 'SoundTurnOff',
+        action_id: isSoundOff ? 'SoundTurnOn' : 'SoundTurnOff',
       })
     );
   }, [isSoundOff]);
@@ -110,21 +115,21 @@ const Header = ({ className, isWeb }: HeaderProps) => {
       {
         !isWeb ?
           <div className={styles.header__buttons}>
-          <button
-            onClick={handleClickMicrophone}
-            className={styles.header__button}
-          >
-            <img src={isMicrophoneOff ? MICROPHONE_OFF : MICROPHONE_ON} />
-          </button>
-          <button
-            onClick={handleClickSound}
-            className={styles.header__button}
-          >
-            {isSoundOff  ? <IconSoundOff /> : <IconSoundOn />}
-          </button>
-        </div>
-        :
-        <div></div>
+            <button
+              onClick={handleClickMicrophone}
+              className={styles.header__button}
+            >
+              <img src={isMicrophoneOff ? MICROPHONE_OFF : MICROPHONE_ON} />
+            </button>
+            <button
+              onClick={handleClickSound}
+              className={styles.header__button}
+            >
+              {isSoundOff ? <IconSoundOff /> : <IconSoundOn />}
+            </button>
+          </div>
+          :
+          <div></div>
       }
     </header>
   );

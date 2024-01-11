@@ -27,11 +27,11 @@ const MicrophoneWeb = () => {
     const initialSlide = useSelector(getStoriesPage);
 
     useEffect(() => {
-        // console.log(isSoundWeb)
+        console.log(isMicrophoneWebRegistration + " fe")
         if (!isSoundWeb || !isSoundWebRegistration) {
             dispatch(turnOffSound());
         }
-        console.log(isMicrophoneWeb + "isMicrophoneWeb")
+        // console.log(isMicrophoneWeb + "isMicrophoneWeb")
         if (!isMicrophoneWeb || !isMicrophoneWebRegistration) {
             dispatch(turnOffMicrophone())
         }

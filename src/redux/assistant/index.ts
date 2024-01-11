@@ -5,14 +5,11 @@ import testData from '../../testData/main.json';
 import { AssistantSliceState, CommandParams, SmartAppResponseType, AlertPopUp } from './types'
 // import { RuleSet } from 'styled-components';
 import { AppDispatch, RootState } from '..';
-import { setData as setYourLocationPage } from '../yourLocationPage'
 import { setData as setFirstStoriesPage } from '../firstStoriesPage'
 import { setData as setSelectionMethod } from '../selectionMethodPage'
 import { StartConfirmationPageSliceState } from '../firstStoriesPage/types';
-import { YourLocationPageSliceState } from '../yourLocationPage/types';
 import { setData as setBubblesImage } from '../bubblesImage';
 import { setData as setSmallUserCard } from '../smallUserCard';
-import { setData as setMeetingInfo } from '../meetInfo';
 import { setData as setDetermineWinner } from '../determineWinner'
 import { setData as setChangeMeeting } from '../changeMeetingPlace';
 import { setData as setUserRegistration } from '../userRegistration'
@@ -32,7 +29,6 @@ import {
 import { selectionMethodPageSliceState } from '../selectionMethodPage/types';
 import { bubblesImageSliceState } from '../bubblesImage/types';
 import { smallUserCardSliceState } from '../smallUserCard/types';
-import { MeetInfoSliceState } from '../meetInfo/types';
 import { ChangeMeetingPlaceSliceState } from '../changeMeetingPlace/types';
 import { UserRegistrationSliceState } from '../userRegistration/types';
 import { DetermineWinnerSliceState } from '../determineWinner/types';
@@ -105,31 +101,14 @@ export const {
 } = assistantSlice.actions;
 export default assistantSlice.reducer;
 
+//screenName обработка и добавление data в redux
+//  page = '/  в   <Route path="/" >
 const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandParams) => {
   const screenName = commandParams.screenName;
   const data = commandParams.data;
 
   let page = '';
   switch (screenName) {
-    case 'FirstStories':
-      page = '/firstStories';
-      dispatch(setFirstStoriesPage(data as StartConfirmationPageSliceState))
-      break;
-    case 'SecondStories':
-      page = '/secondStories';
-      dispatch(setFirstStoriesPage(data as StartConfirmationPageSliceState))
-      break;
-    case 'SecondPage':
-      page = '/SecondPage';
-      break;
-    case 'CityChoose':
-      page = '/cityChoose';
-      dispatch(setYourLocationPage(data as YourLocationPageSliceState))
-      break;
-    case 'SelectionMethod':
-      page = '/selectionMethod';
-      dispatch(setSelectionMethod(data as selectionMethodPageSliceState));
-      break;
     case 'SearchResult':
       page = '/searchResult'
       dispatch(setBubblesImage(data as bubblesImageSliceState));
@@ -141,20 +120,6 @@ const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandPar
     case 'ExtendedUserCard':
       page = '/extendedUserCard'
       dispatch(setSmallUserCard(data as smallUserCardSliceState))
-      break
-    case 'MeetInfo':
-      page = '/meetInfo'
-      dispatch(setMeetingInfo(data as MeetInfoSliceState))
-      break
-    case 'SberTopQrStoriasPage':
-      page = '/sberTopQrStoriasPage'
-      break
-    case 'UsersNotFound':
-      page = '/usersNotFound'
-      break
-    case 'ChangeMeetingPlace':
-      page = '/changeMeetingPlace'
-      dispatch(setChangeMeeting(data as ChangeMeetingPlaceSliceState))
       break
     case 'WinnerPage':
       page = "/winnerPage"
@@ -172,6 +137,7 @@ const processAssistantParams = (dispatch: AppDispatch, commandParams: CommandPar
   dispatch(setPage({ page }));
 };
 
+// обработка commandName и сразу отрисовка команды
 
 const processAssistantCommand = (dispatch: AppDispatch, commandName: string, getState?: RootState, commandParams?: CommandParams) => {
   switch (commandName) {
@@ -248,6 +214,7 @@ export const initAssistant = () => (dispatch: AppDispatch, getState: RootState) 
   assistant = initialize(() => null);
 
   // eslint-disable-next-line no-undef
+  // REACT_APP_BUILD === 'test' - режим теста с JSON файлом
   if (process.env.REACT_APP_BUILD === 'test') {
     const { commandParams, commandName } = testData.smart_app_data;
     dispatch(finishIsLoading());
@@ -266,6 +233,8 @@ export const initAssistant = () => (dispatch: AppDispatch, getState: RootState) 
     const data =
       // response;
       // eslint-disable-next-line no-undefined
+      // testData - JSON файл from '../../testData/main.json';
+
       process.env.REACT_APP_BUILD === 'release' ? response : testData;
     // debugger;
     if (data?.type !== 'smart_app_data' || !data.smart_app_data) return;

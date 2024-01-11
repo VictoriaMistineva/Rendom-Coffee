@@ -3,12 +3,10 @@ import app from './app';
 import assistant from './assistant';
 import utilsCommandName from './utilsCommandName';
 import secondPage from './secondPage';
-import yourLocationPage from './yourLocationPage';
 import startConfirmation from './firstStoriesPage';
 import selectionMethod from './selectionMethodPage';
 import bubblesImage from './bubblesImage'
 import smallUserCard from './smallUserCard'
-import meetInfo from './meetInfo';
 import changeMeetingPlace from './changeMeetingPlace';
 import userRegistration from './userRegistration';
 import determineWinner from './determineWinner';
@@ -18,12 +16,10 @@ const rootReducer = combineReducers({
     assistant,
     utilsCommandName,
     secondPage,
-    yourLocationPage,
     startConfirmation,
     selectionMethod,
     bubblesImage,
     smallUserCard,
-    meetInfo,
     changeMeetingPlace,
     userRegistration,
     determineWinner,
